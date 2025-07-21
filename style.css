@@ -44,7 +44,8 @@ body {
 .banner-video {
     position: relative;
     width: 100%;
-    height: calc(100vh - 200px);
+    height: 60vh;
+    min-height: 400px;
     overflow: hidden;
 }
 
@@ -59,13 +60,13 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    gap: 0px;
     width: 100%;
-    height: 60vh;
+    height: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
     max-width: 10000px;
     margin: 0 auto;
     z-index: 1;
@@ -134,8 +135,10 @@ h1 {
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     width: 100%;
     box-sizing: border-box;
+    justify-content: center;
     gap: 2rem;
     padding: 2rem;
     color: white;
@@ -237,7 +240,6 @@ h1 {
     font-size: 2.4rem;
     color: #f0f0f0;
     display: block;
-    width: 900px;
 }
 
 .bandcamp {
@@ -266,34 +268,15 @@ h1 {
     color: #222;
 }
 
-@media (max-width: 768px) {
-    .header-overlay {
-    flex-direction: row;
-    gap: 1rem;
-    text-align: center;
-    height: auto;
-    padding-top: 3rem;
-    display: flex;
-    }
-
-    .layer1 .layer2 {
-    grid-column: 1;
-    grid-row: 1;
-    }
-
-    .header-left {
-    justify-content: center;
-    }
-
-    .section {
-    flex-direction: row;
-    text-align: center;
-    }
+@media (max-width: 1752px) {
 
     .text {
     max-width: 100%;
     flex: 0 0 100%;
-    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0 1rem;
+    z-index: 1;
     }
 }
 
