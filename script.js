@@ -56,10 +56,22 @@ function onClick (demo_audio_id,ctrl_id) {
     var pause = ctrl.innerHTML === '⏸';
     ctrl.innerHTML = pause ? '▶' : '⏸';
 
-    console.log("OMG UN CLICK",demo_audio,ctrl)
-
     var method = pause ? 'pause' : 'play';
     demo_audio[method]();
+
+    if (~pause){
+      demo_audio_list = document.getElementsByClassName("demo_audio");
+
+      for (const demo_audio of demo_audio_list) {
+        if (demo_audio.id != demo_audio_id){
+          ctrl = document.getElementById(demo_audio.id.replace("_audio","_btn"))
+          if (ctrl.innerHTML == '⏸'){
+            demo_audio["pause"]();
+            ctrl.innerHTML = "▶";
+          }
+        }
+      };
+    }
 
     return false;
 };
