@@ -1,20 +1,22 @@
 
 
 const audioTracks = [
+  /*
   {
     id: "again_call_to_adv",
     label: "Call to adventure",
     src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/again call to adventure.mp3"
   },
   {
-    id: "again_victory",
-    label: "Orchestral victory",
-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/again victory.mp3"
-  },
-  {
     id: "colossus",
     label: "Spiraling violin",
     src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/colossus.mp3"
+  },
+  */
+  {
+    id: "again_victory",
+    label: "Orchestral victory",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/again victory.mp3"
   },
   {
     id: "hardtech",
@@ -38,7 +40,7 @@ const audioTracks = [
   },
   {
     id: "whatyoudidfolk",
-    label: "Mysterious folk",
+    label: "Folk guitar",
     src: "./demos/what you did folk.mp3"
   },
   {
