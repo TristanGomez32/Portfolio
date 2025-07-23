@@ -141,8 +141,8 @@ h1 {
 }
 
 .scroll-btn svg {
-    width: 200px;
-    height: 115px;
+    width: 110px;
+    height: 66.8px;
     fill: #222;
     transition: transform 0.3s;
 }
@@ -331,7 +331,7 @@ h1 {
    * flex-wrap: wrap;
    */
   flex-flow: row wrap;
-  
+
   /* Then we define how is distributed the remaining space */
   justify-content: space-around;
   
@@ -341,7 +341,12 @@ h1 {
 }
 
 .demo {
-  background: rgb(33, 92, 31);
+  /*
+  background-image: url('./img/enceinte.png');
+  background-position: 8px 8px;
+  background-color: rgb(10, 124, 0);
+  background-blend-mode: screen;
+  */
   display: flex;
   flex-flow: column nowrap;
   padding: 5px;
@@ -356,7 +361,6 @@ h1 {
   text-align: center;
 
 }
-
 
 .demo_audio_btn {
   background-color: #333;
