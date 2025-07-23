@@ -15,9 +15,35 @@ const audioTracks = [
   */
   {
     id: "again_victory",
-    label: "Orchestral victory",
+    label: "Epic orchestra",
     src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/again victory.mp3",
     bckgr_image: "./img/crops/enceinte_crop1.png"
+  },
+  {
+    id: "lelitcue2",
+    label: "Ambient synths",
+    src: "./demos/lelit cue 2.mp3",
+    bckgr_image: "./img/crops/hjalmar-wahlin-08_blurred_crop1.png",
+  },
+  {
+    id: "trailerlush",
+    label: "Lush strings",
+    src: "./demos/trailer lush.mp3",
+    bckgr_image: "./img/crops/enceinte_crop2.png"
+  } ,
+  {
+    id: "romewillburn",
+    label: "Hard rock",
+    src: "./demos/rome will burn.mp3",
+    bckgr_image: "./img/crops/affiche-skid-768x0-c-default_blurred_crop1.png",
+    background_size: "250px",
+  },
+  {
+    id: "whatyoudidfolk",
+    label: "Folk guitar",
+    src: "./demos/what you did folk.mp3",
+    bckgr_image: "./img/crops/John_Singer_Sargent_-_Gabriel_Fauré_crop1_blur.png",
+    background_size: "220px",
   },
   {
     id: "hardtech",
@@ -31,32 +57,6 @@ const audioTracks = [
     src: "./demos/summer tape sax.mp3",
     bckgr_image: "./img/crops/lelit_mo_crop1.png",
   },
-  {
-    id: "romewillburn",
-    label: "Hard rock",
-    src: "./demos/rome will burn.mp3",
-    bckgr_image: "./img/crops/affiche-skid-768x0-c-default_blurred_crop1.png",
-    background_size: "250px",
-  },
-  {
-    id: "lelitcue2",
-    label: "Ambient synths",
-    src: "./demos/lelit cue 2.mp3",
-    bckgr_image: "./img/crops/hjalmar-wahlin-08_blurred_crop1.png",
-  },
-  {
-    id: "whatyoudidfolk",
-    label: "Folk guitar",
-    src: "./demos/what you did folk.mp3",
-    bckgr_image: "./img/crops/John_Singer_Sargent_-_Gabriel_Fauré_crop1_blur.png",
-    background_size: "220px",
-  },
-  {
-    id: "trailerlush",
-    label: "Lush strings",
-    src: "./demos/trailer lush.mp3",
-    bckgr_image: "./img/crops/enceinte_crop2.png"
-  }  
 ];
 
 function onClick (demo_audio_id,ctrl_id) {

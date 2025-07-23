@@ -207,6 +207,10 @@ h1 {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/le_lit_de_la_rivière_making_of.png');
 }
 
+.bg-runlike::before {
+    background-image: url('./img/run_like_a_girl.png');
+}
+
 .bg-skid::before {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/skid.png');
 }
@@ -227,8 +231,12 @@ h1 {
     background-color: rgba(60, 207, 97, 0.4);
 }
 
-.bg-skid::after {
+.bg-runlike::after {
     background-color: rgba(100, 170, 235, 0.4);
+}
+
+.bg-skid::after {
+    background-color: rgba(155, 148, 109, 0.404);
 }
 
 .bg-colossus::after {
