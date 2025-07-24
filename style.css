@@ -362,9 +362,10 @@ h1 {
 
   /* Then we define how is distributed the remaining space */
   justify-content: space-around;
+
   
   padding: 0;
-  margin: 10;
+  margin: 0;
   list-style: none;
 }
 
@@ -377,17 +378,19 @@ h1 {
   */
   display: flex;
   flex-flow: column nowrap;
-  padding: 5px;
-  width: 170px;
+  min-width: 170px;
+  max-width: 220px;
   height: 120px;
   margin-top: 10px;
+  margin-left: 10px;
   line-height: 46px;
   color: white;
   align-items: center;
   font-weight: bold;
   font-size: 3em;
-  text-align: center;
-
+  text-align: center; 
+  flex-grow: 1;
+  flex-basis: 0;
 }
 
 .demo_audio_btn {
