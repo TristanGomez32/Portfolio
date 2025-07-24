@@ -17,19 +17,22 @@ const audioTracks = [
     id: "again_victory",
     label: "Epic orchestra",
     src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/again victory.mp3",
-    bckgr_image: "./img/crops/enceinte_crop1.png"
+    bckgr_image: "./img/crops/enceinte_crop1.png",
+    color: "rgb(116,91,52)",
   },
   {
     id: "lelitcue2",
     label: "Ambient synths",
     src: "./demos/lelit cue 2.mp3",
     bckgr_image: "./img/crops/hjalmar-wahlin-08_blurred_crop1.png",
+    color: "rgb(13,32,85)",
   },
   {
     id: "trailerlush",
     label: "Lush strings",
     src: "./demos/trailer lush.mp3",
-    bckgr_image: "./img/crops/enceinte_crop2.png"
+    bckgr_image: "./img/crops/enceinte_crop2.png",
+    color: "rgb(2,57,34)",
   } ,
   {
     id: "romewillburn",
@@ -37,6 +40,7 @@ const audioTracks = [
     src: "./demos/rome will burn.mp3",
     bckgr_image: "./img/crops/affiche-skid-768x0-c-default_blurred_crop1.png",
     background_size: "250px",
+    color: "rgb(25,39,48)",
   },
   {
     id: "whatyoudidfolk",
@@ -44,18 +48,21 @@ const audioTracks = [
     src: "./demos/what you did folk.mp3",
     bckgr_image: "./img/crops/John_Singer_Sargent_-_Gabriel_Fauré_crop1_blur.png",
     background_size: "220px",
+    color: "rgb(131,55,22)",
   },
   {
     id: "hardtech",
     label: "Hardtech",
     src: "./demos/hardtech.mp3",
-    bckgr_image: "./img/crops/skid_crop1.png"
+    bckgr_image: "./img/crops/skid_crop1.png",
+    color: "rgb(155,159,165)",
   },
   {
     id: "sax",
     label: "Akward saxophone",
     src: "./demos/summer tape sax.mp3",
     bckgr_image: "./img/crops/lelit_mo_crop1.png",
+    color: "rgb(27,83,0)",
   },
 ];
 
@@ -64,8 +71,8 @@ function onClick (demo_audio_id,ctrl_id) {
     demo_audio = document.getElementById(demo_audio_id);
     ctrl = document.getElementById(ctrl_id);
 
-    var pause = ctrl.innerHTML === '⏸';
-    ctrl.innerHTML = pause ? '▶' : '⏸';
+    var pause = ctrl.innerHTML === '<text>⏸</text>';
+    ctrl.innerHTML = pause ? '<text>▶</text>' : '<text>⏸</text>';
 
     var method = pause ? 'pause' : 'play';
     demo_audio[method]();
@@ -76,9 +83,9 @@ function onClick (demo_audio_id,ctrl_id) {
       for (const demo_audio of demo_audio_list) {
         if (demo_audio.id != demo_audio_id){
           ctrl = document.getElementById(demo_audio.id.replace("_audio","_btn"))
-          if (ctrl.innerHTML == '⏸'){
+          if (ctrl.innerHTML == '<text>⏸</text>'){
             demo_audio["pause"]();
-            ctrl.innerHTML = "▶";
+            ctrl.innerHTML = "<text>▶</text>";
           }
         }
       };
@@ -98,6 +105,7 @@ const container = document.getElementById("demos");
     var label = info.label;
     var src = info.src;
     var bckgr_image = info.bckgr_image;
+    var color = info.color;
 
     const li = document.createElement("li");
     li.className = "demo";
@@ -107,13 +115,13 @@ const container = document.getElementById("demos");
     if (info.hasOwnProperty("background_size")){
       li.style.backgroundSize = info.background_size;
     }
-    
+        
     li.innerHTML = `
       <audio class="demo_audio" id="${id}_audio" preload="none">
         <source src="${src}" type="audio/mpeg" />
       </audio>
       <text class="demo_label">${label}</text>
-      <button class="demo_audio_btn" id="${id}_btn" onclick="onClick('${id}_audio','${id}_btn')">▶</button>
+      <button class="demo_audio_btn" id="${id}_btn" onclick="onClick('${id}_audio','${id}_btn')" style="color: ${color}"><text>▶</text></button>
       `;
     container.appendChild(li);
   });
