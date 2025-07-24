@@ -51,6 +51,14 @@ const audioTracks = [
     color: "rgb(131,55,22)",
   },
   {
+    id: "dystopiantrailer",
+    label: "Dystopian trailer",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/im not sure we're safe.mp3",
+    bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/hjalmar-wahlin-08_blurred_crop2.png",
+    backgroundSize: "220px",
+    color: "rgba(149, 59, 182, 1)",
+  },
+  {
     id: "hardtech",
     label: "Hardtech",
     src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/hardtech.mp3",
