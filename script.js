@@ -103,11 +103,34 @@ function onClick (demo_audio_id,ctrl_id) {
 };
 
 
+
+function setupProgressCircle(audioId, circle) {
+  console.log(circle);
+  const audio = document.getElementById(audioId);
+  const radius = circle.r.baseVal.value;
+  const circumference = 2 * Math.PI * radius;
+
+  circle.style.strokeDasharray = `${circumference} ${circumference}`;
+  circle.style.strokeDashoffset = circumference;
+
+  function setProgress(percent) {
+    const offset = circumference - (percent / 100) * circumference;
+    circle.style.strokeDashoffset = offset;
+  }
+
+  audio.addEventListener('timeupdate', () => {
+    const percent = (audio.currentTime / audio.duration) * 100;
+    setProgress(percent);
+  });
+
+  audio.addEventListener('ended', () => {
+    setProgress(0);
+  });
+}
+
 const container = document.getElementById("demos");
 
   audioTracks.forEach((info) => {
-
-    console.log(info);
 
     var id = info.id;
     var label = info.label;
@@ -129,9 +152,17 @@ const container = document.getElementById("demos");
         <source src="${src}" type="audio/mpeg" />
       </audio>
       <text class="demo_label">${label}</text>
-      <button class="demo_audio_btn" id="${id}_btn" onclick="onClick('${id}_audio','${id}_btn')" style="color: ${color}"><text>▶</text></button>
+      <div class="audio-button-wrapper">
+        <svg class="progress-ring" width="60" height="60">
+          <circle class="progress-ring-circle" id="${id}_progresscircle" stroke="white" stroke-width="4" fill="transparent" r="26" cx="30" cy="30" />
+        </svg>
+        <button class="demo_audio_btn" id="${id}_btn" onclick="onClick('${id}_audio','${id}_btn')" style="color: ${color}"><text>▶</text></button>
+      </div>
       `;
     container.appendChild(li);
+    
+    setupProgressCircle(id+"_audio", document.getElementById(id+"_progresscircle"));
+
   });
 
 const sections = document.querySelectorAll('.section');
@@ -145,3 +176,4 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 
 sections.forEach(section => observer.observe(section));
+
