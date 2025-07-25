@@ -214,7 +214,7 @@ h1 {
 }
 
 .bg-runlike::before {
-    background-image: url('./img/run_like_a_girl.png');
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/run_like_a_girl.png');
 }
 
 .bg-skid::before {
