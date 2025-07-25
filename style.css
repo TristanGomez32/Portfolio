@@ -358,7 +358,7 @@ span.line {
     color: #222;
 }
 
-@media (max-width: 1752px) {
+@media (max-width: 1429px) {
 
     .text {
     max-width: 100%;
@@ -368,6 +368,9 @@ span.line {
     padding: 0 0rem;
     z-index: 1;
     }
+}
+
+@media (max-width: 800px) {
 
     .text p {
         font-size: 1.5rem;
@@ -451,6 +454,7 @@ span.line {
   max-width: 220px;
   height: 120px;
   margin-top: 10px;
+  margin-bottom: 10px;
   margin-left: 10px;
   margin-right: 10px;
   line-height: 46px;
