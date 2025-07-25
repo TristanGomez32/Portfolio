@@ -67,7 +67,7 @@ const audioTracks = [
   },
   {
     id: "sax",
-    label: "Akward saxophone",
+    label: "Awkward saxophone",
     src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/summer tape sax.mp3",
     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/lelit_mo_crop1.png",
     color: "rgb(27,83,0)",
