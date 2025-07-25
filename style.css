@@ -365,7 +365,7 @@ span.line {
     flex: 0 0 100%;
     box-sizing: border-box;
     text-align: center;
-    padding: 0 1rem;
+    padding: 0 0rem;
     z-index: 1;
     }
 
