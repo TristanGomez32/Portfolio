@@ -105,7 +105,6 @@ function onClick (demo_audio_id,ctrl_id) {
 
 
 function setupProgressCircle(audioId, circle) {
-  console.log(circle);
   const audio = document.getElementById(audioId);
   const radius = circle.r.baseVal.value;
   const circumference = 2 * Math.PI * radius;
@@ -176,4 +175,3 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 
 sections.forEach(section => observer.observe(section));
-

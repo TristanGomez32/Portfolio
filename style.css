@@ -153,41 +153,80 @@ h1 {
 
 .side-menu {
   position: fixed;
-  top: 50%;
-  right: 1rem;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  top: 35%;
+  right: -5.5%;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 0;
+  border-radius: 8px 0 0 8px;
+  transition: transform 0.3s ease;
   z-index: 1000;
 }
 
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-menu li {
+  margin: 1rem 0;
+  padding: 0 1rem;
+  white-space: nowrap;
+}
+
 .side-menu a {
-  padding: 0.6rem 1rem;
-  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
   color: white;
   text-decoration: none;
-  border-radius: 2rem;
-  font-size: 1rem;
-  font-weight: 500;
-  text-align: center;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  font-family: sans-serif;
+  transition: color 0.3s;
 }
 
-.side-menu a:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  color: black;
-  transform: translateX(-5px);
+.side-menu .dot {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  transition: transform 0.3s;
 }
 
-.side-menu a.active {
-  background-color: white;
-  color: black;
-  font-weight: 700;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+.side-menu .label {
+  opacity: 0;
   transform: translateX(-10px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.side-menu a:hover .dot {
+  background: #ffffff;
+  transform: scale(1.4);
+}
+
+.side-menu a:hover .label {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Lors du hover sur le menu entier */
+.side-menu:hover {
+  transform: translateX(-80px);
+}
+
+/* Lors du hover, on affiche les labels */
+.side-menu:hover .label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.side-menu a.active .dot {
+  background: #00aced; /* couleur de surbrillance */
+  transform: scale(1.5);
+}
+
+.side-menu a.active .label {
+  font-weight: bold;
+  color: #00aced;
 }
 
 @media only screen and (max-width: 770px) {
