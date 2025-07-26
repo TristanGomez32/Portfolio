@@ -13,7 +13,7 @@ const section_observer = new IntersectionObserver(entries => {
     }
   });
 }, {
-  threshold: 0.4  // le seuil d'intersection : 50% de la section visible
+  threshold: 0.1  // le seuil d'intersection : 50% de la section visible
 });
 
 page_sections.forEach(section => section_observer.observe(section));

@@ -154,7 +154,8 @@ h1 {
 .side-menu {
   position: fixed;
   top: 35%;
-  right: -5.5%;
+  right: -90px;
+  width: 151px;
   background: rgba(0, 0, 0, 0.6);
   padding: 0.5rem 0;
   border-radius: 8px 0 0 8px;
@@ -210,7 +211,7 @@ h1 {
 
 /* Lors du hover sur le menu entier */
 .side-menu:hover {
-  transform: translateX(-80px);
+  transform: translateX(-100px);
 }
 
 /* Lors du hover, on affiche les labels */
