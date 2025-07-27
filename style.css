@@ -593,13 +593,22 @@ span.line {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
   align-items: center;
   background-color: #111;
   padding: 1.5rem;
   text-align: center;
   color: white;
   margin-top: 3rem;
+}
+
+.email {
+  margin-bottom: 10px;
+  background-color: #22222288;
+  border-radius: 10px;
+  gap: 0.4rem;
+  padding-right: 5px;
+  padding-left: 5px;
+
 }
 
 div.email > span:nth-child(2) {
