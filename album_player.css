@@ -77,7 +77,11 @@
   cursor: pointer;
 }
 
-.track:hover {
+.track:hover  {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.track[data-playing="true"]{
   background-color: rgba(255, 255, 255, 0.05);
 }
 
@@ -89,7 +93,27 @@
   transition: opacity 0.2s;
 }
 
-.track:hover .track-number::before {
+/* Replace number with ▶ on hover if not playing */
+.track:hover[data-playing="false"] .track-number::before {
+  content: "▶";
+  color: #ccc;
+  font-size: 16px;
+}
+
+/* Replace number with ⏸ if playing */
+.track[data-playing="true"] .track-number::before {
+  content: "⏸";
+  color: #ccc;
+  font-size: 16px;
+}
+
+/* Hide original number text when icon is shown */
+.track:hover .track-number,
+.track[data-playing="true"] .track-number {
+  color: transparent;
+}
+
+.track:hover[data-playing="false"] .track-number::before {
   content: "▶";
   color: #ccc;
   font-size: 16px;

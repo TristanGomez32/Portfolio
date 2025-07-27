@@ -17,3 +17,4 @@ const section_observer = new IntersectionObserver(entries => {
 });
 
 page_sections.forEach(section => section_observer.observe(section));
+
