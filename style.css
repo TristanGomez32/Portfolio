@@ -302,7 +302,7 @@ h1 {
 }
 
 .bg-dragons::before {
-    background-image: url('./img/romantic_flight.png');
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/romantic_flight.png');
 }
 
 
