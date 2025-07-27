@@ -301,6 +301,11 @@ h1 {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/skid.png');
 }
 
+.bg-dragons::before {
+    background-image: url('./img/romantic_flight.png');
+}
+
+
 .bg-colossus::before {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/colossus.png');
 }
@@ -322,7 +327,11 @@ h1 {
 }
 
 .bg-skid::after {
-    background-color: rgba(155, 148, 109, 0.404);
+    background-color: rgba(155, 148, 109, 0.4);
+}
+
+.bg-dragons::after {
+    background-color: rgba(199,145,93,0.4);
 }
 
 .bg-colossus::after {
