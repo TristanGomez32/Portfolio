@@ -591,7 +591,10 @@ span.line {
 
 .footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  
+  align-items: center;
   background-color: #111;
   padding: 1.5rem;
   text-align: center;
@@ -599,3 +602,6 @@ span.line {
   margin-top: 3rem;
 }
 
+div.email > span:nth-child(2) {
+	display: none;
+}
