@@ -74,26 +74,58 @@ const audioTracks = [
   },
 ];
 
+function make_play_symbol(color){
+  return `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="22" fill="white" />
+            <path d="M20 16L32 24L20 32V16Z" fill="${color}"/>
+            </svg> 
+          `
+}
+
+function make_pause_symbol(color){
+  return `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Cercle de fond -->
+            <circle cx="24" cy="24" r="22" fill="white"></circle>
+            <!-- Barres du "pause" -->
+            <path d="M19 16H22V32H19V16Z" fill="${color}"></path>
+            <path d="M26 16H29V32H26V16Z" fill="${color}"></path>
+          </svg>
+          `
+}
+
+function is_playing_func(ctrl){
+  return ctrl.dataset.playing=="true";
+}
+
+function play_demo(ctrl,demo_audio){
+  ctrl.innerHTML = make_pause_symbol(ctrl.dataset.color);
+  ctrl.dataset.playing = true;
+  demo_audio["play"]();
+}
+
+function pause_demo(ctrl,demo_audio){
+  ctrl.innerHTML = make_play_symbol(ctrl.dataset.color);
+  ctrl.dataset.playing = false;
+  demo_audio["pause"]();
+}
+
 function onClick (demo_audio_id,ctrl_id) {
 
     demo_audio = document.getElementById(demo_audio_id);
     ctrl = document.getElementById(ctrl_id);
 
-    var pause = ctrl.innerHTML === '<text>⏸</text>';
-    ctrl.innerHTML = pause ? '<text>▶</text>' : '<text>⏸</text>';
-
-    var method = pause ? 'pause' : 'play';
-    demo_audio[method]();
-
-    if (~pause){
+    if (is_playing_func(ctrl)){
+      pause_demo(ctrl,demo_audio);
+    }else{
+      play_demo(ctrl,demo_audio);
+      
       demo_audio_list = document.getElementsByClassName("demo_audio");
 
       for (const demo_audio of demo_audio_list) {
         if (demo_audio.id != demo_audio_id){
           ctrl = document.getElementById(demo_audio.id.replace("_audio","_btn"))
-          if (ctrl.innerHTML == '<text>⏸</text>'){
-            demo_audio["pause"]();
-            ctrl.innerHTML = "<text>▶</text>";
+          if (is_playing_func(ctrl)){
+            pause_demo(ctrl,demo_audio);
           }
         }
       };
@@ -127,6 +159,9 @@ function setupProgressCircle(audioId, circle) {
   });
 }
 
+
+
+
 const container = document.getElementById("demos");
 
   audioTracks.forEach((info) => {
@@ -155,7 +190,9 @@ const container = document.getElementById("demos");
         <svg class="progress-ring" width="60" height="60">
           <circle class="progress-ring-circle" id="${id}_progresscircle" stroke="white" stroke-width="4" fill="transparent" r="26" cx="30" cy="30" />
         </svg>
-        <button class="demo_audio_btn" id="${id}_btn" onclick="onClick('${id}_audio','${id}_btn')" style="color: ${color}"><text>▶</text></button>
+        <button class="demo_audio_btn" id="${id}_btn" onclick="onClick('${id}_audio','${id}_btn','${color}')" data-playing="false" data-color="${color}">
+          ${make_play_symbol(color)}
+        </button>
       </div>
       `;
     container.appendChild(li);
