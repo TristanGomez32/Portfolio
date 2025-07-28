@@ -24,14 +24,29 @@
 
             <img src="https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/profile.jpg" alt="Photo de Tristan Gomez" class="profile-pic">
 
-            <h1>Tristan Gomez</h1>
-            <a href="https://www.instagram.com/tristangomez32/" class="instagram-link" target="_blank" aria-label="Instagram">
-              <svg class="instagram-logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm4.25 4.25a4.75 4.75 0 1 1 0 9.5a4.75 4.75 0 0 1 0-9.5Zm0 1.5a3.25 3.25 0 1 0 0 6.5a3.25 3.25 0 0 0 0-6.5Zm5.38-.88a.88.88 0 1 1 0 1.75a.88.88 0 0 1 0-1.75Z"/>
-              </svg>
-              <span class="instagram-id">tristangomez32</span>
-            </a>
-            <h2 style="text-align: center;">Composing short movie soundtracks for</h2>
+            <h1 class="page_title">Tristan Gomez</h1>
+
+            <div class="logos-top">
+              <a href="https://www.instagram.com/tristangomez32/" class="instagram-link-top" target="_blank" aria-label="Instagram">
+                <img src="./img/instagram.png" class="instagram-logo">
+              </a>
+          
+              <a href="https://tristangomez.bandcamp.com/" class="instagram-link-top" target="_blank" aria-label="Instagram">
+                <img src="./img/spotify.png" class="instagram-logo">
+              </a>
+
+              <a href="https://tristangomez.bandcamp.com/" class="instagram-link-top" target="_blank" aria-label="Instagram">
+                <img src="./img/bandcamp.png" class="instagram-logo">
+              </a>
+
+            </div>
+
+
+            <h2 style="text-align: center;">
+              <span class="line">Composing</span> 
+              <span class="line">short movie 
+              <span class="line">OSTs for</span>
+            </h2>
             <div class="logos_ecoles">
               <img src="https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/cinecreatis_blanc.png" alt="Logo Cinécréatis" class="school-pic">
               <img src="https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/Logo_ESMA_Artistique_blanc.png" alt="Logo ESMA" class="school-pic">
@@ -204,71 +219,80 @@
 
 
   </section>
+
   <section id="albums"> 
 
-        <h2 class="section-heading" id="albums">Albums</h2>
+    <h2 class="section-heading" id="albums">Albums</h2>
 
-        <div class="albums">
+    <div class="albums">
 
-          <div class="album_section">
+      <div class="album_section">
 
-          <img src="albums/rome_will_burn/cover.jpg" alt="Album cover" class="big-album-cover" />
+        <div class="album_subsection">
+          <img src="albums/rome_will_burn/cover.jpg" alt="Album cover" class="big-album-cover" style="object-fit: cover;">
+        </div>
 
+        <div class="album_subsection">
           <div class="album-player">
+            
             <div class="album-header">
-              <img src="albums/rome_will_burn/cover.jpg" alt="Album cover" class="album-cover" />
+              
+              <img src="https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/rome_will_burn/cover.jpg" alt="Album cover" class="album-cover">
               <div class="album-info">
-                <h2>Rome will burn</h2>
-                <button class="play-btn" id="mainPlayBtn">▶</button>
+                    <h2>Rome will burn</h2>
+                    <button class="play-btn" id="mainPlayBtn">▶</button>
               </div>
+
             </div>
 
-<ul class="track-list">
-  <li class="track" data-src="albums/rome_will_burn/rome_will_burn.mp3" data-playing="false">
-    <span class="track-number">1</span>
-    <div class="track-info">
-      <span class="track-title">Rome will burn</span>
-      <span class="track-artist">Tristan Gomez</span>
-    </div>
-    <span class="track-duration">02:31</span>
-  </li>
-  <li class="track" data-src="albums/rome_will_burn/again.mp3" data-playing="false">
-    <span class="track-number">2</span>
-    <div class="track-info">
-      <span class="track-title">Again</span>
-      <span class="track-artist">Tristan Gomez</span>
-    </div>
-    <span class="track-duration">02:55</span>
-  </li>
-  <li class="track" data-src="albums/rome_will_burn/what_you_did.mp3" data-playing="false">
-    <span class="track-number">3</span>
-    <div class="track-info">
-      <span class="track-title">What you did</span>
-      <span class="track-artist">Tristan Gomez, Dorian Couëdel</span>
-    </div>
-    <span class="track-duration">03:11</span>
-  </li>
-</ul>
+            <ul class="track-list">
+              <li class="track" data-src="https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/rome_will_burn/rome_will_burn.mp3" data-playing="false">
+                <span class="track-number">1</span>
+                <div class="track-info">
+                  <span class="track-title">Rome will burn</span>
+                  <span class="track-artist">Tristan Gomez</span>
+                </div>
+                <span class="track-duration">02:31</span>
+              </li>
+              <li class="track" data-src="https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/rome_will_burn/again.mp3" data-playing="false">
+                <span class="track-number">2</span>
+                <div class="track-info">
+                  <span class="track-title">Again</span>
+                  <span class="track-artist">Tristan Gomez</span>
+                </div>
+                <span class="track-duration">02:55</span>
+              </li>
+              <li class="track" data-src="https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/rome_will_burn/what_you_did.mp3" data-playing="false">
+                <span class="track-number">3</span>
+                <div class="track-info">
+                  <span class="track-title">What you did</span>
+                  <span class="track-artist">Tristan Gomez, Dorian Couëdel</span>
+                </div>
+                <span class="track-duration">03:11</span>
+              </li>
+            </ul>
 
             <audio id="audioPlayer"></audio>
+          
           </div>
-
-          </div>
-
-          <div class="album_player">
-            <iframe class="bandcamp"
-              src="https://bandcamp.com/EmbeddedPlayer/album=3195983293/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
-              seamless><a href="https://jimmyr.bandcamp.com/album/im-not-sure-were-safe">I'm not sure we're safe</a></iframe>
-          </div> 
-
-          <div class="album_player">
-            <iframe class="bandcamp"
-              src="https://bandcamp.com/EmbeddedPlayer/album=364098121/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
-              seamless><a href="https://jimmyr.bandcamp.com/album/classical-music-works">Classical music works</a></iframe>
-          </div> 
-
-
         </div>
+
+      </div>
+
+      <div class="album_player">
+        <iframe class="bandcamp"
+          src="https://bandcamp.com/EmbeddedPlayer/album=3195983293/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+          seamless><a href="https://jimmyr.bandcamp.com/album/im-not-sure-were-safe">I'm not sure we're safe</a></iframe>
+      </div> 
+
+      <div class="album_player">
+        <iframe class="bandcamp"
+          src="https://bandcamp.com/EmbeddedPlayer/album=364098121/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+          seamless><a href="https://jimmyr.bandcamp.com/album/classical-music-works">Classical music works</a></iframe>
+      </div> 
+
+
+    </div>
 
 
 
@@ -278,9 +302,7 @@
       <footer class="footer">
           <h3 >Contact</h3>
           <a href="https://www.instagram.com/tristangomez32/" class="instagram-link" target="_blank" aria-label="Instagram">
-            <svg class="instagram-logo" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm4.25 4.25a4.75 4.75 0 1 1 0 9.5a4.75 4.75 0 0 1 0-9.5Zm0 1.5a3.25 3.25 0 1 0 0 6.5a3.25 3.25 0 0 0 0-6.5Zm5.38-.88a.88.88 0 1 1 0 1.75a.88.88 0 0 1 0-1.75Z"/>
-            </svg>
+            <img src="https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/instagram.png" class="instagram-logo">
             <span class="instagram-id">tristangomez32</span>
           </a>
 

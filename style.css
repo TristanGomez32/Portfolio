@@ -82,6 +82,15 @@ body {
     margin-right: 1rem;
 }
 
+.page_title {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 
 .sub_header{
     display: flex;
@@ -429,6 +438,25 @@ span.line {
 
 }
 
+.logos-top{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+
+
+}
+
+.instagram-link-top {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+  
+}
+
 .instagram-link {
   display: flex;
   align-items: center;
@@ -446,17 +474,15 @@ span.line {
 
 .instagram-link:hover {
     transform: scale(1.1);
-    opacity: 0.7;
 }
 
-.instagram-icon {
-    width: 36px;
-    height: 36px;
-    transition: transform 0.3s;
-}
 
-.instagram-link:hover .instagram-icon {
+.instagram-link:hover  {
     transform: scale(1.1);
+}
+
+.instagram-link-top:hover {
+  transform: scale(1.3);
 }
 
 .instagram-logo {
