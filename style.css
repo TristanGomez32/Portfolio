@@ -1,7 +1,15 @@
 
+@font-face {
+    font-family: 'circular';
+    src: url('./font/circular-std-medium-500.ttf');
+}
+
+
 html {
     scroll-behavior: smooth;
+    font-family: Circular !important;
 }
+
 
 body {
     font-family: 'Inter', sans-serif;
