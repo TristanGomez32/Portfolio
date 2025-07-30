@@ -242,12 +242,13 @@
                     <h2>Rome will burn</h2>
                     <p> Hard rock / Folk / Orchestral</p>
               </div>
-              <button class="play-btn" id="mainPlayBtn"></button>
+              <button class="play-btn"></button>
 
             </div>
 
-            <div class="seekbar-container" id="seekbar_container_romewillburn">
-              <div class="seekbar" id="seekbar_romewillburn"></div>
+            <div class="seekbar-container">
+              <div class="seekbar"></div>
+              <div class="seekbar-handle"></div>
             </div>
 
             <ul class="track-list">
@@ -277,18 +278,63 @@
               </li>
             </ul>
 
-            <audio id="audioPlayer" preload="metadata"></audio>
+            <audio id="romewillburn" class="album-audio"></audio>
           
           </div>
         </div>
 
       </div>
 
-      <div class="album_player">
-        <iframe class="bandcamp"
-          src="https://bandcamp.com/EmbeddedPlayer/album=3195983293/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
-          seamless><a href="https://jimmyr.bandcamp.com/album/im-not-sure-were-safe">I'm not sure we're safe</a></iframe>
-      </div> 
+      <div class="album_section">
+
+        <div class="album_subsection">
+          <img src="albums/weird_signal/cover.jpg" alt="Album cover" class="big-album-cover" style="object-fit: cover;">
+        </div>
+
+        <div class="album_subsection">
+          <div class="album-player">
+            
+            <div class="album-header">
+              
+              <img src="albums/weird_signal/cover.jpg" alt="Album cover" class="album-cover">
+              <div class="album-info">
+                    <h2>Weird signal</h2>
+                    <p>Electronic</p>
+              </div>
+              <button class="play-btn"></button>
+
+            </div>
+
+            <div class="seekbar-container">
+              <div class="seekbar"></div>
+              <div class="seekbar-handle"></div>
+            </div>
+
+            <ul class="track-list">
+              <li class="track" data-src="./albums/weird_signal/intruder_on_board.mp3" data-playing="false">
+                <span class="track-number">1</span>
+                <div class="track-info">
+                  <span class="track-title">Intruder on board</span>
+                  <span class="track-artist">Electronic trailer</span>
+                </div>
+                <span class="track-duration">01:27</span>
+              </li>
+              <li class="track" data-src="./albums/weird_signal/weird_signal.mp3" data-playing="false">
+                <span class="track-number">2</span>
+                <div class="track-info">
+                  <span class="track-title">Weird signal</span>
+                  <span class="track-artist">Synthwave</span>
+                </div>
+                <span class="track-duration">01:02</span>
+              </li>
+            </ul>
+
+            <audio class="album-audio"></audio>
+          
+          </div>
+        </div>
+
+      </div>
 
       <div class="album_player">
         <iframe class="bandcamp"

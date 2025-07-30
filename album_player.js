@@ -1,3 +1,5 @@
+BTN_COLOR= "#2c2c2c"
+
 function make_play_symbol(color){
   return `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="24" cy="24" r="22" fill="white" />
@@ -16,15 +18,6 @@ function make_pause_symbol(color){
           </svg>
           `
 }
-
-const audio = document.getElementById("audioPlayer");
-const playBtn = document.getElementById("mainPlayBtn");
-const seekBar = document.getElementById("seekbar_romewillburn");
-const seekBar_container = document.getElementById("seekbar_container_romewillburn");
-
-const tracks = document.querySelectorAll(".track-list li");
-
-BTN_COLOR= "#2c2c2c"
 
 function playTrack(track) {
     const src = track.getAttribute("data-src");
@@ -47,58 +40,63 @@ function playTrack(track) {
     track.querySelectorAll(".track-number")[0].dataset.playing = true;
 }
 
+const albums = document.querySelectorAll(".album-player");
+console.log(albums);
+for (album of albums){
+  audio = album.querySelectorAll(".album-audio")[0];
+  albumHeader = album.querySelectorAll(".album-header")[0];
+  console.log(albumHeader);
+  playBtn = albumHeader.querySelectorAll(".play-btn")[0];
+  console.log(playBtn);
+  seekBar = album.querySelectorAll(".seekbar")[0];
+  seekBarHandle = album.querySelectorAll(".seekbar-handle")[0]; 
+  seekBarContainer = album.querySelectorAll(".seekbar-container")[0]; 
+  tracks = album.querySelectorAll(".track-list li");
 
-playBtn.addEventListener('click', () => {
+  playBtn.innerHTML = make_play_symbol(BTN_COLOR);
+  playBtn.addEventListener('click', () => {
 
-  for (track of tracks){
-    if (track.getAttribute("data-src") == audio.src){
-      break
+    for (track of tracks){
+      if (track.getAttribute("data-src") == audio.src){
+        break
+      }
     }
-  }
 
-  track.click();
-
-});
-
-
-
-tracks.forEach(track => {
-  track.addEventListener('click', () => {
-    const isPlaying = track.dataset.playing === "true";
-
-    tracks.forEach(t => t.dataset.playing = "false");
-
-    track.dataset.playing = isPlaying ? "false" : "true";
-    track.querySelectorAll(".track-number")[0].playing = track.dataset.playing;
-
-    if (isPlaying){
-        audio.pause();
-        playBtn.innerHTML = make_play_symbol(BTN_COLOR);
-    } else {
-        playTrack(track);
-        playBtn.innerHTML = make_pause_symbol(BTN_COLOR);
-    }
+    track.click();
 
   });
-});
 
+  tracks.forEach(track => {
+    track.addEventListener('click', () => {
+      const isPlaying = track.dataset.playing === "true";
 
-play_btn_list = document.querySelectorAll(".play-btn")
+      tracks.forEach(t => t.dataset.playing = "false");
 
-play_btn_list.forEach((btn) => {
-  btn.innerHTML = make_play_symbol(BTN_COLOR);
-});
+      track.dataset.playing = isPlaying ? "false" : "true";
+      track.querySelectorAll(".track-number")[0].playing = track.dataset.playing;
 
+      if (isPlaying){
+          audio.pause();
+          playBtn.innerHTML = make_play_symbol(BTN_COLOR);
+      } else {
+          playTrack(track);
+          playBtn.innerHTML = make_pause_symbol(BTN_COLOR);
+      }
+
+    });
+  });
 
   audio.addEventListener('timeupdate', () => {
     const progressPercent = (audio.currentTime / audio.dataset.duration) * 100;
     seekBar.style.width = `${progressPercent}%`;
+    seekBarHandle.style.left = `${progressPercent}%`;
   });
 
-
-  seekBar_container.addEventListener('click', (e) => {
-    const containerWidth = seekBar_container.clientWidth;
+  seekBarContainer.addEventListener('click', (e) => {
+    const containerWidth = seekBarContainer.clientWidth;
     const offsetX = e.offsetX;
     const newTime = (offsetX / containerWidth) * audio.dataset.duration;
     audio.currentTime = newTime;
   });
+
+}
