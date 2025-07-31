@@ -22,6 +22,9 @@ function make_pause_symbol(color){
 function playTrack(track) {
     const src = track.getAttribute("data-src");
     
+    album = track.parentElement.parentElement;
+    audio = album.querySelectorAll(".album-audio")[0];
+
     if (audio.src != src){
       audio.src = src;
       duration_str_split = track.querySelectorAll(".track-duration")[0].innerHTML.split(":");
@@ -43,15 +46,18 @@ function playTrack(track) {
 const albums = document.querySelectorAll(".album-player");
 console.log(albums);
 for (album of albums){
+
+
   audio = album.querySelectorAll(".album-audio")[0];
   albumHeader = album.querySelectorAll(".album-header")[0];
-  console.log(albumHeader);
   playBtn = albumHeader.querySelectorAll(".play-btn")[0];
-  console.log(playBtn);
   seekBar = album.querySelectorAll(".seekbar")[0];
   seekBarHandle = album.querySelectorAll(".seekbar-handle")[0]; 
   seekBarContainer = album.querySelectorAll(".seekbar-container")[0]; 
   tracks = album.querySelectorAll(".track-list li");
+
+  console.log(album.id,audio.id,albumHeader.id,playBtn.id,seekBar.id,seekBarHandle.id,seekBarContainer.id);
+
 
   playBtn.innerHTML = make_play_symbol(BTN_COLOR);
   playBtn.addEventListener('click', () => {
@@ -75,6 +81,14 @@ for (album of albums){
       track.dataset.playing = isPlaying ? "false" : "true";
       track.querySelectorAll(".track-number")[0].playing = track.dataset.playing;
 
+      album = track.parentElement.parentElement;
+
+      playBtn = album.querySelectorAll(".album-header")[0].querySelectorAll(".play-btn")[0];
+
+      console.log("playBtn",playBtn.id);
+
+      audio = album.querySelectorAll(".album-audio")[0];
+
       if (isPlaying){
           audio.pause();
           playBtn.innerHTML = make_play_symbol(BTN_COLOR);
@@ -86,16 +100,34 @@ for (album of albums){
     });
   });
 
-  audio.addEventListener('timeupdate', () => {
+  audio.addEventListener('timeupdate', (e) => {
+
     const progressPercent = (audio.currentTime / audio.dataset.duration) * 100;
+
+    audio = e["target"];
+
+    console.log("AUDIO ID",audio.id);
+    seekbarContainer = audio.parentElement.querySelectorAll(".seekbar-container")[0];
+    seekBar = seekbarContainer.querySelectorAll(".seekbar")[0];
+    seekBarHandle = seekbarContainer.querySelectorAll(".seekbar-handle")[0];
+
+
     seekBar.style.width = `${progressPercent}%`;
     seekBarHandle.style.left = `${progressPercent}%`;
+
+    console.log("seekbar",seekBar.id,seekBarHandle.id,seekBarHandle.style.left);
+
+
   });
 
   seekBarContainer.addEventListener('click', (e) => {
+    seekBarContainer = e["target"];
     const containerWidth = seekBarContainer.clientWidth;
     const offsetX = e.offsetX;
+    audio = seekBarContainer.parentElement.querySelectorAll(".album-audio")[0];
+    console.log("AUDIO IS UNDEFINED ?",audio);
     const newTime = (offsetX / containerWidth) * audio.dataset.duration;
+    console.log("PLAYING",e,audio.id,seekBarContainer.id);
     audio.currentTime = newTime;
   });
 
