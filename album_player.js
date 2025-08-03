@@ -22,7 +22,7 @@ function make_pause_symbol(color){
 function playTrack(track) {
     const src = track.getAttribute("data-src");
     
-    album = track.parentElement.parentElement;
+    album = track.parentElement.parentElement.parentElement;
     audio = album.querySelectorAll(".album-audio")[0];
 
     if (audio.src != src){
@@ -32,6 +32,8 @@ function playTrack(track) {
     }
     audio.play();
     playBtn.innerHTML = make_pause_symbol(BTN_COLOR);
+
+    tracks = track.parentElement.querySelectorAll(".track-list li");
     tracks.forEach((t) => t.classList.remove("active-track"));
     tracks.forEach((t) => t.querySelectorAll(".track-number")[0].classList.remove("active-track"));
     tracks.forEach((t) => t.querySelectorAll(".track-number")[0].dataset.playing = false);
@@ -48,7 +50,6 @@ for (album of albums){
   audio = album.querySelectorAll(".album-audio")[0];
   albumHeader = album.querySelectorAll(".album-header")[0];
   playBtn = albumHeader.querySelectorAll(".play-btn")[0];
-  seekBar = album.querySelectorAll(".seekbar")[0];
   seekBarHandle = album.querySelectorAll(".seekbar-handle")[0]; 
   seekBarContainer = album.querySelectorAll(".seekbar-container")[0]; 
   tracks = album.querySelectorAll(".track-list li");
@@ -57,7 +58,7 @@ for (album of albums){
   playBtn.addEventListener('click', (e) => {
 
     playBtn = e["target"];
-    tracks = playBtn.parentElement.parentElement.parentElement.parentElement.querySelectorAll(".track-list li");
+    tracks = playBtn.parentElement.parentElement.parentElement.parentElement.parentElement.querySelectorAll(".track-list li");
 
     for (track of tracks){
       if (track.getAttribute("data-src") == audio.src){
@@ -78,8 +79,8 @@ for (album of albums){
       track.dataset.playing = isPlaying ? "false" : "true";
       track.querySelectorAll(".track-number")[0].playing = track.dataset.playing;
 
-      album = track.parentElement.parentElement;
-      playBtn = album.querySelectorAll(".album-header")[0].querySelectorAll(".play-btn")[0];
+      album = track.parentElement.parentElement.parentElement;
+      playBtn = album.querySelectorAll(".play-btn")[0];
       audio = album.querySelectorAll(".album-audio")[0];
 
       if (isPlaying){
@@ -95,9 +96,9 @@ for (album of albums){
 
   audio.addEventListener('timeupdate', (e) => {
 
-    const progressPercent = (audio.currentTime / audio.dataset.duration) * 100;
-
     audio = e["target"];
+
+    const progressPercent = (audio.currentTime / audio.dataset.duration) * 100;
 
     seekbarContainer = audio.parentElement.querySelectorAll(".seekbar-container")[0];
     seekBar = seekbarContainer.querySelectorAll(".seekbar")[0];
@@ -117,7 +118,7 @@ for (album of albums){
 
     const containerWidth = seekBarContainer.clientWidth;
     const offsetX = e.offsetX;
-    audio = seekBarContainer.parentElement.querySelectorAll(".album-audio")[0];
+    audio = seekBarContainer.parentElement.parentElement.querySelectorAll(".album-audio")[0];
     const newTime = (offsetX / containerWidth) * audio.dataset.duration;
     audio.currentTime = newTime;
   });
