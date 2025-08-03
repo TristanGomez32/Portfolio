@@ -29,10 +29,8 @@ function playTrack(track) {
       audio.src = src;
       duration_str_split = track.querySelectorAll(".track-duration")[0].innerHTML.split(":");
       audio.dataset.duration = 60*parseInt(duration_str_split[0])+parseInt(duration_str_split[1]);
-      console.log("DURATION",duration_str_split,60*parseInt(duration_str_split[0])+parseInt(duration_str_split[1]),audio.dataset);
     }
     audio.play();
-    console.log("2ND try",audio.duration);
     playBtn.innerHTML = make_pause_symbol(BTN_COLOR);
     tracks.forEach((t) => t.classList.remove("active-track"));
     tracks.forEach((t) => t.querySelectorAll(".track-number")[0].classList.remove("active-track"));
@@ -44,9 +42,8 @@ function playTrack(track) {
 }
 
 const albums = document.querySelectorAll(".album-player");
-console.log(albums);
-for (album of albums){
 
+for (album of albums){
 
   audio = album.querySelectorAll(".album-audio")[0];
   albumHeader = album.querySelectorAll(".album-header")[0];
@@ -56,11 +53,11 @@ for (album of albums){
   seekBarContainer = album.querySelectorAll(".seekbar-container")[0]; 
   tracks = album.querySelectorAll(".track-list li");
 
-  console.log(album.id,audio.id,albumHeader.id,playBtn.id,seekBar.id,seekBarHandle.id,seekBarContainer.id);
-
-
   playBtn.innerHTML = make_play_symbol(BTN_COLOR);
-  playBtn.addEventListener('click', () => {
+  playBtn.addEventListener('click', (e) => {
+
+    playBtn = e["target"];
+    tracks = playBtn.parentElement.parentElement.parentElement.parentElement.querySelectorAll(".track-list li");
 
     for (track of tracks){
       if (track.getAttribute("data-src") == audio.src){
@@ -82,11 +79,7 @@ for (album of albums){
       track.querySelectorAll(".track-number")[0].playing = track.dataset.playing;
 
       album = track.parentElement.parentElement;
-
       playBtn = album.querySelectorAll(".album-header")[0].querySelectorAll(".play-btn")[0];
-
-      console.log("playBtn",playBtn.id);
-
       audio = album.querySelectorAll(".album-audio")[0];
 
       if (isPlaying){
@@ -106,17 +99,12 @@ for (album of albums){
 
     audio = e["target"];
 
-    console.log("AUDIO ID",audio.id);
     seekbarContainer = audio.parentElement.querySelectorAll(".seekbar-container")[0];
     seekBar = seekbarContainer.querySelectorAll(".seekbar")[0];
     seekBarHandle = seekbarContainer.querySelectorAll(".seekbar-handle")[0];
 
-
     seekBar.style.width = `${progressPercent}%`;
     seekBarHandle.style.left = `${progressPercent}%`;
-
-    console.log("seekbar",seekBar.id,seekBarHandle.id,seekBarHandle.style.left);
-
 
   });
 
@@ -130,9 +118,7 @@ for (album of albums){
     const containerWidth = seekBarContainer.clientWidth;
     const offsetX = e.offsetX;
     audio = seekBarContainer.parentElement.querySelectorAll(".album-audio")[0];
-    console.log("AUDIO IS UNDEFINED ?",e,seekBarContainer,audio);
     const newTime = (offsetX / containerWidth) * audio.dataset.duration;
-    console.log("PLAYING",e,audio.id,seekBarContainer.id);
     audio.currentTime = newTime;
   });
 
