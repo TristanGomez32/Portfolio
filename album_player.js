@@ -2,16 +2,29 @@ BTN_COLOR= "#2c2c2c"
 
 /* GENERATE ALBUM */
 
-function generateAlbumHTML(folderPath, albumName, genre, tracks, genres, track_durations) {
+function generateAlbumHTML(metadata,show_big_cover=true) {
+  
+  folderPath = metadata["folder"],
+  albumName = metadata["albumName"];
+  genre = metadata["genre"];
+  tracks = metadata["tracks"];
+  genres = metadata["genres"];
+  track_durations = metadata["track_durations"];
+
   const coverUrl = `${folderPath}cover.jpg`;
 
   const trackItemsHTML = tracks.map((track, index) => {
     const fileName = track.split('/').pop();
     const baseName = fileName.replace('.mp3', '').replace(/_/g, ' ');
-    const title = baseName
-      .split(' ')
-      .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-      .join(' ');
+    var title;
+    if ("titles" in metadata){
+      title = metadata["titles"][index];
+    }else{
+      title = baseName.split(' ')
+                      .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+                      .join(' ');
+    }
+
     const trackUrl = `${folderPath}${track}`;
 
     return `
@@ -25,11 +38,16 @@ function generateAlbumHTML(folderPath, albumName, genre, tracks, genres, track_d
       </li>`;
   }).join('\n');
 
-  return `
-    <div class="album_section">
-      <div class="album_subsection">
-        <img src="${coverUrl}" alt="Album cover" class="big-album-cover" style="object-fit: cover;">
-      </div>
+  html = `<div class="album_section">`
+
+  if (show_big_cover){
+    html+= `<div class="album_subsection">
+              <img src="${coverUrl}" alt="Album cover" class="big-album-cover" style="object-fit: cover;">
+            </div>
+            `
+  }
+
+  html += `
       <div class="album_subsection">
         <div class="album-player">
           <div class="album-header">
@@ -55,38 +73,63 @@ function generateAlbumHTML(folderPath, albumName, genre, tracks, genres, track_d
         </div>
       </div>
     </div>`;
+
+    return html;
 }
 
-metadatas = [{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/rome_will_burn/",
+metadatas = {"albums":[{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/rome_will_burn/",
                   "albumName": "Rome will burn",
                   "genre": "Hard rock / Folk / Orchestral",
-                  "tracks_to_add":["rome_will_burn.mp3","again.mp3","what_you_did.mp3"],
+                  "tracks":["rome_will_burn.mp3","again.mp3","what_you_did.mp3"],
                   "genres":["Hard rock","Orchestral","Folk / Orchestral"],
                   "track_durations":["02:31","02:55","03:11"]
             },
             {"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/weird_signal/",
                   "albumName": "Weird Signal",
                   "genre": "Electronic",
-                  "tracks_to_add":["intruder_on_board.mp3","weird_signal.mp3"],
+                  "tracks":["intruder_on_board.mp3","weird_signal.mp3"],
                   "genres":["Electronic trailer","Synthwave"],
                   "track_durations":["01:27","01:02"]
             },
             {"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/classical_work/",
                   "albumName": "Classical work",
                   "genre": "Baroque / Classical / Post-romantic",
-                  "tracks_to_add":["fugue_for_organ.mp3","song_for_violin_and_piano.mp3","theme_and_variations.mp3"],
+                  "tracks":["fugue_for_organ.mp3","theme_and_variations.mp3","song_for_violin_and_piano.mp3"],
                   "genres":["Baroque","Classical","Post-romantic"],
                   "track_durations":["03:30","06:38","01:53"]
-            },
-]
+            },           
+            ],
+            "short_movies":{
+              "lelit":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/lelit/",
+                  "albumName": "Le lit de la rivière",
+                  "genre": "Ambient synths",
+                  "tracks":["tu_vas_guerir.mp3","crematorium.mp3","dispersion.mp3","souvenirs.mp3","le_lit.mp3"],
+                  "titles":["Tu vas guérir","Crématorium","Dispersion","Souvenirs","Le lit"],
+                  "genres":["Ambient synths","Ambient synths","Ambient synths","Ambient synths","Ambient synths"],
+                  "track_durations":["01:26","00:56","02:50","02:06","01:17"]
+            }
+            }, "summer_tape":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/summer_tape/",
+                  "albumName": "Summer tape",
+                  "genre": "Folk/Hardtech/Blues",
+                  "tracks":["we're_the_only_ones_here_!.mp3","akward_flirt.mp3","why_did_you_bring_all_of_these.mp3","banjo_what.mp3","your_mom_is_gonna_worry.mp3"],
+                  "genres":["Hardtech","Folk / Blues","Folk","Folk","Folk"],
+                  "track_durations":["00:45","00:41","00:24","00:46","00:54"]
+            }
+          };
 
 var albumHTML;
 
-for (metadata of metadatas){
-  albumHTML = generateAlbumHTML(metadata["folder"], metadata["albumName"], metadata["genre"], metadata["tracks_to_add"], metadata["genres"],metadata["track_durations"]);
+for (metadata of metadatas["albums"]){
+  albumHTML = generateAlbumHTML(metadata);
   document.querySelectorAll(".albums")[0].innerHTML += albumHTML;
 
 }
+
+albumHTML = generateAlbumHTML(metadatas["short_movies"]["lelit"],show_big_cover=false); 
+document.getElementById("lelit_player").innerHTML += albumHTML;
+
+albumHTML = generateAlbumHTML(metadatas["short_movies"]["summer_tape"],show_big_cover=false); 
+document.getElementById("summer_tape_player").innerHTML += albumHTML;
 
 
 
@@ -126,7 +169,7 @@ function make_pause_symbol(color){
 function playTrack(track) {
     console.log("playtrack",track);
     const src = track.getAttribute("data-src");
-    
+    console.log("SRC IS",src);
     album = track.parentElement.parentElement.parentElement;
     audio = album.querySelectorAll(".album-audio")[0];
 
@@ -166,6 +209,7 @@ for (album of albums){
     tracks = playBtn.parentElement.parentElement.parentElement.parentElement.parentElement.querySelectorAll(".track-list li");
 
     for (track of tracks){
+      console.log(track.getAttribute("data-src"),audio.src);
       if (track.getAttribute("data-src") == audio.src){
         break
       }
