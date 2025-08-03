@@ -122,10 +122,15 @@ for (album of albums){
 
   seekBarContainer.addEventListener('click', (e) => {
     seekBarContainer = e["target"];
+
+    if (seekBarContainer.getAttribute("class")=="seekbar"){
+      seekBarContainer = seekBarContainer.parentElement;
+    }
+
     const containerWidth = seekBarContainer.clientWidth;
     const offsetX = e.offsetX;
     audio = seekBarContainer.parentElement.querySelectorAll(".album-audio")[0];
-    console.log("AUDIO IS UNDEFINED ?",audio);
+    console.log("AUDIO IS UNDEFINED ?",e,seekBarContainer,audio);
     const newTime = (offsetX / containerWidth) * audio.dataset.duration;
     console.log("PLAYING",e,audio.id,seekBarContainer.id);
     audio.currentTime = newTime;
