@@ -10,6 +10,10 @@ function generateAlbumHTML(metadata,show_big_cover=true) {
   tracks = metadata["tracks"];
   genres = metadata["genres"];
   track_durations = metadata["track_durations"];
+  color1 = metadata["color1"];
+  color2 = metadata["color2"];
+
+  console.log("COLOR",color1,color2);
 
   const coverUrl = `${folderPath}cover.jpg`;
 
@@ -50,7 +54,7 @@ function generateAlbumHTML(metadata,show_big_cover=true) {
   html += `
       <div class="album_subsection">
         <div class="album-player">
-          <div class="album-header">
+          <div class="album-header" style="background-color:${color1}">
             <div class="album-header-top">
               <img src="${coverUrl}" alt="Album cover" class="album-cover">
               <div class="album-info">
@@ -64,7 +68,7 @@ function generateAlbumHTML(metadata,show_big_cover=true) {
               <div class="seekbar-handle"></div>
             </div>
           </div>
-          <div class="album-body">
+          <div class="album-body" style="background-color:${color2}">
             <ul class="track-list">
               ${trackItemsHTML}
             </ul>
@@ -108,7 +112,7 @@ metadatas = {"albums":[{"folder":"https://media.githubusercontent.com/media/Tris
                   "track_durations":["01:26","00:56","02:50","02:06","01:17"]
             }, "summer_tape":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/summer_tape/",
                   "albumName": "Summer tape",
-                  "genre": "Folk/Hardtech/Blues",
+                  "genre": "Folk / Hardtech / Blues",
                   "tracks":["we're_the_only_ones_here_!.mp3","akward_flirt.mp3","why_did_you_bring_all_of_these.mp3","banjo_what.mp3","your_mom_is_gonna_worry.mp3"],
                   "genres":["Hardtech","Folk / Blues","Folk","Folk","Folk"],
                   "track_durations":["00:45","00:41","00:24","00:46","00:54"]
@@ -178,8 +182,13 @@ function playTrack(track) {
       duration_str_split = track.querySelectorAll(".track-duration")[0].innerHTML.split(":");
       audio.dataset.duration = 60*parseInt(duration_str_split[0])+parseInt(duration_str_split[1]);
     }
+
+    audio_list = document.querySelectorAll("audio");
+    for (other_audio of audio_list){
+      other_audio.pause();
+    }
+
     audio.play();
-    playBtn.innerHTML = make_pause_symbol(BTN_COLOR);
 
     tracks = track.parentElement.querySelectorAll(".track-list li");
     tracks.forEach((t) => t.classList.remove("active-track"));
@@ -243,6 +252,23 @@ for (album of albums){
           playBtn.innerHTML = make_play_symbol(BTN_COLOR);
       } else {
           playTrack(track);
+          playBtn_list = document.querySelectorAll(".play-btn");
+          for (other_playBtn of playBtn_list){
+            other_playBtn.innerHTML = make_play_symbol(BTN_COLOR);
+          }
+          demo_btn_list = document.querySelectorAll(".demo_audio_btn");
+          for (demo_audio_btn of demo_btn_list){
+
+            rect = demo_audio_btn.querySelectorAll("rect")[0];
+            if (rect){
+              color = rect.getAttribute("fill");
+              demo_audio_btn.innerHTML = make_play_symbol(color);
+            }else{
+              console.log(demo_audio_btn,"RECT IS UNDEFINED");
+            }
+            
+          }
+
           playBtn.innerHTML = make_pause_symbol(BTN_COLOR);
       }
 
@@ -279,5 +305,7 @@ for (album of albums){
   });
 
 }
+
+
 
 
