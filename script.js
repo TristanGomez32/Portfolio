@@ -118,19 +118,30 @@ function onClick (demo_audio_id,ctrl_id) {
     if (is_playing_func(ctrl)){
       pause_demo(ctrl,demo_audio);
     }else{
+
+      demo_audio_list = document.getElementsByClassName("demo_audio");
+      for (const demo_audio of demo_audio_list) {
+          other_ctrl = document.getElementById(demo_audio.id.replace("_audio","_btn"))
+          if (is_playing_func(other_ctrl)){
+            pause_demo(other_ctrl,demo_audio);
+          }
+      };
+
+      playBtn_list = document.querySelectorAll(".play-btn");
+      for (other_playBtn of playBtn_list){
+        other_playBtn.innerHTML = make_play_symbol(BTN_COLOR);
+      }
+
+      audio_list = document.querySelectorAll("audio");
+      for (other_audio of audio_list){
+        other_audio.pause();
+      }
+
       play_demo(ctrl,demo_audio);
       
-      demo_audio_list = document.getElementsByClassName("demo_audio");
 
-      for (const demo_audio of demo_audio_list) {
-        if (demo_audio.id != demo_audio_id){
-          ctrl = document.getElementById(demo_audio.id.replace("_audio","_btn"))
-          if (is_playing_func(ctrl)){
-            pause_demo(ctrl,demo_audio);
-          }
-        }
-      };
     }
+
 
     return false;
 };
