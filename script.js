@@ -118,7 +118,6 @@ function onClick (demo_audio_id,ctrl_id) {
     if (is_playing_func(ctrl)){
       pause_demo(ctrl,demo_audio);
     }else{
-
       demo_audio_list = document.getElementsByClassName("demo_audio");
       for (const demo_audio of demo_audio_list) {
           other_ctrl = document.getElementById(demo_audio.id.replace("_audio","_btn"))
@@ -132,7 +131,12 @@ function onClick (demo_audio_id,ctrl_id) {
         other_playBtn.innerHTML = make_play_symbol(other_playBtn.dataset.color);
       }
 
-      audio_list = document.querySelectorAll("audio");
+      tracks = document.querySelectorAll(".track");
+      for (track of tracks){
+        track.dataset.playing = false;
+      }
+
+      audio_list = document.querySelectorAll(".album-audio");
       for (other_audio of audio_list){
         other_audio.pause();
       }

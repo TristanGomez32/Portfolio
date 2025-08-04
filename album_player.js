@@ -284,7 +284,10 @@ for (album of albums){
             if (rect){
               color = rect.getAttribute("fill");
               demo_audio_btn.innerHTML = make_play_symbol(color);
-            }            
+            }
+            
+            demo_audio_btn.dataset.playing = false;
+
           }
 
           playBtn.innerHTML = make_pause_symbol(playBtn.dataset.color);

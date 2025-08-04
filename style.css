@@ -266,16 +266,11 @@ h1 {
     padding: 2rem;
     color: white;
     overflow: hidden;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease, transform 1s ease;
     min-height: 300px;
-}
-
-.section.visible {
     opacity: 1;
     transform: translateY(0);
 }
+
 
 .section::before {
     content: "";
