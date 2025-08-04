@@ -63,6 +63,7 @@ function generateAlbumHTML(metadata,show_big_cover=true) {
               </div>
               <button class="play-btn" data-color="${top_color}"></button>
             </div>
+            <div class="timecode"> 00:00 : 00:00 </div>
             <div class="seekbar-container" style="background-color:${bottom_color}">
               <div class="seekbar"></div>
               <div class="seekbar-handle"></div>
@@ -159,10 +160,21 @@ document.getElementById("summer_tape_player").innerHTML += albumHTML;
 
 /* GENERATE ALBUM END */
 
+function convert_to_str_with_zero_padding(value){
+  if (value<10){
+    value_str = "0"+value.toString();
+  }else{
+    value_str = value.toString();
+  }
+  return value_str;
+}
 
-
-
-
+function convert_timecode_to_string(time_seconds){
+    min = Math.floor(time_seconds / 60);
+    min_str = convert_to_str_with_zero_padding(min);
+    sec_str = convert_to_str_with_zero_padding(time_seconds%60);
+    return min_str + ":" + sec_str;
+}
 
 
 
@@ -308,6 +320,13 @@ for (album of albums){
 
     seekBar.style.width = `${progressPercent}%`;
     seekBarHandle.style.left = `${progressPercent}%`;
+
+    timecode = audio.parentElement.querySelectorAll(".timecode")[0];
+
+    durationStr = convert_timecode_to_string(audio.dataset.duration);
+    currentTimeStr = convert_timecode_to_string(parseInt(audio.currentTime));
+
+    timecode.innerHTML = currentTimeStr + " : " + durationStr;
 
   });
 

@@ -160,6 +160,12 @@
   background-color: rgba(31, 31, 31, 0.274);
 }
 
+.timecode{
+  text-align: right;
+  width: 85%;
+
+}
+
 .seekbar-container {
   width: 85%;
   height: 8px;
