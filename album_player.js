@@ -10,10 +10,12 @@ function generateAlbumHTML(metadata,show_big_cover=true) {
   tracks = metadata["tracks"];
   genres = metadata["genres"];
   track_durations = metadata["track_durations"];
-  color1 = metadata["color1"];
-  color2 = metadata["color2"];
+  top_color = metadata["top_color"];
+  bottom_color = metadata["bottom_color"];
+  bottom_text = metadata["bottom_text"];
+  top_text = metadata["top_text"];
 
-  console.log("COLOR",color1,color2);
+  console.log("COLOR",top_color,bottom_color);
 
   const coverUrl = `${folderPath}cover.jpg`;
 
@@ -33,10 +35,10 @@ function generateAlbumHTML(metadata,show_big_cover=true) {
 
     return `
       <li class="track" data-src="${trackUrl}" data-playing="false">
-        <span class="track-number">${index + 1}</span>
+        <span class="track-number" style="${bottom_color}">${index + 1}</span>
         <div class="track-info">
           <span class="track-title">${title}</span>
-          <span class="track-artist">${genres[index]}</span>
+          <span class="track-artist" style="color:${bottom_text}">${genres[index]}</span>
         </div>
         <span class="track-duration">${track_durations[index]}</span>
       </li>`;
@@ -54,22 +56,22 @@ function generateAlbumHTML(metadata,show_big_cover=true) {
   html += `
       <div class="album_subsection">
         <div class="album-player">
-          <div class="album-header" style="background-color:${color1}">
+          <div class="album-header" style="background-color:${top_color}">
             <div class="album-header-top">
               <img src="${coverUrl}" alt="Album cover" class="album-cover">
               <div class="album-info">
                 <h2>${albumName}</h2>
-                <p>${genre}</p>
+                <p style="color:${top_text}">${genre}</p>
               </div>
-              <button class="play-btn"></button>
+              <button class="play-btn" data-color="${top_color}"></button>
             </div>
-            <div class="seekbar-container">
+            <div class="seekbar-container" style="background-color:${bottom_color}">
               <div class="seekbar"></div>
               <div class="seekbar-handle"></div>
             </div>
           </div>
-          <div class="album-body" style="background-color:${color2}">
-            <ul class="track-list">
+          <div class="album-body" style="background-color:${bottom_color}">
+            <ul class="track-list" style="scrollbar-color:${top_color} ${bottom_color}">
               ${trackItemsHTML}
             </ul>
           </div>
@@ -86,21 +88,34 @@ metadatas = {"albums":[{"folder":"https://media.githubusercontent.com/media/Tris
                   "genre": "Hard rock / Folk / Orchestral",
                   "tracks":["rome_will_burn.mp3","again.mp3","what_you_did.mp3"],
                   "genres":["Hard rock","Orchestral","Folk / Orchestral"],
-                  "track_durations":["02:31","02:55","03:11"]
+                  "track_durations":["02:31","02:55","03:11"],
+                  "top_color":"#7a371bff", 
+                  "bottom_color":"rgba(88, 40, 21, 1)",
+                  "bottom_text":"#e2d0c1ff",
+                  "top_text":"#e4cdb8ff",
             },
             {"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/weird_signal/",
                   "albumName": "Weird Signal",
                   "genre": "Electronic",
                   "tracks":["intruder_on_board.mp3","weird_signal.mp3"],
-                  "genres":["Electronic trailer","Synthwave"],
-                  "track_durations":["01:27","01:02"]
+                  "genres":["Trailer","Synthwave"],
+                  "track_durations":["01:27","01:02"],
+                  "top_color":"#2a3194ff",
+                  "bottom_color":"#152b55ff",
+                  "bottom_text":"#9bd2e6",
+                  "top_text":"#9ecedf",
             },
             {"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/classical_work/",
                   "albumName": "Classical work",
                   "genre": "Baroque / Classical / Post-romantic",
                   "tracks":["fugue_for_organ.mp3","theme_and_variations.mp3","song_for_violin_and_piano.mp3"],
                   "genres":["Baroque","Classical","Post-romantic"],
-                  "track_durations":["03:30","06:38","01:53"]
+                  "track_durations":["03:30","06:38","01:53"],
+                  "top_color":"#755537", 
+                  "bottom_color":"#4b2c0c",
+                  "bottom_text":"#e2d0c1ff",
+                  "top_text":"#e4cdb8ff",
+                  
             },],
             "short_movies":{
               "lelit":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/lelit/",
@@ -109,13 +124,22 @@ metadatas = {"albums":[{"folder":"https://media.githubusercontent.com/media/Tris
                   "tracks":["tu_vas_guerir.mp3","crematorium.mp3","dispersion.mp3","souvenirs.mp3","le_lit.mp3"],
                   "titles":["Tu vas guérir","Crématorium","Dispersion","Souvenirs","Le lit"],
                   "genres":["Ambient synths","Ambient synths","Ambient synths","Ambient synths","Ambient synths"],
-                  "track_durations":["01:26","00:56","02:50","02:06","01:17"]
+                  "track_durations":["01:26","00:56","02:50","02:06","01:17"],
+                  "top_color":"#4c752c",
+                  "bottom_color":"#375324",
+                  "bottom_text":"#c7dfafff",
+                  "top_text":"#d4ecbbff",
+
             }, "summer_tape":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/summer_tape/",
                   "albumName": "Summer tape",
                   "genre": "Folk / Hardtech / Blues",
                   "tracks":["we're_the_only_ones_here_!.mp3","akward_flirt.mp3","why_did_you_bring_all_of_these.mp3","banjo_what.mp3","your_mom_is_gonna_worry.mp3"],
                   "genres":["Hardtech","Folk / Blues","Folk","Folk","Folk"],
-                  "track_durations":["00:45","00:41","00:24","00:46","00:54"]
+                  "track_durations":["00:45","00:41","00:24","00:46","00:54"],
+                  "top_color":"#b59363",
+                  "bottom_color":"#886133",
+                  "bottom_text":"#fddfc6ff",
+                  "top_text":"#fadbc2ff",
             }
           }};
 
@@ -211,7 +235,7 @@ for (album of albums){
   seekBarContainer = album.querySelectorAll(".seekbar-container")[0]; 
   tracks = album.querySelectorAll(".track-list li");
 
-  playBtn.innerHTML = make_play_symbol(BTN_COLOR);
+  playBtn.innerHTML = make_play_symbol(playBtn.dataset.color);
   playBtn.addEventListener('click', (e) => {
 
     playBtn = e["target"];
@@ -249,12 +273,12 @@ for (album of albums){
 
       if (isPlaying){
           audio.pause();
-          playBtn.innerHTML = make_play_symbol(BTN_COLOR);
+          playBtn.innerHTML = make_play_symbol(playBtn.dataset.color);
       } else {
           playTrack(track);
           playBtn_list = document.querySelectorAll(".play-btn");
           for (other_playBtn of playBtn_list){
-            other_playBtn.innerHTML = make_play_symbol(BTN_COLOR);
+            other_playBtn.innerHTML = make_play_symbol(playBtn.dataset.color);
           }
           demo_btn_list = document.querySelectorAll(".demo_audio_btn");
           for (demo_audio_btn of demo_btn_list){
@@ -269,7 +293,7 @@ for (album of albums){
             
           }
 
-          playBtn.innerHTML = make_pause_symbol(BTN_COLOR);
+          playBtn.innerHTML = make_pause_symbol(playBtn.dataset.color);
       }
 
     });

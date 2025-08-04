@@ -133,10 +133,11 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  width: 90%;
+  width: 96%;
   height: 95%;
   overflow-y: auto;
   overflow-x: clip;
+  scrollbar-width: auto;
 }
 
 .track {
@@ -147,15 +148,16 @@
   transition: background 0.3s;
   cursor: pointer;
   border-radius: 10px;
+  padding-right: 0px;
 }
 
 .track:hover  {
-  background-color: rgb(31, 31, 31);
+  background-color: rgba(31, 31, 31, 0.274)
 }
 
 
 .active-track {
-  background-color: rgb(31, 31, 31);
+  background-color: rgba(31, 31, 31, 0.274);
 }
 
 .seekbar-container {
@@ -191,21 +193,21 @@
   width: 30px;
   text-align: center;
   font-weight: bold;
-  color: #ccc;
+  color: #ffffff;
   transition: opacity 0.2s;
 }
 
 /* Replace number with ▶ on hover if not playing */
 .track:hover[data-playing="false"] .track-number::before {
   content: "▶";
-  color: #ccc;
+  color: #ffffff;
   font-size: 16px;
 }
 
 /* Replace number with ⏸ if playing */
 .track[data-playing="true"] .track-number::before {
   content: "⏸";
-  color: #ccc;
+  color: #ffffff;
   font-size: 16px;
 }
 
@@ -217,7 +219,7 @@
 
 .track:hover[data-playing="false"] .track-number::before {
   content: "▶";
-  color: #ccc;
+  color: #ffffff;
   font-size: 16px;
 }
 
@@ -242,9 +244,9 @@
 }
 
 .track-duration {
-  color: #ccc;
+  color: #ffffff;
   font-weight: bold;
   min-width: 50px;
-  text-align: right;
+  text-align: left;
 }
 

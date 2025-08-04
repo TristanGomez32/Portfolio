@@ -332,7 +332,7 @@ h1 {
 }
 
 .bg-sunbed::after {
-    background-color: rgba(165, 76, 25, 0.4);
+    background-color: rgba(146, 139, 121, 0.4);
 }
 
 .bg-litmo::after {
