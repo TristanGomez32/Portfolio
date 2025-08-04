@@ -129,7 +129,7 @@ function onClick (demo_audio_id,ctrl_id) {
 
       playBtn_list = document.querySelectorAll(".play-btn");
       for (other_playBtn of playBtn_list){
-        other_playBtn.innerHTML = make_play_symbol(BTN_COLOR);
+        other_playBtn.innerHTML = make_play_symbol(other_playBtn.dataset.color);
       }
 
       audio_list = document.querySelectorAll("audio");

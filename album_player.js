@@ -15,8 +15,6 @@ function generateAlbumHTML(metadata,show_big_cover=true) {
   bottom_text = metadata["bottom_text"];
   top_text = metadata["top_text"];
 
-  console.log("COLOR",top_color,bottom_color);
-
   const coverUrl = `${folderPath}cover.jpg`;
 
   const trackItemsHTML = tracks.map((track, index) => {
@@ -35,7 +33,7 @@ function generateAlbumHTML(metadata,show_big_cover=true) {
 
     return `
       <li class="track" data-src="${trackUrl}" data-playing="false">
-        <span class="track-number" style="${bottom_color}">${index + 1}</span>
+        <span class="track-number" data-playing="false">${index + 1}</span>
         <div class="track-info">
           <span class="track-title">${title}</span>
           <span class="track-artist" style="color:${bottom_text}">${genres[index]}</span>
@@ -136,10 +134,10 @@ metadatas = {"albums":[{"folder":"https://media.githubusercontent.com/media/Tris
                   "tracks":["we're_the_only_ones_here_!.mp3","akward_flirt.mp3","why_did_you_bring_all_of_these.mp3","banjo_what.mp3","your_mom_is_gonna_worry.mp3"],
                   "genres":["Hardtech","Folk / Blues","Folk","Folk","Folk"],
                   "track_durations":["00:45","00:41","00:24","00:46","00:54"],
-                  "top_color":"#b59363",
+                  "top_color":"#9b7e55ff",
                   "bottom_color":"#886133",
                   "bottom_text":"#fddfc6ff",
-                  "top_text":"#fadbc2ff",
+                  "top_text":"#ffffffff",
             }
           }};
 
@@ -153,8 +151,6 @@ for (metadata of metadatas["albums"]){
 
 albumHTML = generateAlbumHTML(metadatas["short_movies"]["lelit"],show_big_cover=false); 
 document.getElementById("lelit_player").innerHTML += albumHTML;
-
-console.log(metadatas["short_movies"]);
 
 albumHTML = generateAlbumHTML(metadatas["short_movies"]["summer_tape"],show_big_cover=false); 
 document.getElementById("summer_tape_player").innerHTML += albumHTML;
@@ -195,9 +191,9 @@ function make_pause_symbol(color){
 }
 
 function playTrack(track) {
-    console.log("playtrack",track);
+
     const src = track.getAttribute("data-src");
-    console.log("SRC IS",src);
+
     album = track.parentElement.parentElement.parentElement;
     audio = album.querySelectorAll(".album-audio")[0];
 
@@ -216,11 +212,11 @@ function playTrack(track) {
 
     tracks = track.parentElement.querySelectorAll(".track-list li");
     tracks.forEach((t) => t.classList.remove("active-track"));
-    tracks.forEach((t) => t.querySelectorAll(".track-number")[0].classList.remove("active-track"));
+    //tracks.forEach((t) => t.querySelectorAll(".track-number")[0].classList.remove("active-track"));
     tracks.forEach((t) => t.querySelectorAll(".track-number")[0].dataset.playing = false);
 
     track.classList.add("active-track");
-    track.querySelectorAll(".track-number")[0].classList.add("active-track");
+    //track.querySelectorAll(".track-number")[0].classList.add("active-track");
     track.querySelectorAll(".track-number")[0].dataset.playing = true;
 }
 
@@ -243,14 +239,15 @@ for (album of albums){
 
     found_source = false;
     for (track of tracks){
-      console.log(track.getAttribute("data-src"),audio.src);
+
       if (track.getAttribute("data-src") == audio.src){
+
         found_source = true;
         break
       }
     }
 
-    if (~found_source){
+    if (!found_source){
       track = tracks[0];
     }
 
@@ -278,7 +275,7 @@ for (album of albums){
           playTrack(track);
           playBtn_list = document.querySelectorAll(".play-btn");
           for (other_playBtn of playBtn_list){
-            other_playBtn.innerHTML = make_play_symbol(playBtn.dataset.color);
+            other_playBtn.innerHTML = make_play_symbol(other_playBtn.dataset.color);
           }
           demo_btn_list = document.querySelectorAll(".demo_audio_btn");
           for (demo_audio_btn of demo_btn_list){
@@ -287,10 +284,7 @@ for (album of albums){
             if (rect){
               color = rect.getAttribute("fill");
               demo_audio_btn.innerHTML = make_play_symbol(color);
-            }else{
-              console.log(demo_audio_btn,"RECT IS UNDEFINED");
-            }
-            
+            }            
           }
 
           playBtn.innerHTML = make_pause_symbol(playBtn.dataset.color);
