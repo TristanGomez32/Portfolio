@@ -97,8 +97,7 @@ metadatas = {"albums":[{"folder":"https://media.githubusercontent.com/media/Tris
                   "tracks":["fugue_for_organ.mp3","theme_and_variations.mp3","song_for_violin_and_piano.mp3"],
                   "genres":["Baroque","Classical","Post-romantic"],
                   "track_durations":["03:30","06:38","01:53"]
-            },           
-            ],
+            },],
             "short_movies":{
               "lelit":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/lelit/",
                   "albumName": "Le lit de la rivière",
@@ -107,7 +106,6 @@ metadatas = {"albums":[{"folder":"https://media.githubusercontent.com/media/Tris
                   "titles":["Tu vas guérir","Crématorium","Dispersion","Souvenirs","Le lit"],
                   "genres":["Ambient synths","Ambient synths","Ambient synths","Ambient synths","Ambient synths"],
                   "track_durations":["01:26","00:56","02:50","02:06","01:17"]
-            }
             }, "summer_tape":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/summer_tape/",
                   "albumName": "Summer tape",
                   "genre": "Folk/Hardtech/Blues",
@@ -115,7 +113,7 @@ metadatas = {"albums":[{"folder":"https://media.githubusercontent.com/media/Tris
                   "genres":["Hardtech","Folk / Blues","Folk","Folk","Folk"],
                   "track_durations":["00:45","00:41","00:24","00:46","00:54"]
             }
-          };
+          }};
 
 var albumHTML;
 
@@ -127,6 +125,8 @@ for (metadata of metadatas["albums"]){
 
 albumHTML = generateAlbumHTML(metadatas["short_movies"]["lelit"],show_big_cover=false); 
 document.getElementById("lelit_player").innerHTML += albumHTML;
+
+console.log(metadatas["short_movies"]);
 
 albumHTML = generateAlbumHTML(metadatas["short_movies"]["summer_tape"],show_big_cover=false); 
 document.getElementById("summer_tape_player").innerHTML += albumHTML;
@@ -149,19 +149,19 @@ document.getElementById("summer_tape_player").innerHTML += albumHTML;
 
 function make_play_symbol(color){
   return `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="22" fill="white" />
-            <path d="M20 16L32 24L20 32V16Z" fill="${color}"/>
-            </svg> 
+            <circle cx="24" cy="24" r="24" fill="white"/>
+            <path d="M 17.16 14.84 C 17.16 14.0447 17.8047 13.4 18.6 13.4 C 18.9663 13.4 19.321 13.5092 19.6125 13.7093 L 33.0675 23.0693 C 33.869 23.6283 33.869 24.7717 33.0675 25.3307 L 19.6125 34.6907 C 19.321 34.8908 18.9663 35 18.6 35 C 17.8047 35 17.16 34.3553 17.16 33.56 V 14.84 Z" fill="${color}"/>
+          </svg>
           `
-}
+        }
 
 function make_pause_symbol(color){
   return `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Cercle de fond -->
-            <circle cx="24" cy="24" r="22" fill="white"></circle>
+            <circle cx="24" cy="24" r="24" fill="white"></circle>
             <!-- Barres du "pause" -->
-            <path d="M19 16H22V32H19V16Z" fill="${color}"></path>
-            <path d="M26 16H29V32H26V16Z" fill="${color}"></path>
+            <rect x="16.8" y="14.4" width="4.8" height="19.2" rx="1" fill="${color}"/>
+            <rect x="26.4" y="14.4" width="4.8" height="19.2" rx="1" fill="${color}"/>
           </svg>
           `
 }
@@ -208,11 +208,17 @@ for (album of albums){
     playBtn = e["target"];
     tracks = playBtn.parentElement.parentElement.parentElement.parentElement.parentElement.querySelectorAll(".track-list li");
 
+    found_source = false;
     for (track of tracks){
       console.log(track.getAttribute("data-src"),audio.src);
       if (track.getAttribute("data-src") == audio.src){
+        found_source = true;
         break
       }
+    }
+
+    if (~found_source){
+      track = tracks[0];
     }
 
     track.click();

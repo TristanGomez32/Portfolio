@@ -76,22 +76,23 @@ const audioTracks = [
 
 function make_play_symbol(color){
   return `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="22" fill="white" />
-            <path d="M20 16L32 24L20 32V16Z" fill="${color}"/>
-            </svg> 
+            <circle cx="24" cy="24" r="24" fill="white"/>
+            <path d="M 17.16 14.84 C 17.16 14.0447 17.8047 13.4 18.6 13.4 C 18.9663 13.4 19.321 13.5092 19.6125 13.7093 L 33.0675 23.0693 C 33.869 23.6283 33.869 24.7717 33.0675 25.3307 L 19.6125 34.6907 C 19.321 34.8908 18.9663 35 18.6 35 C 17.8047 35 17.16 34.3553 17.16 33.56 V 14.84 Z" fill="${color}"/>
+          </svg>
           `
-}
+        }
 
 function make_pause_symbol(color){
   return `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Cercle de fond -->
-            <circle cx="24" cy="24" r="22" fill="white"></circle>
+            <circle cx="24" cy="24" r="24" fill="white"></circle>
             <!-- Barres du "pause" -->
-            <path d="M19 16H22V32H19V16Z" fill="${color}"></path>
-            <path d="M26 16H29V32H26V16Z" fill="${color}"></path>
+            <rect x="16.8" y="14.4" width="4.8" height="19.2" rx="1" fill="${color}"/>
+            <rect x="26.4" y="14.4" width="4.8" height="19.2" rx="1" fill="${color}"/>
           </svg>
           `
 }
+
 
 function is_playing_func(ctrl){
   return ctrl.dataset.playing=="true";
