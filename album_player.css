@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    min-width: 0;
 }
 
 .album_subsection {

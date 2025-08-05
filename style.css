@@ -260,10 +260,11 @@ h1 {
     flex-direction: row;
     width: 100%;
     box-sizing: border-box;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
     color: white;
     overflow: hidden;
     min-height: 300px;

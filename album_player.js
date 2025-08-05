@@ -151,10 +151,10 @@ for (metadata of metadatas["albums"]){
 }
 
 albumHTML = generateAlbumHTML(metadatas["short_movies"]["lelit"],show_big_cover=false); 
-document.getElementById("lelit_player").innerHTML += albumHTML;
+document.querySelectorAll(".bg-lit")[0].innerHTML += albumHTML;
 
 albumHTML = generateAlbumHTML(metadatas["short_movies"]["summer_tape"],show_big_cover=false); 
-document.getElementById("summer_tape_player").innerHTML += albumHTML;
+document.querySelectorAll(".bg-sunbed")[0].innerHTML += albumHTML;
 
 /* GENERATE ALBUM END */
 
