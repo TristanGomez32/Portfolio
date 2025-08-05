@@ -87,7 +87,6 @@ body {
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 1rem;
 }
 
 .page_title {
@@ -109,15 +108,14 @@ body {
 .logos_ecoles{
     display: flex;
     flex-flow: row nowrap;
+    align-items: center;
 }
 
 .school-pic {
     width: 110px;
     height: 80px;
     object-fit: cover;
-    margin-right: 1rem;
 }
-
 
 .header-left {
     display: flex;
