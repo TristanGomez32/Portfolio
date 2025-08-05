@@ -156,8 +156,6 @@ document.getElementById("lelit_player").innerHTML += albumHTML;
 albumHTML = generateAlbumHTML(metadatas["short_movies"]["summer_tape"],show_big_cover=false); 
 document.getElementById("summer_tape_player").innerHTML += albumHTML;
 
-
-
 /* GENERATE ALBUM END */
 
 function convert_to_str_with_zero_padding(value){
@@ -175,13 +173,6 @@ function convert_timecode_to_string(time_seconds){
     sec_str = convert_to_str_with_zero_padding(time_seconds%60);
     return min_str + ":" + sec_str;
 }
-
-
-
-
-
-
-
 
 function make_play_symbol(color){
   return `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
