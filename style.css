@@ -166,84 +166,7 @@ h1 {
     transform: translateY(4px);
 }
 
-.side-menu {
-  position: fixed;
-  top: 35%;
-  right: -90px;
-  width: 151px;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 0.5rem 0;
-  border-radius: 8px 0 0 8px;
-  transition: transform 0.3s ease;
-  z-index: 1000;
-}
 
-.side-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.side-menu li {
-  margin: 1rem 0;
-  padding: 0 1rem;
-  white-space: nowrap;
-}
-
-.side-menu a {
-  display: flex;
-  align-items: center;
-  color: white;
-  text-decoration: none;
-  font-family: sans-serif;
-  transition: color 0.3s;
-}
-
-.side-menu .dot {
-  width: 10px;
-  height: 10px;
-  background: white;
-  border-radius: 50%;
-  margin-right: 0.5rem;
-  transition: transform 0.3s;
-}
-
-.side-menu .label {
-  opacity: 0;
-  transform: translateX(-10px);
-  transition: opacity 0.3s, transform 0.3s;
-}
-
-.side-menu a:hover .dot {
-  background: #ffffff;
-  transform: scale(1.4);
-}
-
-.side-menu a:hover .label {
-  font-weight: bold;
-  color: #ffffff;
-}
-
-/* Lors du hover sur le menu entier */
-.side-menu:hover {
-  transform: translateX(-100px);
-}
-
-/* Lors du hover, on affiche les labels */
-.side-menu:hover .label {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.side-menu a.active .dot {
-  background: #00aced; /* couleur de surbrillance */
-  transform: scale(1.5);
-}
-
-.side-menu a.active .label {
-  font-weight: bold;
-  color: #00aced;
-}
 
 @media only screen and (max-width: 770px) {
     .mobile-hidden {
@@ -465,7 +388,7 @@ span.line {
   gap: 0.4rem;
   font-size: 1rem;
   transition: opacity 0.3s;
-  background-color: #22222288;
+  transition: transform 0.3s ease;
   border-radius: 10px;
   padding-right: 5px;
   padding-left: 5px;
@@ -473,11 +396,6 @@ span.line {
 }
 
 .instagram-link:hover {
-    transform: scale(1.1);
-}
-
-
-.instagram-link:hover  {
     transform: scale(1.1);
 }
 
@@ -626,9 +544,15 @@ span.line {
   margin-top: 3rem;
 }
 
+.footer-top{
+   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;   
+}
+
+
 .email {
-  margin-bottom: 10px;
-  background-color: #22222288;
   border-radius: 10px;
   gap: 0.4rem;
   padding-right: 5px;

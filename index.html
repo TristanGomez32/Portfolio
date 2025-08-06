@@ -8,6 +8,7 @@
   <link rel="icon" type="image/x-icon" href="https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/favicon.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="album_player.css">
+  <link rel="stylesheet" href="menu.css">  
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
@@ -26,6 +27,8 @@
 
             <h1 class="page_title">Tristan Gomez</h1>
 
+            <!--
+
             <div class="logos-top">
               <a href="https://www.instagram.com/tristangomez32/" class="instagram-link-top" target="_blank" aria-label="Instagram">
                 <img src="https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/instagram.png" class="instagram-logo">
@@ -41,6 +44,7 @@
 
             </div>
 
+            -->
 
             <h2 style="text-align: center;">
               <span class="line">Composing</span> 
@@ -62,16 +66,34 @@
 
         <div class="sub_header"></div>
 
-        <nav class="side-menu">
-          <ul>
-            <li><a href="#top"><span class="dot"></span><span class="label">Demos</span></a></li>
-            <li><a href="#shortmovies"><span class="dot"></span><span class="label">Short movies</span></a></li>
-            <li><a href="#rescores"><span class="dot"></span><span class="label">Rescores</span></a></li>
-            <li><a href="#albums"><span class="dot"></span><span class="label">Albums</span></a></li>
-            <li><a href="#contact"><span class="dot"></span><span class="label">Contact</span></a></li>
-          </ul>
-        </nav>
+        <button class="menu-btn">Menu +</button>
 
+        <div class="menu-page" data-isshown="false">
+          
+          <div class="quit-menu-btn-container">
+            <button class="menu-btn" id="quit-menu-btn">Close</button>
+          </div>
+
+          <div class="menu-summary" >
+            <a href="#top">Demos</a>
+            <a href="#shortmovies">Short movies</a>
+            <a href="#rescores">Rescores</a>
+            <a href="#albums">Albums</a>
+          </div>
+        
+          <div class="socials">          
+            <a href="https://www.instagram.com/tristangomez32/" class="instagram-link-menu" target="_blank" aria-label="Instagram">
+              <span class="instagram-id">Instagram</span>
+            </a>
+            
+            <a href="https://tristangomez.bandcamp.com/" class="instagram-link-menu" target="_blank" aria-label="Instagram">
+              <span class="instagram-id">Bandcamp</span>
+            </a>
+            
+            <div class="email-menu">tristan.go<span>mez44@</span>gmai<span>example.</span>l.com</div></div>
+
+        </div>
+        
         <ul class="demos" id="demos"></ul>
 
         <h2 class="section-heading mobile-hidden" id="scroll_text">Full soundtracks and more</h2> 
@@ -229,11 +251,18 @@
   <section id="contact"> 
   
       <footer class="footer">
-          <h3 >Contact</h3>
-          <a href="https://www.instagram.com/tristangomez32/" class="instagram-link" target="_blank" aria-label="Instagram">
-            <img src="https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/instagram.png" class="instagram-logo">
-            <span class="instagram-id">tristangomez32</span>
-          </a>
+
+          <div class="footer-top">
+
+            <a href="https://www.instagram.com/tristangomez32/" class="instagram-link" target="_blank" aria-label="Instagram">
+              <span class="instagram-id">Instagram</span>
+            </a>
+
+            <a href="https://tristangomez.bandcamp.com/" class="instagram-link" target="_blank" aria-label="Instagram">
+              <span class="instagram-id">Bandcamp</span>
+            </a>
+
+          </div>
 
           <div class="email">tristan.go<span>mez44@</span>gmai<span>example.</span>l.com</div>
       </footer>
