@@ -350,7 +350,7 @@ span.line {
     font-weight: 600;
     color: #222;
     position:sticky; 
-    width: 410px;
+    width: 204px;
     top:20px;
     height: 55px;
 }
@@ -376,6 +376,14 @@ span.line {
     }
 
 }
+
+
+@media (max-width: 335px) {
+    .section-heading {
+        font-size: 1.5rem;
+    }
+}
+
 
 .logos-top{
   display: flex;
