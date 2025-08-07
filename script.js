@@ -62,7 +62,7 @@ const audioTracks = [
     id: "hardtech",
     label: "Hardtech",
     src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/hardtech.mp3",
-    bckgr_image: "./img/crops/skid_crop1_darker.png",
+    bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/skid_crop1_darker.png",
     color: "#757c81",
   },
   {
