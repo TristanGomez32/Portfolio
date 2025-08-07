@@ -20,6 +20,10 @@ body {
     line-height: 1.6;
 }
 
+h2{
+    z-index: 20;
+}
+
 .banner-container {
   position: relative;
   width: 100%;
@@ -55,6 +59,7 @@ body {
     height: 60vh;
     min-height: 400px;
     overflow: hidden;
+    z-index: 2;
 }
 
 .banner-video video {
@@ -160,10 +165,12 @@ h1 {
     height: 66.8px;
     fill: #222;
     transition: transform 0.3s;
+    transition: fill 0.3s
 }
 
 .scroll-btn:hover svg {
     transform: translateY(4px);
+    fill: green;
 }
 
 
@@ -337,6 +344,9 @@ span.line {
     margin: 3rem auto 1.5rem;
     font-weight: 600;
     color: #222;
+    position:sticky; 
+    width: 410px;
+    top:20px
 }
 
 @media (max-width: 1429px) {
@@ -387,8 +397,7 @@ span.line {
   text-decoration: none;
   gap: 0.4rem;
   font-size: 1rem;
-  transition: opacity 0.3s;
-  transition: transform 0.3s ease;
+  transition: color 0.3s ease;
   border-radius: 10px;
   padding-right: 5px;
   padding-left: 5px;
@@ -396,7 +405,7 @@ span.line {
 }
 
 .instagram-link:hover {
-    transform: scale(1.1);
+    color: green;
 }
 
 .instagram-link-top:hover {
@@ -458,6 +467,7 @@ span.line {
   text-align: center; 
   flex-grow: 1;
   flex-basis: 0;
+  z-index: 2;
 }
 
 .audio-button-wrapper {
@@ -557,8 +567,12 @@ span.line {
   gap: 0.4rem;
   padding-right: 5px;
   padding-left: 5px;
-
+  transition: color 0.3s ease;
 }
+.email:hover{
+    color:green;
+}
+
 
 div.email > span:nth-child(2) {
 	display: none;
