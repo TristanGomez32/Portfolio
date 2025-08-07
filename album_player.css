@@ -208,37 +208,18 @@
 
 .track-number {
   width: 30px;
+  height: 30px;
   text-align: center;
   font-weight: bold;
   color: #ffffff;
   transition: opacity 0.2s;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.track[data-playing="false"].active-track .track-number::before {
-  content: "▶";
-  color: #ffffff;
-  font-size: 16px;
-}
-
-/* Replace number with ▶ on hover if not playing */
-.track:hover[data-playing="false"] .track-number::before {
-  content: "▶";
-  color: #ffffff;
-  font-size: 16px;
-}
-
-/* Replace number with ⏸ if playing */
-.track[data-playing="true"] .track-number::before {
-  content: "⏸";
-  color: #ffffff;
-  font-size: 16px;
-}
-
-/* Hide original number text when icon is shown */
-.track:hover .track-number,
-.track.active-track .track-number {
-  color: transparent;
-}
 
 
 

@@ -133,7 +133,11 @@ function onClick (demo_audio_id,ctrl_id) {
 
       tracks = document.querySelectorAll(".track");
       for (track of tracks){
-        track.dataset.playing = false;
+        if (track.dataset.playing=="true"){
+          track.dataset.playing = "false";
+          track.querySelectorAll(".track-number")[0].innerHTML = make_play_symbol("white",draw_circle=false,set_size=false);
+        }
+        
       }
 
       audio_list = document.querySelectorAll(".album-audio");
