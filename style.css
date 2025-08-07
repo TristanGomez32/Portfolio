@@ -21,7 +21,7 @@ body {
 }
 
 h2{
-    z-index: 20;
+    z-index: 2;
 }
 
 .banner-container {
@@ -340,13 +340,19 @@ span.line {
 
 .section-heading {
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
     font-size: 2rem;
     margin: 3rem auto 1.5rem;
     font-weight: 600;
     color: #222;
     position:sticky; 
     width: 410px;
-    top:20px
+    top:20px;
+    height: 55px;
 }
 
 @media (max-width: 1429px) {
