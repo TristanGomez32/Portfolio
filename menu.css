@@ -29,7 +29,13 @@ z-index: 1;
   padding-left: 8px;
   padding-right: 8px;
   transition: color 0.2s ease;
+  transition: opacity 0.4s ease;
+  opacity: 0;
   border: rgba(0, 0, 0, 0.644);
+}
+
+.disabled{
+  pointer-events: none;
 }
 
 .menu-btn:hover{
