@@ -291,7 +291,7 @@ h1 {
     flex: 0 0 50%;
     max-width: 50%;
     box-sizing: border-box;
-    padding: 0 0rem;
+    padding: 0 1rem;
     z-index: 1;
 }
 
@@ -313,7 +313,7 @@ span.line {
 .player {
     /*width: 800px;*/
     /*height: 450px;*/
-    width: 80vh;
+    width: 718px;
     /*margin: 4rem auto;*/
     margin:0;
     display: flex;
@@ -322,11 +322,36 @@ span.line {
     justify-content: center;
 }
 
+
+
+
 .player h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     text-align: center;
 }
+
+.player-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 718px;
+}
+
+@media (max-width: 750px) {
+    .player{
+        width: 97vw;
+
+    }
+
+    .player-container{
+        width: 97vw;
+    }
+
+
+}
+
 
 .bandcamp {
     border: 0; 
@@ -370,7 +395,7 @@ span.line {
     height: 55px;
 }
 
-@media (max-width: 1429px) {
+@media (max-width: 1499px) {
 
     .text {
     max-width: 100%;
