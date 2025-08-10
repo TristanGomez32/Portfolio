@@ -244,6 +244,40 @@ function playTrack(track) {
 
 const albums = document.querySelectorAll(".album-player");
 
+function updateSeekBar(progressPercent,seekBar,seekBarHandle){
+
+  seekBar.style.width = `${progressPercent}%`;
+  seekBarHandle.style.left = `${progressPercent}%`;
+
+  audio = seekBarContainer.parentElement.parentElement.querySelectorAll(".album-audio")[0];
+
+  timecode = audio.parentElement.querySelectorAll(".timecode")[0];
+
+  durationStr = convert_timecode_to_string(audio.dataset.duration);
+  currentTimeStr = convert_timecode_to_string(parseInt(audio.currentTime));
+
+  timecode.innerHTML = currentTimeStr + " : " + durationStr;
+
+}
+
+function updateAudio(e,seekBarContainer){
+  if (seekBarContainer.getAttribute("class")=="seekbar"){
+    seekBarContainer = seekBarContainer.parentElement;
+  }
+
+  audio = seekBarContainer.parentElement.parentElement.querySelectorAll(".album-audio")[0];
+
+  seekBarContainer.clientX
+
+  var proportion = (e.clientX - seekBarContainer.getBoundingClientRect().left)/seekBarContainer.clientWidth;
+  proportion = Math.max(proportion,0);
+  proportion = Math.min(proportion,1);
+  
+  const newTime = proportion * audio.dataset.duration;
+
+  audio.currentTime = newTime;
+};
+
 for (album of albums){
 
   audio = album.querySelectorAll(".album-audio")[0];
@@ -327,60 +361,90 @@ for (album of albums){
 
     audio = e["target"];
 
-    const progressPercent = (audio.currentTime / audio.dataset.duration) * 100;
-
     seekbarContainer = audio.parentElement.querySelectorAll(".seekbar-container")[0];
+
+    if (Array.from(seekBarContainer.classList).includes("updating")){
+      return;
+    }
+
     seekBar = seekbarContainer.querySelectorAll(".seekbar")[0];
     seekBarHandle = seekbarContainer.querySelectorAll(".seekbar-handle")[0];
 
-    seekBar.style.width = `${progressPercent}%`;
-    seekBarHandle.style.left = `${progressPercent}%`;
+    const progressPercent = (audio.currentTime / audio.dataset.duration) * 100;
 
-    timecode = audio.parentElement.querySelectorAll(".timecode")[0];
-
-    durationStr = convert_timecode_to_string(audio.dataset.duration);
-    currentTimeStr = convert_timecode_to_string(parseInt(audio.currentTime));
-
-    timecode.innerHTML = currentTimeStr + " : " + durationStr;
-
-  });
-
-
-  var mouseDown = 0;
-  document.body.onmousedown = function() { 
-    ++mouseDown;
-  };
-  document.body.onmouseup = function() {
-    --mouseDown;
-  };
-
-  function updateSeekBar(e,seekBarContainer){
-    if (seekBarContainer.getAttribute("class")=="seekbar"){
-      seekBarContainer = seekBarContainer.parentElement;
-    }
-
-    const containerWidth = seekBarContainer.clientWidth;
-    const offsetX = e.offsetX;
-    audio = seekBarContainer.parentElement.parentElement.querySelectorAll(".album-audio")[0];
-    const newTime = (offsetX / containerWidth) * audio.dataset.duration;
-    audio.currentTime = newTime;
-  };
     
-  seekBarContainer.addEventListener('mousemove', (e) => {
-
-    if (!mouseDown) {return null;}
-    
-    seekBarContainer = e["target"];
-
-    if (!seekBarContainer.matches(':hover')) { return null;}
-    
-    updateSeekBar(e,seekBarContainer);
+    updateSeekBar(progressPercent,seekBar,seekBarHandle,audio);
 
   });
 
   seekBarContainer.addEventListener('mousedown', (e) => {
+
     seekBarContainer = e["target"];
-    updateSeekBar(e,seekBarContainer);
+
+    if (seekBarContainer.getAttribute("class")=="seekbar"){
+      seekBarContainer = seekBarContainer.parentElement;
+    }
+
+    for (otherSeekBarContainer of document.querySelectorAll(".seekbar-container")){
+      otherSeekBarContainer.classList.remove("updating");
+    }
+
+    seekBarContainer.classList.add("updating");
+
   });
 
+  seekBarContainer.addEventListener("click", (e)=>{
+
+    seekBarContainer = e["target"];
+
+    if (seekBarContainer.getAttribute("class")=="seekbar"){
+      seekBarContainer = seekBarContainer.parentElement;
+    }
+
+    updateAudio(e,seekBarContainer);
+
+  });
+
+  
 }
+
+var mouseDown = false;
+window.onmousedown = function() {mouseDown=true;};
+window.onmouseup = function(e) {
+  mouseDown=false;
+  for (otherSeekBarContainer of document.querySelectorAll(".seekbar-container")){
+  
+    if (Array.from(otherSeekBarContainer.classList).includes("updating")){
+      updateAudio(e,otherSeekBarContainer);
+    }
+    
+    otherSeekBarContainer.classList.remove("updating");
+  }
+};
+
+document.addEventListener("mousemove", (e) => {
+
+  if (!mouseDown){ 
+    return null;
+  };
+
+  seekBarContainers = document.querySelectorAll(".seekbar-container");
+
+  for (seekBarContainer of seekBarContainers){
+    if (Array.from(seekBarContainer.classList).includes("updating")){
+      break;
+    }
+  }
+
+  //updateAudio(e,seekBarContainer);
+
+  seekBar = seekBarContainer.querySelectorAll(".seekbar")[0];
+  seekBarHandle = seekBarContainer.querySelectorAll(".seekbar-handle")[0];
+
+  var proportion = (e.clientX - seekBarContainer.getBoundingClientRect().left)/seekBarContainer.clientWidth;
+  proportion = Math.max(proportion,0);
+  proportion = Math.min(proportion,1);
+
+  updateSeekBar(100*proportion,seekBar,seekBarHandle);
+
+});
