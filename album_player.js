@@ -190,7 +190,7 @@ function make_play_symbol(color,draw_circle=true,set_size=true){
   html += `</svg>`;
   
   return html;
-        }
+}
 
 function make_pause_symbol(color,draw_circle=true,set_size=true){
    
@@ -345,9 +345,16 @@ for (album of albums){
 
   });
 
-  seekBarContainer.addEventListener('click', (e) => {
-    seekBarContainer = e["target"];
 
+  var mouseDown = 0;
+  document.body.onmousedown = function() { 
+    ++mouseDown;
+  };
+  document.body.onmouseup = function() {
+    --mouseDown;
+  };
+
+  function updateSeekBar(e,seekBarContainer){
     if (seekBarContainer.getAttribute("class")=="seekbar"){
       seekBarContainer = seekBarContainer.parentElement;
     }
@@ -357,10 +364,23 @@ for (album of albums){
     audio = seekBarContainer.parentElement.parentElement.querySelectorAll(".album-audio")[0];
     const newTime = (offsetX / containerWidth) * audio.dataset.duration;
     audio.currentTime = newTime;
+  };
+    
+  seekBarContainer.addEventListener('mousemove', (e) => {
+
+    if (!mouseDown) {return null;}
+    
+    seekBarContainer = e["target"];
+
+    if (!seekBarContainer.matches(':hover')) { return null;}
+    
+    updateSeekBar(e,seekBarContainer);
+
+  });
+
+  seekBarContainer.addEventListener('mousedown', (e) => {
+    seekBarContainer = e["target"];
+    updateSeekBar(e,seekBarContainer);
   });
 
 }
-
-
-
-
