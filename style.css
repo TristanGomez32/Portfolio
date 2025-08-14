@@ -32,6 +32,14 @@ h2{
 }
 
 
+video {
+    background-image: url(img/first_img_of_header_vid.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;
+    object-fit: cover;
+
+}
 .video-overlay {
   position: absolute;
   top: 0;
