@@ -1,5 +1,3 @@
-BTN_COLOR= "#2c2c2c"
-
 /* GENERATE ALBUM */
 
 function generateAlbumHTML(metadata,show_big_cover=true) {
