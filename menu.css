@@ -190,3 +190,9 @@ z-index: 1;
 div.email-menu > span:nth-child(2) {
 	display: none;
 }
+
+@media (max-width: 750px) {
+  .menu-summary a{
+    font-size: 2.5rem;
+  }
+}
