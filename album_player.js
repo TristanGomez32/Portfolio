@@ -246,10 +246,15 @@ const albums = document.querySelectorAll(".album-player");
 
 function updateSeekBar(progressPercent,seekBar,seekBarHandle){
 
+  audio = seekBarContainer.parentElement.parentElement.querySelectorAll(".album-audio")[0];
+
+  if(audio.src==""){
+
+    return;
+  }
+
   seekBar.style.width = `${progressPercent}%`;
   seekBarHandle.style.left = `${progressPercent}%`;
-
-  audio = seekBarContainer.parentElement.parentElement.querySelectorAll(".album-audio")[0];
 
   timecode = audio.parentElement.querySelectorAll(".timecode")[0];
 
@@ -260,12 +265,37 @@ function updateSeekBar(progressPercent,seekBar,seekBarHandle){
 
 }
 
+function playNextTrack(album){
+
+  tracks = album.querySelectorAll(".track");
+
+  let i=0;
+  while(i<tracks.length){
+    track = tracks[i];
+          
+    if (track.getAttribute("data-src")==audio.src){
+      break
+    }
+    
+    i++;
+
+  }
+
+  tracks[(i+1)%tracks.length].click();
+
+}
+
 function updateAudio(e,seekBarContainer){
   if (seekBarContainer.getAttribute("class")=="seekbar"){
     seekBarContainer = seekBarContainer.parentElement;
   }
 
-  audio = seekBarContainer.parentElement.parentElement.querySelectorAll(".album-audio")[0];
+  album = seekBarContainer.parentElement.parentElement
+  audio = album.querySelectorAll(".album-audio")[0];
+
+  if (audio.src==""){
+    return;
+  }
 
   seekBarContainer.clientX
 
@@ -273,9 +303,16 @@ function updateAudio(e,seekBarContainer){
   proportion = Math.max(proportion,0);
   proportion = Math.min(proportion,1);
   
-  const newTime = proportion * audio.dataset.duration;
+  console.log(proportion);
 
-  audio.currentTime = newTime;
+  if (proportion == 1){
+    playNextTrack(album);
+  }else{
+    const newTime = proportion * audio.dataset.duration;
+    audio.currentTime = newTime;
+  }
+
+
 };
 
 for (album of albums){
@@ -375,6 +412,16 @@ for (album of albums){
     
     updateSeekBar(progressPercent,seekBar,seekBarHandle,audio);
 
+    album = audio.parentElement;
+
+    console.log("THIS SHOULD BE AN ALBUM",album);
+
+    if (progressPercent>=99.9){
+      playNextTrack(album);
+    }else{
+      console.log("progress",progressPercent);
+    }
+    
   });
 
   seekBarContainer.addEventListener('mousedown', (e) => {
