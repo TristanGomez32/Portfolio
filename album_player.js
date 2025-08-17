@@ -447,7 +447,10 @@ for (album of albums){
 
   }
 
-  seekBarContainer.addEventListener('mousedown', setSeekBarToUpdateMode);
+  seekBarContainer.addEventListener('mousedown', (e) => {
+    setSeekBarToUpdateMode(e);
+    InUpdateModeAndUpdateIt(e);
+  });
   seekBarContainer.addEventListener('touchstart', (e) => {
     setSeekBarToUpdateMode(e);  
     findSeekBarInUpdateModeAndUpdateIt(e);
@@ -478,7 +481,7 @@ var mouseDown = false;
 window.onmousedown = function() {mouseDown=true;};
 window.onmouseup = function(e){
   mouseDown=false;
-  setSeekBarToNotUpdatingMode;
+  setSeekBarToNotUpdatingMode(e);
 }
 window.ontouchend = function(e) {
   setSeekBarToNotUpdatingMode(e);
