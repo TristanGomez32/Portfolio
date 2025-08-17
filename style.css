@@ -232,6 +232,10 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
+.bg-berceuse::before {
+    background-image: url('./img/laberceuse.png');
+}
+
 .bg-lit::before {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/le_lit_de_la_rivière.png');
 }
@@ -248,6 +252,10 @@ h1 {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/run_like_a_girl.png');
 }
 
+.bg-warehouse::before {
+    background-image: url('./img/warehousebackground.png');
+}
+
 .bg-skid::before {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/skid.png');
 }
@@ -260,6 +268,11 @@ h1 {
 .bg-colossus::before {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/colossus.png');
 }
+
+.bg-berceuse::after {
+    background-color: rgb(43, 78, 128,0.4);
+}
+
 
 .bg-lit::after {
     background-color: rgba(64, 130, 80, 0.4);
@@ -275,6 +288,10 @@ h1 {
 
 .bg-runlike::after {
     background-color: rgba(100, 170, 235, 0.4);
+}
+
+.bg-warehouse::after {
+    background-color: rgba(234,117,50,0.1);
 }
 
 .bg-skid::after {
@@ -653,4 +670,10 @@ span.line {
 
 div.email > span:nth-child(2) {
 	display: none;
+}
+
+
+.coming_soon_text{
+    position: absolute;
+    font-size: 3rem;
 }

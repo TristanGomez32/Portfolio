@@ -127,6 +127,17 @@ metadatas = {"albums":[{"folder":"https://media.githubusercontent.com/media/Tris
                   "bottom_text":"#c7dfafff",
                   "top_text":"#d4ecbbff",
 
+            },"laberceuse":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/laberceuse/",
+                  "albumName": "La berceuse",
+                  "genre": "Folk",
+                  "tracks":["De belles paroles.mp3","Pardon.mp3","Rupture.mp3","La honte.mp3"],
+                  "titles":["De belles paroles","Pardon","Rupture","La honte"],
+                  "genres":["Folk","Folk","Folk","Folk","Folk"],
+                  "track_durations":["01:26","00:56","02:50","02:06","01:17"],
+                  "top_color":"#7593b6ff",
+                  "bottom_color":"#54769cff",
+                  "bottom_text":"#93a2b3",
+                  "top_text":"#cad1d8ff",
             }, "summer_tape":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/summer_tape/",
                   "albumName": "Summer tape",
                   "genre": "Folk / Hardtech / Blues",
@@ -147,6 +158,9 @@ for (metadata of metadatas["albums"]){
   document.querySelectorAll(".albums")[0].innerHTML += albumHTML;
 
 }
+
+albumHTML = generateAlbumHTML(metadatas["short_movies"]["laberceuse"],show_big_cover=false); 
+document.getElementById("laberceuse_player").innerHTML += albumHTML;
 
 albumHTML = generateAlbumHTML(metadatas["short_movies"]["lelit"],show_big_cover=false); 
 document.getElementById("lelit_player").innerHTML += albumHTML;
