@@ -450,26 +450,19 @@ for (album of albums){
   seekBarContainer.addEventListener('mousedown', setSeekBarToUpdateMode);
   seekBarContainer.addEventListener('touchstart', (e) => {
     setSeekBarToUpdateMode(e);  
-
+    findSeekBarInUpdateModeAndUpdateIt(e);
   });
 
   seekBarContainer.addEventListener("click", (e)=>{
-
-    seekBarContainer = e["target"];
-
-    if (seekBarContainer.getAttribute("class")=="seekbar"){
-      seekBarContainer = seekBarContainer.parentElement;
-    }
-
-    updateAudio(e,seekBarContainer);
-
+    setSeekBarToUpdateMode(e);  
+    findSeekBarInUpdateModeAndUpdateIt(e);
+    setSeekBarToNotUpdatingMode(e);
   });
 
   
 }
 
 function setSeekBarToNotUpdatingMode(e) {
-  
   for (otherSeekBarContainer of document.querySelectorAll(".seekbar-container")){
   
     if (Array.from(otherSeekBarContainer.classList).includes("updating")){
@@ -477,6 +470,7 @@ function setSeekBarToNotUpdatingMode(e) {
     }
     
     otherSeekBarContainer.classList.remove("updating");
+
   }
 };
 
@@ -494,10 +488,16 @@ function findSeekBarInUpdateModeAndUpdateIt(e){
 
   seekBarContainers = document.querySelectorAll(".seekbar-container");
 
+  found_updating_seekBar = false;
   for (seekBarContainer of seekBarContainers){
     if (Array.from(seekBarContainer.classList).includes("updating")){
+      found_updating_seekBar=true;
       break;
     }
+  }
+
+  if (!found_updating_seekBar){
+    return null;
   }
 
   //updateAudio(e,seekBarContainer);
