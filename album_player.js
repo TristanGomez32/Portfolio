@@ -242,12 +242,19 @@ function playTrack(track) {
 
 const albums = document.querySelectorAll(".album-player");
 
+function updateTimecode(audio,timecode){
+  durationStr = convert_timecode_to_string(audio.dataset.duration);
+  currentTimeStr = convert_timecode_to_string(parseInt(audio.currentTime));
+  timecode.innerHTML = currentTimeStr + " : " + durationStr;
+}
+
 function updateSeekBar(progressPercent,seekBar,seekBarHandle){
+
+  seekBarContainer = seekBar.parentElement;
 
   audio = seekBarContainer.parentElement.parentElement.querySelectorAll(".album-audio")[0];
 
   if(audio.src==""){
-
     return;
   }
 
@@ -256,10 +263,7 @@ function updateSeekBar(progressPercent,seekBar,seekBarHandle){
 
   timecode = audio.parentElement.querySelectorAll(".timecode")[0];
 
-  durationStr = convert_timecode_to_string(audio.dataset.duration);
-  currentTimeStr = convert_timecode_to_string(parseInt(audio.currentTime));
-
-  timecode.innerHTML = currentTimeStr + " : " + durationStr;
+  updateTimecode(audio,timecode);
 
 }
 
@@ -279,7 +283,13 @@ function playNextTrack(album){
 
   }
 
-  tracks[(i+1)%tracks.length].click();
+  if ((i+1)==tracks.length){
+    //Reset to first track once album is fully played
+    tracks[0].click();
+    tracks[0].click();
+  }else{
+    tracks[(i+1)%tracks.length].click();
+  }
 
 }
 
@@ -295,14 +305,18 @@ function updateAudio(e,seekBarContainer){
     return;
   }
 
-  seekBarContainer.clientX
+  if(e.type.includes(`touch`)) {
+    const { touches, changedTouches } = e.originalEvent ?? e;
+    const touch = touches[0] ?? changedTouches[0];
+    x = touch.pageX;
+  } else {
+        x = e.clientX;
+  }
 
-  var proportion = (e.clientX - seekBarContainer.getBoundingClientRect().left)/seekBarContainer.clientWidth;
+  var proportion = (x - seekBarContainer.getBoundingClientRect().left)/seekBarContainer.clientWidth;
   proportion = Math.max(proportion,0);
   proportion = Math.min(proportion,1);
   
-  console.log(proportion);
-
   if (proportion == 1){
     playNextTrack(album);
   }else{
@@ -412,18 +426,13 @@ for (album of albums){
 
     album = audio.parentElement;
 
-    console.log("THIS SHOULD BE AN ALBUM",album);
-
     if (progressPercent>=99.9){
       playNextTrack(album);
-    }else{
-      console.log("progress",progressPercent);
     }
     
   });
 
-  seekBarContainer.addEventListener('mousedown', (e) => {
-
+  function setSeekBarToUpdateMode(e){
     seekBarContainer = e["target"];
 
     if (seekBarContainer.getAttribute("class")=="seekbar"){
@@ -435,6 +444,12 @@ for (album of albums){
     }
 
     seekBarContainer.classList.add("updating");
+
+  }
+
+  seekBarContainer.addEventListener('mousedown', setSeekBarToUpdateMode);
+  seekBarContainer.addEventListener('touchstart', (e) => {
+    setSeekBarToUpdateMode(e);  
 
   });
 
@@ -453,10 +468,8 @@ for (album of albums){
   
 }
 
-var mouseDown = false;
-window.onmousedown = function() {mouseDown=true;};
-window.onmouseup = function(e) {
-  mouseDown=false;
+function setSeekBarToNotUpdatingMode(e) {
+  
   for (otherSeekBarContainer of document.querySelectorAll(".seekbar-container")){
   
     if (Array.from(otherSeekBarContainer.classList).includes("updating")){
@@ -467,11 +480,17 @@ window.onmouseup = function(e) {
   }
 };
 
-document.addEventListener("mousemove", (e) => {
+var mouseDown = false;
+window.onmousedown = function() {mouseDown=true;};
+window.onmouseup = function(e){
+  mouseDown=false;
+  setSeekBarToNotUpdatingMode;
+}
+window.ontouchend = function(e) {
+  setSeekBarToNotUpdatingMode(e);
+}
 
-  if (!mouseDown){ 
-    return null;
-  };
+function findSeekBarInUpdateModeAndUpdateIt(e){
 
   seekBarContainers = document.querySelectorAll(".seekbar-container");
 
@@ -486,10 +505,46 @@ document.addEventListener("mousemove", (e) => {
   seekBar = seekBarContainer.querySelectorAll(".seekbar")[0];
   seekBarHandle = seekBarContainer.querySelectorAll(".seekbar-handle")[0];
 
-  var proportion = (e.clientX - seekBarContainer.getBoundingClientRect().left)/seekBarContainer.clientWidth;
+  if(e.type.includes(`touch`)) {
+    const { touches, changedTouches } = e.originalEvent ?? e;
+    const touch = touches[0] ?? changedTouches[0];
+    x = touch.pageX;
+  } else {
+        x = e.clientX;
+  }
+
+  var proportion = (x - seekBarContainer.getBoundingClientRect().left)/seekBarContainer.clientWidth;
   proportion = Math.max(proportion,0);
   proportion = Math.min(proportion,1);
 
   updateSeekBar(100*proportion,seekBar,seekBarHandle);
 
+}
+
+document.addEventListener("mousemove", (e) => {
+  
+  if (!mouseDown){ 
+    return null;
+  };
+
+  findSeekBarInUpdateModeAndUpdateIt(e);
+
 });
+
+document.addEventListener("touchmove", (e) => {
+  findSeekBarInUpdateModeAndUpdateIt(e);
+});
+
+
+for (album of albums){
+
+  tracks = album.querySelectorAll(".track-list li");
+  tracks[0].click();
+  tracks[0].click();
+
+  timecode = album.querySelectorAll(".timecode")[0];
+  audio = album.querySelectorAll("audio")[0];
+
+  updateTimecode(audio,timecode);
+
+}
