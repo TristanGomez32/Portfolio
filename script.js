@@ -52,7 +52,7 @@ const audioTracks = [
   },
   {
     id: "dystopiantrailer",
-    label: "Dystopian trailer",
+    label: "Dystopian electro",
     src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/im not sure we're safe.mp3",
     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/hjalmar-wahlin-08_blurred_crop2.png",
     backgroundSize: "220px",
