@@ -174,7 +174,8 @@ function setupProgressCircle(audioId, circle) {
     setProgress(percent);
   });
 
-  audio.addEventListener('ended', () => {
+  audio.addEventListener('ended', (e) => {
+    e["target"].parentElement.querySelectorAll(".demo_audio_btn")[0].click();
     setProgress(0);
   });
 }
