@@ -233,7 +233,7 @@ h1 {
 }
 
 .bg-berceuse::before {
-    background-image: url('./img/laberceuse.png');
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/laberceuse.png');
 }
 
 .bg-lit::before {
@@ -253,7 +253,7 @@ h1 {
 }
 
 .bg-warehouse::before {
-    background-image: url('./img/warehousebackground.png');
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/warehousebackground.png');
 }
 
 .bg-skid::before {
