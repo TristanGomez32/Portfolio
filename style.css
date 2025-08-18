@@ -35,7 +35,7 @@ h2{
 video {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/first_img_of_header_vid.png');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: center top;
     object-fit: cover;
 }
