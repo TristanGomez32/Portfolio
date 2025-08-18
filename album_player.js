@@ -81,7 +81,7 @@ function generateAlbumHTML(metadata,show_big_cover=true) {
 }
 
 metadatas = {"albums":[{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/rome_will_burn/",
-                  "albumName": "Rome will burn",
+                  "albumName": "Rome",
                   "genre": "Hard rock / Folk / Orchestral",
                   "tracks":["rome_will_burn.mp3","again.mp3","what_you_did.mp3","trailer_for_my_brother.mp3"],
                   "genres":["Hard rock","Orchestral","Folk / Orchestral","Orchestral / Electro"],
@@ -116,7 +116,10 @@ metadatas = {"albums":[{"folder":"https://media.githubusercontent.com/media/Tris
             },],
             "short_movies":{
               "lelit":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/lelit/",
-                  "albumName": "Le lit de la rivière",
+                  "albumName": "<span class='line'>\
+                                  <span class='line'>Le lit</span>\
+                                  <span class='line'>de la rivière</span>\
+                                </span>",
                   "genre": "Ambient synths",
                   "tracks":["tu_vas_guerir.mp3","crematorium.mp3","dispersion.mp3","souvenirs.mp3","le_lit.mp3"],
                   "titles":["Tu vas guérir","Crématorium","Dispersion","Souvenirs","Le lit"],

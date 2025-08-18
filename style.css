@@ -129,6 +129,12 @@ video {
     object-fit: cover;
 }
 
+@media only screen and (max-width: 354px) {
+    .school-pic {
+        width: 80px;
+    }
+}
+
 .header-left {
     display: flex;
     align-items: center;
