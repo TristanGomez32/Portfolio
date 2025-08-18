@@ -300,7 +300,7 @@ h1 {
 }
 
 .bg-skid::after {
-    background-color: rgba(155, 148, 109, 0.4);
+    background-color: rgba(75, 71, 53, 0.4);
 }
 
 .bg-dragons::after {

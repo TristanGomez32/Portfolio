@@ -16,7 +16,7 @@ const audioTracks = [
   {
     id: "again_victory",
     label: "Epic orchestra",
-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/again victory.mp3",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/trailer victory.mp3",
     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/enceinte_crop1.png",
     color: "rgb(116,91,52)",
   },
