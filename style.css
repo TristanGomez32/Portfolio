@@ -225,7 +225,7 @@ h1 {
     z-index: -2;
     transform: scale(1.05);
     transition: transform 0.5s ease;
-    filter: blur(8px);
+    filter: blur(16px);
 }
 
 .section::after {
