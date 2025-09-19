@@ -147,7 +147,7 @@ metadatas = {"albums":[{"folder":"https://media.githubusercontent.com/media/Tris
                   "tracks":["run_like_a_girl.mp3","credits.mp3"],
                   "titles":["Run like a girl","Credits"],
                   "genres":["Orchestral / Electronic","Orchestral / Electronic"],
-                  "track_durations":["01:02","01:59"],
+                  "track_durations":["01:59","01:02"],
                   "top_color":"#7593b6ff",
                   "bottom_color":"#54769cff",
                   "bottom_text":"#93a2b3",
