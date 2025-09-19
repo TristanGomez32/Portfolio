@@ -141,6 +141,17 @@ metadatas = {"albums":[{"folder":"https://media.githubusercontent.com/media/Tris
                   "bottom_color":"#54769cff",
                   "bottom_text":"#93a2b3",
                   "top_text":"#cad1d8ff",
+            },"runlikeagirl":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/runlikeagirl/",
+                  "albumName": "Run like a girl",
+                  "genre": "Orchestral / Electronic",
+                  "tracks":["run_like_a_girl.mp3","credits.mp3"],
+                  "titles":["Run like a girl","Credits"],
+                  "genres":["Orchestral / Electronic","Orchestral / Electronic"],
+                  "track_durations":["01:02","01:59"],
+                  "top_color":"#7593b6ff",
+                  "bottom_color":"#54769cff",
+                  "bottom_text":"#93a2b3",
+                  "top_text":"#cad1d8ff",                 
             }, "summer_tape":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/summer_tape/",
                   "albumName": "Summer tape",
                   "genre": "Folk / Hardtech / Blues",
@@ -170,6 +181,9 @@ document.getElementById("lelit_player").innerHTML += albumHTML;
 
 albumHTML = generateAlbumHTML(metadatas["short_movies"]["summer_tape"],show_big_cover=false); 
 document.getElementById("summer_tape_player").innerHTML += albumHTML;
+
+albumHTML = generateAlbumHTML(metadatas["short_movies"]["runlikeagirl"],show_big_cover=false); 
+document.getElementById("runlikeagirl_player").innerHTML += albumHTML;
 
 /* GENERATE ALBUM END */
 
