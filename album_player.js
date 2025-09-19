@@ -130,17 +130,28 @@ metadatas = {"albums":[{"folder":"https://media.githubusercontent.com/media/Tris
                   "bottom_text":"#c7dfafff",
                   "top_text":"#d4ecbbff",
 
-            },"laberceuse":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/laberceuse/",
+            },"laberceuse":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/laberceuse/",
                   "albumName": "La berceuse",
                   "genre": "Folk",
-                  "tracks":["De belles paroles.mp3","Pardon.mp3","Rupture.mp3","La honte.mp3"],
-                  "titles":["De belles paroles","Pardon","Rupture","La honte"],
-                  "genres":["Folk","Folk","Folk","Folk","Folk"],
-                  "track_durations":["01:26","00:56","02:50","02:06","01:17"],
+                  "tracks":["de_belles_paroles.mp3","la_honte.mp3"],
+                  "titles":["De belles paroles","La honte"],
+                  "genres":["Orchestral / Ambient / Synths","Folk"],
+                  "track_durations":["01:10","01:13"],
                   "top_color":"#7593b6ff",
                   "bottom_color":"#54769cff",
                   "bottom_text":"#93a2b3",
                   "top_text":"#cad1d8ff",
+            },"runlikeagirl":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/runlikeagirl/",
+                  "albumName": "Run like a girl",
+                  "genre": "Orchestral / Electronic",
+                  "tracks":["run_like_a_girl.mp3","credits.mp3"],
+                  "titles":["Run like a girl","Credits"],
+                  "genres":["Orchestral / Electronic","Orchestral / Electronic"],
+                  "track_durations":["01:59","01:02"],
+                  "top_color":"#7593b6ff",
+                  "bottom_color":"#54769cff",
+                  "bottom_text":"#93a2b3",
+                  "top_text":"#cad1d8ff",                 
             }, "summer_tape":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/summer_tape/",
                   "albumName": "Summer tape",
                   "genre": "Folk / Hardtech / Blues",
@@ -170,6 +181,9 @@ document.getElementById("lelit_player").innerHTML += albumHTML;
 
 albumHTML = generateAlbumHTML(metadatas["short_movies"]["summer_tape"],show_big_cover=false); 
 document.getElementById("summer_tape_player").innerHTML += albumHTML;
+
+albumHTML = generateAlbumHTML(metadatas["short_movies"]["runlikeagirl"],show_big_cover=false); 
+document.getElementById("runlikeagirl_player").innerHTML += albumHTML;
 
 /* GENERATE ALBUM END */
 
