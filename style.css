@@ -306,6 +306,12 @@ h1 {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/colossus.png');
 }
 
+.bg-severance::before {
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/severance.webp');
+}
+
+
+
 .bg-berceuse::after {
     background-color: rgb(43, 78, 128,0.4);
 }
@@ -342,6 +348,11 @@ h1 {
 .bg-colossus::after {
     background-color: rgba(150, 150, 150, 0.4);
 }
+
+.bg-severance::after {
+    background-color: rgba(94, 119, 92, 0.4);
+}
+
 
 .section:hover::before {
     transform: scale(1.08);
