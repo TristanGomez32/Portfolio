@@ -68,8 +68,8 @@ const audioTracks = [
   {
     id: "dnb",
     label: "DnB",
-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/dnb.mp3",
-    bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/severance_crop.png",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/dnb.mp3",
+    bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/severance_crop.png",
     color: "#596554",
   },
   {
