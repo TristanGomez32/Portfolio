@@ -69,8 +69,8 @@ const audioTracks = [
     id: "dnb",
     label: "DnB",
     src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/dnb.mp3",
-    bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/severance_crop.png",
-    color: "#596554",
+    bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/romantic_flight_crop.png",
+    color: "#5f3d30",
   },
   {
     id: "sax",
