@@ -66,6 +66,13 @@ const audioTracks = [
     color: "#757c81",
   },
   {
+    id: "dnb",
+    label: "DnB",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/dnb.mp3",
+    bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/severance_crop.png",
+    color: "#596554",
+  },
+  {
     id: "sax",
     label: "Awkward saxophone",
     src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/summer tape sax.mp3",
