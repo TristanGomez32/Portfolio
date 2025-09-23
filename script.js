@@ -72,6 +72,15 @@ const audioTracks = [
     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/romantic_flight_crop.png",
     color: "#5f3d30",
   },
+
+  {
+    id: "spy_thriller",
+    label: "Spy thriller",
+    src: "./demos/severance.mp3",
+    bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/lelit_mo_crop1.png",
+    color: "rgb(27,83,0)",
+  },
+  /*
   {
     id: "sax",
     label: "Awkward saxophone",
@@ -79,6 +88,7 @@ const audioTracks = [
     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/lelit_mo_crop1.png",
     color: "rgb(27,83,0)",
   },
+  */
 ];
 
 function make_play_symbol(color){
