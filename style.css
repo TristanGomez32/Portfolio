@@ -310,6 +310,10 @@ h1 {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/severance.webp');
 }
 
+.bg-brahms::before {
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/Johannes-Brahms-young.webp');
+}
+
 
 
 .bg-berceuse::after {
@@ -351,6 +355,10 @@ h1 {
 
 .bg-severance::after {
     background-color: rgba(94, 119, 92, 0.4);
+}
+
+.bg-brahms::after {
+    background-color: rgba(87, 74, 57, 0.4);
 }
 
 
