@@ -76,7 +76,7 @@ const audioTracks = [
   {
     id: "spy_thriller",
     label: "Spy thriller",
-    src: "./demos/severance.mp3",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/severance.mp3",
     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/lelit_mo_crop1.png",
     color: "rgb(27,83,0)",
   },
