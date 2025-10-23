@@ -72,7 +72,6 @@ const audioTracks = [
     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/romantic_flight_crop.png",
     color: "#5f3d30",
   },
-
   {
     id: "spy_thriller",
     label: "Spy thriller",
@@ -80,6 +79,14 @@ const audioTracks = [
     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/lelit_mo_crop1.png",
     color: "rgb(27,83,0)",
   },
+  {
+    id: "action_strings",
+    label: "Action blockbuster",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/mission_lu.mp3",
+    bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/tshirt_red.png",
+    color: "rgba(113, 15, 10)",
+  },
+
   /*
   {
     id: "sax",
