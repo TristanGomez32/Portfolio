@@ -16,7 +16,7 @@ const audioTracks = [
   {
     id: "again_victory",
     label: "Epic orchestra",
-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/brahms_waltz_epic.mp3",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/trailer victory.mp3",
     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/enceinte_crop1.png",
     color: "rgb(116,91,52)",
   },
@@ -86,6 +86,49 @@ const audioTracks = [
     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/tshirt_red.png",
     color: "rgba(113, 15, 10)",
   },
+  {
+    id: "peaceful_piano",
+    label: "Peaceful piano",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/ambient.mp3",
+    bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/ice.png",
+    color: "rgba(47, 142, 197)",
+  },
+  {
+    id: "kpop_x_trailer",
+    label: "Epic K-Pop",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/golden.mp3",
+    bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/golden.png",
+    color: "rgba(204, 132, 56)",
+  },
+  {
+    id: "f1_car_chase",
+    label: "F1 car chase",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/skid_part2.mp3",
+    bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/f1.png",
+    color: "rgba(121, 72, 60)",
+  },
+  {
+    id: "tension_builder",
+    label: "Tension builder",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/skid_part1.mp3",
+    bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/f1_2.png",
+    color: "rgba(19, 39, 45)",
+  },
+  {
+    id: "2000s_medical_drama",
+    label: "2000s medical drama",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/trailer dr home.mp3",
+    bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/hospital.png",
+    color: "rgba(117, 148, 153)",
+  },
+  {
+    id: "neoromantic",
+    label: "Neo-Romantic",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/neoromantic.mp3",
+    bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/orpheus.png",
+    color: "rgba(165, 123, 58)",
+  },
+
 
   /*
   {
