@@ -269,6 +269,10 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
+.bg-evanescence::before {
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/evanescence.jpg');
+}
+
 .bg-berceuse::before {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/laberceuse.png');
 }

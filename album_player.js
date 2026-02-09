@@ -129,7 +129,6 @@ metadatas = {"albums":[{"folder":"https://media.githubusercontent.com/media/Tris
                   "bottom_color":"#375324",
                   "bottom_text":"#c7dfafff",
                   "top_text":"#d4ecbbff",
-
             },"laberceuse":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/laberceuse/",
                   "albumName": "La berceuse",
                   "genre": "Folk",
@@ -162,6 +161,16 @@ metadatas = {"albums":[{"folder":"https://media.githubusercontent.com/media/Tris
                   "bottom_color":"#644f31ff",
                   "bottom_text":"#fddfc6ff",
                   "top_text":"#ffffffff",
+            }, "evanescence":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/evanescence/",
+                  "albumName": "Evanescence",
+                  "genre": "Orchestral",
+                  "tracks":["evanescence.mp3"],
+                  "genres":["Orchestral"],
+                  "track_durations":["02:03"],
+                  "top_color":"#161616ff",
+                  "bottom_color":"#2b2b2bff",
+                  "bottom_text":"#c4c4c4ff",
+                  "top_text":"#ffffffff",
             }
           }};
 
@@ -170,8 +179,10 @@ var albumHTML;
 for (metadata of metadatas["albums"]){
   albumHTML = generateAlbumHTML(metadata);
   document.querySelectorAll(".albums")[0].innerHTML += albumHTML;
-
 }
+
+albumHTML = generateAlbumHTML(metadatas["short_movies"]["evanescence"],show_big_cover=false); 
+document.getElementById("evanescence_player").innerHTML += albumHTML;
 
 albumHTML = generateAlbumHTML(metadatas["short_movies"]["laberceuse"],show_big_cover=false); 
 document.getElementById("laberceuse_player").innerHTML += albumHTML;
