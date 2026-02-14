@@ -294,7 +294,7 @@ h1 {
 }
 
 .bg-iledyeu::before {
-    background-image: url('./img/iledyeufalaise.png');
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/iledyeufalaise.png');
 }
 
 .bg-warehouse::before {
