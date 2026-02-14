@@ -174,7 +174,7 @@ metadatas = {
                   "bottom_text":"#c4c4c4ff",
                   "top_text":"#ffffffff",
             }
-            },"docs":{"liledyeu":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/ileyeu/",
+            },"docs":{"liledyeu":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/ileyeu/",
                   "albumName": "<span class='line'>\
                                   <span class='line'>L'Île</span>\
                                   <span class='line'>d'yeu</span>\
