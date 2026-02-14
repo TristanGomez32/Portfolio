@@ -80,7 +80,9 @@ function generateAlbumHTML(metadata,show_big_cover=true) {
     return html;
 }
 
-metadatas = {"albums":[{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/rome_will_burn/",
+metadatas = {
+            "albums":[
+            {"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/rome_will_burn/",
                   "albumName": "Rome",
                   "genre": "Hard rock / Folk / Orchestral",
                   "tracks":["rome_will_burn.mp3","again.mp3","what_you_did.mp3","trailer_for_my_brother.mp3"],
@@ -172,7 +174,23 @@ metadatas = {"albums":[{"folder":"https://media.githubusercontent.com/media/Tris
                   "bottom_text":"#c4c4c4ff",
                   "top_text":"#ffffffff",
             }
-          }};
+            },"docs":{"liledyeu":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/ileyeu/",
+                  "albumName": "<span class='line'>\
+                                  <span class='line'>L'Île</span>\
+                                  <span class='line'>d'yeu</span>\
+                                </span>",
+                  "genre": "Orchestral",
+                  "tracks":["lile_dyeu.mp3","interlude1.mp3","interlude2.mp3","interlude3.mp3","lile_dyeu_variation.mp3"],
+                  "titles":["L'Île d'Yeu","Interlude 1","Interlude 2","Interlude 3","L'Île d'Yeu (variation)"],
+                  "genres":["Orchestral","Orchestral","Orchestral","Orchestral","Orchestral"],
+                  "track_durations":["01:49","00:25","00:24","00:33","01:21"],
+                  "top_color":"#78594a",
+                  "bottom_color":"#574136",
+                  "bottom_text":"#e0a587",
+                  "top_text":"rgb(255, 255, 255)",
+            }
+            }
+          };
 
 var albumHTML;
 
@@ -195,6 +213,10 @@ document.getElementById("summer_tape_player").innerHTML += albumHTML;
 
 albumHTML = generateAlbumHTML(metadatas["short_movies"]["runlikeagirl"],show_big_cover=false); 
 document.getElementById("runlikeagirl_player").innerHTML += albumHTML;
+
+albumHTML = generateAlbumHTML(metadatas["docs"]["liledyeu"],show_big_cover=false); 
+document.getElementById("liledyeu_player").innerHTML += albumHTML;
+
 
 /* GENERATE ALBUM END */
 
