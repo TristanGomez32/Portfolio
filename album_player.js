@@ -98,7 +98,7 @@ metadatas = {
                   "genre": "Dystopian / Synthwave",
                   "tracks":["intruder_on_board.mp3","weird_signal.mp3"],
                   "genres":["Dystopian","Synthwave"],
-                  "track_durations":["01:02","01:27",],
+                  "track_durations":["01:02","01:25",],
                   "top_color":"#2a3194ff",
                   "bottom_color":"#152b55ff",
                   "bottom_text":"#9bd2e6",
@@ -180,7 +180,7 @@ metadatas = {
                                   <span class='line'>d'yeu</span>\
                                 </span>",
                   "genre": "Orchestral",
-                  "tracks":["début.mp3","interlude1.mp3","interlude2.mp3","interlude3.mp3","fin.mp3"],
+                  "tracks":["debut.mp3","interlude1.mp3","interlude2.mp3","interlude3.mp3","fin.mp3"],
                   "titles":["L'Île d'Yeu","Interlude 1","Interlude 2","Interlude 3","L'Île d'Yeu (variation)"],
                   "genres":["Orchestral","Orchestral","Orchestral","Orchestral","Orchestral"],
                   "track_durations":["01:49","00:25","00:24","00:33","01:21"],
@@ -189,7 +189,22 @@ metadatas = {
                   "bottom_text":"#e0a587",
                   "top_text":"rgb(255, 255, 255)",
             }
+            },"ads":{"publu":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/publu/",
+                  "albumName": "<span class='line'>\
+                                  <span class='line'>LU - </span>\
+                                  <span class='line'>La gourmandise</span>\
+                                </span>",
+                  "genre": "Orchestral / Jazz",
+                  "tracks":["intro.mp3","intro_alt.mp3","end.mp3"],
+                  "titles":["Petit beurre ?","Petit beurre ? (alt.)","Simple chef d'oeuvre"],
+                  "genres":["Orchestral","Baroque","Jazz"],
+                  "track_durations":["00:25","00:13","00:13"],
+                  "top_color":"#a17038",
+                  "bottom_color":"#724c2a",
+                  "bottom_text":"#fcd3be",
+                  "top_text":"rgb(255, 255, 255)",
             }
+            },
           };
 
 var albumHTML;
@@ -217,6 +232,8 @@ document.getElementById("runlikeagirl_player").innerHTML += albumHTML;
 albumHTML = generateAlbumHTML(metadatas["docs"]["liledyeu"],show_big_cover=false); 
 document.getElementById("liledyeu_player").innerHTML += albumHTML;
 
+albumHTML = generateAlbumHTML(metadatas["ads"]["publu"],show_big_cover=false); 
+document.getElementById("publu_player").innerHTML += albumHTML;
 
 /* GENERATE ALBUM END */
 
@@ -274,6 +291,16 @@ function make_pause_symbol(color,draw_circle=true,set_size=true){
 
 }
 
+function trackId(src){
+  src_split = src.split("/")
+  track_id = src_split.slice(-2)[0]  + "/" + src_split.slice(-1)[0] 
+  return track_id
+}
+
+function is_same_track(src1,src2){
+  return trackId(src1) == trackId(src2);
+}
+
 function playTrack(track) {
 
     const src = track.getAttribute("data-src");
@@ -281,7 +308,7 @@ function playTrack(track) {
     album = track.parentElement.parentElement.parentElement;
     audio = album.querySelectorAll(".album-audio")[0];
 
-    if (audio.src != src){
+    if (!is_same_track(audio.src,src)){
       audio.src = src;
       duration_str_split = track.querySelectorAll(".track-duration")[0].innerHTML.split(":");
       audio.dataset.duration = 60*parseInt(duration_str_split[0])+parseInt(duration_str_split[1]);
@@ -296,11 +323,9 @@ function playTrack(track) {
 
     tracks = track.parentElement.querySelectorAll(".track-list li");
     tracks.forEach((t) => t.classList.remove("active-track"));
-    //tracks.forEach((t) => t.querySelectorAll(".track-number")[0].classList.remove("active-track"));
     tracks.forEach((t) => t.querySelectorAll(".track-number")[0].dataset.playing = false);
 
     track.classList.add("active-track");
-    //track.querySelectorAll(".track-number")[0].classList.add("active-track");
     track.querySelectorAll(".track-number")[0].dataset.playing = true;
 }
 
@@ -339,7 +364,7 @@ function playNextTrack(album){
   while(i<tracks.length){
     track = tracks[i];
           
-    if (track.getAttribute("data-src")==audio.src){
+    if (is_same_track(track.getAttribute("data-src"),audio.src)){
       break
     }
     
@@ -347,10 +372,17 @@ function playNextTrack(album){
 
   }
 
+  //Reset to first track once album is fully played
   if ((i+1)==tracks.length){
-    //Reset to first track once album is fully played
-    tracks[0].click();
-    tracks[0].click();
+    //If there's only one track, the next track to be played is already selected
+    //Hence we don't need a second click
+    if (tracks.length>1){
+      tracks[0].click();
+      tracks[0].click();
+    }else{
+      audio.currentTime = 0;
+      tracks[0].click();
+    }
   }else{
     tracks[(i+1)%tracks.length].click();
   }
@@ -409,7 +441,7 @@ for (album of albums){
     found_source = false;
     for (track of tracks){
 
-      if (track.getAttribute("data-src") == audio.src){
+      if (is_same_track(track.getAttribute("data-src"),audio.src)){
 
         found_source = true;
         break
@@ -484,8 +516,7 @@ for (album of albums){
     seekBarHandle = seekbarContainer.querySelectorAll(".seekbar-handle")[0];
 
     const progressPercent = (audio.currentTime / audio.dataset.duration) * 100;
-
-    
+ 
     updateSeekBar(progressPercent,seekBar,seekBarHandle,audio);
 
     album = audio.parentElement;
@@ -513,7 +544,7 @@ for (album of albums){
 
   seekBarContainer.addEventListener('mousedown', (e) => {
     setSeekBarToUpdateMode(e);
-    InUpdateModeAndUpdateIt(e);
+    findSeekBarInUpdateModeAndUpdateIt(e);
   });
   seekBarContainer.addEventListener('touchstart', (e) => {
     setSeekBarToUpdateMode(e);  
@@ -566,8 +597,6 @@ function findSeekBarInUpdateModeAndUpdateIt(e){
   if (!found_updating_seekBar){
     return null;
   }
-
-  //updateAudio(e,seekBarContainer);
 
   seekBar = seekBarContainer.querySelectorAll(".seekbar")[0];
   seekBarHandle = seekBarContainer.querySelectorAll(".seekbar-handle")[0];
