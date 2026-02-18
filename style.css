@@ -301,6 +301,10 @@ h1 {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/warehousebackground.png');
 }
 
+.bg-publu::before {
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/publu.png');
+}
+
 .bg-skid::before {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/skid.png');
 }
@@ -308,7 +312,6 @@ h1 {
 .bg-dragons::before {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/romantic_flight.png');
 }
-
 
 .bg-colossus::before {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/colossus.png');
@@ -352,6 +355,11 @@ h1 {
 .bg-warehouse::after {
     background-color: rgba(234,117,50,0.1);
 }
+
+.bg-publu::after {
+    background-color: rgba(141, 82, 30, 0.459);
+}
+
 
 .bg-skid::after {
     background-color: rgba(75, 71, 53, 0.4);
