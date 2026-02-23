@@ -169,6 +169,16 @@ metadatas = {
                   "tracks":["evanescence.mp3"],
                   "genres":["Orchestral"],
                   "track_durations":["02:03"],
+                  "top_color":"#232c35",
+                  "bottom_color":"#394857",
+                  "bottom_text":"#c4c4c4ff",
+                  "top_text":"#ffffffff",
+            }, "ensemble":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/ensemble/",
+                  "albumName": "Ensemble",
+                  "genre": "Angst / Ambient",
+                  "tracks":["ensemble.mp3"],
+                  "genres":["Angst / Ambient"],
+                  "track_durations":["02:18"],
                   "top_color":"#161616ff",
                   "bottom_color":"#2b2b2bff",
                   "bottom_text":"#c4c4c4ff",
@@ -216,6 +226,9 @@ for (metadata of metadatas["albums"]){
 
 albumHTML = generateAlbumHTML(metadatas["short_movies"]["evanescence"],show_big_cover=false); 
 document.getElementById("evanescence_player").innerHTML += albumHTML;
+
+albumHTML = generateAlbumHTML(metadatas["short_movies"]["ensemble"],show_big_cover=false); 
+document.getElementById("ensemble_player").innerHTML += albumHTML;
 
 albumHTML = generateAlbumHTML(metadatas["short_movies"]["laberceuse"],show_big_cover=false); 
 document.getElementById("laberceuse_player").innerHTML += albumHTML;
