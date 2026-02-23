@@ -273,10 +273,6 @@ h1 {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/evanescence.jpg');
 }
 
-.bg-ensemble::before {
-    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/ensemble.jpg');
-}
-
 .bg-berceuse::before {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/laberceuse.png');
 }
@@ -330,9 +326,6 @@ h1 {
 }
 
 
-.bg-evanescence::after {
-    background-color: rgb(37,150,190,0.1);
-}
 
 .bg-berceuse::after {
     background-color: rgb(43, 78, 128,0.4);
