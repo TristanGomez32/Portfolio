@@ -174,7 +174,7 @@ metadatas = {
                   "bottom_text":"#c4c4c4ff",
                   "top_text":"#ffffffff",
             }, "ensemble":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/ensemble/",
-                  "albumName": "Ensemlble",
+                  "albumName": "Ensemble",
                   "genre": "Angst/Ambient",
                   "tracks":["ensemble.mp3"],
                   "genres":["Angst/Ambient"],
