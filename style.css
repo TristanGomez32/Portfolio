@@ -269,6 +269,24 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
+.bg-promesses::before {
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/promesses.png');
+}
+
+.bg-tophit::before {
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/tophit.png');
+}
+
+.bg-prejudices::before {
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/prejudices.jpg');
+}
+
+
+.bg-lepassager::before {
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/lepassager.jpg');
+}
+
+
 .bg-evanescence::before {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/evanescence.jpg');
 }
@@ -309,6 +327,11 @@ h1 {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/publu.png');
 }
 
+.bg-dromfit::before {
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/dromfit.png');
+}
+
+
 .bg-skid::before {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/skid.png');
 }
@@ -329,6 +352,18 @@ h1 {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/Johannes-Brahms-young.webp');
 }
 
+
+.bg-promesses::after {
+    background-color: rgba(95, 110, 143,0.1);
+}
+
+.bg-tophit::after {
+    background-color: rgba(20, 20, 20, 0.315);
+}
+
+.bg-prejudices::after {
+    background-color: rgb(37,150,190,0.1);
+}
 
 .bg-evanescence::after {
     background-color: rgb(37,150,190,0.1);
