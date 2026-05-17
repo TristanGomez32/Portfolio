@@ -270,20 +270,20 @@ h1 {
 }
 
 .bg-promesses::before {
-    background-image: url('./img/promesses.png');
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/promesses.png');
 }
 
 .bg-tophit::before {
-    background-image: url('./img/tophit.png');
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/tophit.png');
 }
 
 .bg-prejudices::before {
-    background-image: url('./img/prejudices.jpg');
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/prejudices.jpg');
 }
 
 
 .bg-lepassager::before {
-    background-image: url('./img/lepassager.jpg');
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/lepassager.jpg');
 }
 
 
@@ -328,7 +328,7 @@ h1 {
 }
 
 .bg-dromfit::before {
-    background-image: url('./img/dromfit.png');
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/dromfit.png');
 }
 
 
