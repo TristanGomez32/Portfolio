@@ -213,6 +213,26 @@ metadatas = {
                   "bottom_color":"#91685d",
                   "bottom_text":"#fed8a5",
                   "top_text":"#ecc8ce",
+            }, "lefeuauxpoudres":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/lefeuauxpoudres/",
+                  "albumName": "Le feu aux poudres",
+                  "genre": "Metal",
+                  "tracks":["le_feu_aux_poudres.mp3"],
+                  "genres":["Metal"],
+                  "track_durations":["00:32"],
+                  "top_color":"#252324",
+                  "bottom_color":"#413d3f",
+                  "bottom_text":"#999999",
+                  "top_text":"#eeeeee",
+            }, "lesaintjean":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/lesaintjean/",
+                  "albumName": "Le Saint-Jean",
+                  "genre": "Neo-romantic",
+                  "tracks":["small_talk.mp3","farewell.mp3"],
+                  "genres":["Neo-romantic","Neo-romantic"],
+                  "track_durations":["02:32","1:30"],
+                  "top_color":"#252324",
+                  "bottom_color":"#413d3f",
+                  "bottom_text":"#999999",
+                  "top_text":"#eeeeee",
             }
             },"docs":{"liledyeu":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/liledyeu/",
                   "albumName": "<span class='line'>\
@@ -280,6 +300,12 @@ document.getElementById("promesses_player").innerHTML += albumHTML;
 
 albumHTML = generateAlbumHTML(metadatas["short_movies"]["tophit"],show_big_cover=false); 
 document.getElementById("tophit_player").innerHTML += albumHTML;
+
+albumHTML = generateAlbumHTML(metadatas["short_movies"]["lesaintjean"],show_big_cover=false); 
+document.getElementById("lesaintjean_player").innerHTML += albumHTML;
+
+albumHTML = generateAlbumHTML(metadatas["short_movies"]["lefeuauxpoudres"],show_big_cover=false); 
+document.getElementById("lefeuauxpoudres_player").innerHTML += albumHTML;
 
 albumHTML = generateAlbumHTML(metadatas["short_movies"]["evanescence"],show_big_cover=false); 
 document.getElementById("evanescence_player").innerHTML += albumHTML;
