@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: 'circular';
-    src: url('./font/circular-std-medium-500.ttf');
+    src: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/font/circular-std-medium-500.ttf');
 }
 
 
@@ -277,6 +277,14 @@ h1 {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/tophit.png');
 }
 
+.bg-lefeuauxpoudres::before {
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/lefeuauxpoudres.png');
+}
+
+.bg-lesaintjean::before {
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/lesaintjean.png');
+}
+
 .bg-prejudices::before {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/prejudices.jpg');
 }
@@ -352,13 +360,16 @@ h1 {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/Johannes-Brahms-young.webp');
 }
 
-
 .bg-promesses::after {
     background-color: rgba(95, 110, 143,0.1);
 }
 
 .bg-tophit::after {
     background-color: rgba(20, 20, 20, 0.315);
+}
+
+.bg-lefeuauxpoudres::after {
+    background-color: rgba(31, 29, 27,0.40);
 }
 
 .bg-prejudices::after {
@@ -372,7 +383,6 @@ h1 {
 .bg-berceuse::after {
     background-color: rgb(43, 78, 128,0.4);
 }
-
 
 .bg-lit::after {
     background-color: rgba(64, 130, 80, 0.4);
