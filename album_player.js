@@ -88,8 +88,8 @@ metadatas = {
                   "tracks":["rome_will_burn.mp3","again.mp3","what_you_did.mp3","trailer_for_my_brother.mp3"],
                   "genres":["Hard rock","Orchestral","Folk / Orchestral","Orchestral / Electro"],
                   "track_durations":["02:25","02:46","03:11","02:39"],
-                  "top_color":"#7a371bff", 
-                  "bottom_color":"rgba(88, 40, 21, 1)",
+                  "top_color":"rgba(88, 40, 21, 1)", 
+                  "bottom_color":"#7a371bff",
                   "bottom_text":"#e2d0c1ff",
                   "top_text":"#e4cdb8ff",
             },
@@ -99,8 +99,8 @@ metadatas = {
                   "tracks":["intruder_on_board.mp3","weird_signal.mp3"],
                   "genres":["Dystopian","Synthwave"],
                   "track_durations":["01:02","01:25",],
-                  "top_color":"#2a3194ff",
-                  "bottom_color":"#152b55ff",
+                  "top_color":"#152b55ff",
+                  "bottom_color":"#2a3194ff",
                   "bottom_text":"#9bd2e6",
                   "top_text":"#9ecedf",
             },
@@ -110,8 +110,8 @@ metadatas = {
                   "tracks":["fugue_for_organ.mp3","theme_and_variations.mp3","song_for_violin_and_piano.mp3"],
                   "genres":["Baroque","Classical","Post-romantic"],
                   "track_durations":["03:27","06:37","01:53"],
-                  "top_color":"#755537", 
-                  "bottom_color":"#4b2c0c",
+                  "top_color":"#4b2c0c", 
+                  "bottom_color":"#5e442c",
                   "bottom_text":"#e2d0c1ff",
                   "top_text":"#e4cdb8ff",
                   
@@ -127,8 +127,8 @@ metadatas = {
                   "titles":["Tu vas guérir","Crématorium","Dispersion","Souvenirs","Le lit"],
                   "genres":["Ambient synths","Ambient synths","Ambient synths","Ambient synths","Ambient synths"],
                   "track_durations":["01:26","00:56","02:50","02:06","01:17"],
-                  "top_color":"#4c752c",
-                  "bottom_color":"#375324",
+                  "top_color":"#375324",
+                  "bottom_color":"#4c752c",
                   "bottom_text":"#c7dfafff",
                   "top_text":"#d4ecbbff",
             },"laberceuse":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/laberceuse/",
@@ -138,9 +138,9 @@ metadatas = {
                   "titles":["De belles paroles","La honte"],
                   "genres":["Orchestral / Ambient / Synths","Folk"],
                   "track_durations":["01:10","01:13"],
-                  "top_color":"#7593b6ff",
-                  "bottom_color":"#54769cff",
-                  "bottom_text":"#93a2b3",
+                  "top_color":"rgb(67, 94, 124)",
+                  "bottom_color":"rgb(98, 124, 153)",
+                  "bottom_text":"#ccd0d4",
                   "top_text":"#cad1d8ff",
             },"runlikeagirl":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/runlikeagirl/",
                   "albumName": "Run like a girl",
@@ -149,8 +149,8 @@ metadatas = {
                   "titles":["Run like a girl","Credits"],
                   "genres":["Orchestral / Electronic","Orchestral / Electronic"],
                   "track_durations":["01:59","01:02"],
-                  "top_color":"#7593b6ff",
-                  "bottom_color":"#54769cff",
+                  "top_color":"rgb(66, 92, 122)",
+                  "bottom_color":"rgb(91, 115, 143)",
                   "bottom_text":"#93a2b3",
                   "top_text":"#cad1d8ff",                 
             }, "summer_tape":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/summer_tape/",
@@ -159,8 +159,8 @@ metadatas = {
                   "tracks":["we're_the_only_ones_here_!.mp3","akward_flirt.mp3","why_did_you_bring_all_of_these.mp3","banjo_what.mp3","your_mom_is_gonna_worry.mp3"],
                   "genres":["Hardtech","Folk / Blues","Folk","Folk","Folk"],
                   "track_durations":["00:45","00:41","00:24","00:46","00:54"],
-                  "top_color":"#81663fff",
-                  "bottom_color":"#644f31ff",
+                  "top_color":"#644f31ff",
+                  "bottom_color":"#81663fff",
                   "bottom_text":"#fddfc6ff",
                   "top_text":"#ffffffff",
             }, "evanescence":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/evanescence/",
@@ -183,6 +183,36 @@ metadatas = {
                   "bottom_color":"#2b2b2bff",
                   "bottom_text":"#c4c4c4ff",
                   "top_text":"#ffffffff",
+            }, "lepassager":{"folder":"./albums/lepassager/",
+                  "albumName": "Le passager",
+                  "genre": "Lofi / Orchestral",
+                  "tracks":["deux_whiskies.mp3","sur_le_chemin.mp3"],
+                  "genres":["Lofi","Orchestral"],
+                  "track_durations":["00:46","01:35"],
+                  "top_color":"#00232b",
+                  "bottom_color":"#002e38",
+                  "bottom_text":"#c4c4c4ff",
+                  "top_text":"#ffffffff",
+            }, "promesses":{"folder":"./albums/promesses/",
+                  "albumName": "Promesses",
+                  "genre": "Orchestral / Electronic",
+                  "tracks":["cérémonie.mp3","nuit de noce.mp3","trahison.mp3"],
+                  "genres":["Orchestral","Orchestral / Electronic", "Orchestral / Electronic"],
+                  "track_durations":["00:46","02:09","02:17"],
+                  "top_color":"#2c0e19",
+                  "bottom_color":"#4d182a",
+                  "bottom_text":"#c4c4c4ff",
+                  "top_text":"#ffffffff",
+            }, "tophit":{"folder":"./albums/tophit/",
+                  "albumName": "Promesses",
+                  "genre": "Funk",
+                  "tracks":["break-in.mp3","disco party.mp3","main event.mp3"],
+                  "genres":["Funk","Funk", "Funk"],
+                  "track_durations":["02:24","00:51","01:13"],
+                  "top_color":"#7b404a",
+                  "bottom_color":"#91685d",
+                  "bottom_text":"#fed8a5",
+                  "top_text":"#ecc8ce",
             }
             },"docs":{"liledyeu":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/liledyeu/",
                   "albumName": "<span class='line'>\
@@ -194,10 +224,20 @@ metadatas = {
                   "titles":["L'Île d'Yeu","Interlude 1","Interlude 2","Interlude 3","L'Île d'Yeu (variation)"],
                   "genres":["Orchestral","Orchestral","Orchestral","Orchestral","Orchestral"],
                   "track_durations":["01:49","00:25","00:24","00:33","01:21"],
-                  "top_color":"#78594a",
-                  "bottom_color":"#574136",
-                  "bottom_text":"#e0a587",
+                  "top_color":"#384139",
+                  "bottom_color":"#4a574c",
+                  "bottom_text":"#accab0",
                   "top_text":"rgb(255, 255, 255)",
+            }, "prejudices":{"folder":"./albums/prejudices/",
+                  "albumName": "Préjudices",
+                  "genre": "Ambient",
+                  "tracks":["l'atelier.mp3","l'affaire.mp3","préjudices.mp3","guyane.mp3","quelqu'un de bien.mp3"],
+                  "genres":["Ambient","Ambient","Ambient","Ambient","Ambient"],
+                  "track_durations":["02:02","02:57","03:02","03:01","03:44"],
+                  "top_color":"#001227",
+                  "bottom_color":"#002652",
+                  "bottom_text":"rgb(149, 168, 196)",
+                  "top_text":"#ffffffff",
             }
             },"ads":{"publu":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/publu/",
                   "albumName": "<span class='line'>\
@@ -209,9 +249,20 @@ metadatas = {
                   "titles":["Petit beurre ?","Petit beurre ? (alt.)","Simple chef d'oeuvre"],
                   "genres":["Orchestral","Baroque","Jazz"],
                   "track_durations":["00:25","00:13","00:13"],
-                  "top_color":"#a17038",
-                  "bottom_color":"#724c2a",
+                  "top_color":"#724c2a",
+                  "bottom_color":"#a17038",
                   "bottom_text":"#fcd3be",
+                  "top_text":"rgb(255, 255, 255)",
+            },"dromfit":{"folder":"./albums/dromfit/",
+                  "albumName": "Dromfit",
+                  "genre": "Trailer",
+                  "tracks":["dromfit.mp3"],
+                  "titles":["Dromfit"],
+                  "genres":["Trailer"],
+                  "track_durations":["00:35"],
+                  "top_color":"#2b2b2b",
+                  "bottom_color":"#4d4d4d",
+                  "bottom_text":"#ffffff",
                   "top_text":"rgb(255, 255, 255)",
             }
             },
@@ -224,8 +275,17 @@ for (metadata of metadatas["albums"]){
   document.querySelectorAll(".albums")[0].innerHTML += albumHTML;
 }
 
+albumHTML = generateAlbumHTML(metadatas["short_movies"]["promesses"],show_big_cover=false); 
+document.getElementById("promesses_player").innerHTML += albumHTML;
+
+albumHTML = generateAlbumHTML(metadatas["short_movies"]["tophit"],show_big_cover=false); 
+document.getElementById("tophit_player").innerHTML += albumHTML;
+
 albumHTML = generateAlbumHTML(metadatas["short_movies"]["evanescence"],show_big_cover=false); 
 document.getElementById("evanescence_player").innerHTML += albumHTML;
+
+albumHTML = generateAlbumHTML(metadatas["short_movies"]["lepassager"],show_big_cover=false); 
+document.getElementById("lepassager_player").innerHTML += albumHTML;
 
 albumHTML = generateAlbumHTML(metadatas["short_movies"]["ensemble"],show_big_cover=false); 
 document.getElementById("ensemble_player").innerHTML += albumHTML;
@@ -245,8 +305,14 @@ document.getElementById("runlikeagirl_player").innerHTML += albumHTML;
 albumHTML = generateAlbumHTML(metadatas["docs"]["liledyeu"],show_big_cover=false); 
 document.getElementById("liledyeu_player").innerHTML += albumHTML;
 
+albumHTML = generateAlbumHTML(metadatas["docs"]["prejudices"],show_big_cover=false); 
+document.getElementById("prejudices_player").innerHTML += albumHTML;
+
 albumHTML = generateAlbumHTML(metadatas["ads"]["publu"],show_big_cover=false); 
 document.getElementById("publu_player").innerHTML += albumHTML;
+
+albumHTML = generateAlbumHTML(metadatas["ads"]["dromfit"],show_big_cover=false); 
+document.getElementById("dromfit_player").innerHTML += albumHTML;
 
 /* GENERATE ALBUM END */
 
