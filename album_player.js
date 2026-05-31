@@ -204,7 +204,7 @@ metadatas = {
                   "bottom_text":"#c4c4c4ff",
                   "top_text":"#ffffffff",
             }, "tophit":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/tophit/",
-                  "albumName": "Promesses",
+                  "albumName": "Top hit",
                   "genre": "Funk",
                   "tracks":["break-in.mp3","disco party.mp3","main event.mp3"],
                   "genres":["Funk","Funk", "Funk"],
@@ -213,6 +213,16 @@ metadatas = {
                   "bottom_color":"#91685d",
                   "bottom_text":"#fed8a5",
                   "top_text":"#ecc8ce",
+            }, "leserpent":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/leserpent/",
+                  "albumName": "Le Serpent",
+                  "genre": "Ambient",
+                  "tracks":["le_serpent.mp3","tous_les_regards.mp3","ça_va_aller.mp3","un_verre_d'eau.mp3","votre_nom.mp3"],
+                  "genres":["Ambient","Ambient","Ambient","Ambient","Ambient"],
+                  "track_durations":["00:43","01:15","00:20","01:05","00:28"],
+                  "top_color":"#4b0d0f",
+                  "bottom_color":"#6d1316",
+                  "bottom_text":"#d4d3d3",
+                  "top_text":"#eeeeee", 
             }, "lefeuauxpoudres":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/lefeuauxpoudres/",
                   "albumName": "Le feu aux poudres",
                   "genre": "Metal",
@@ -306,6 +316,9 @@ document.getElementById("lesaintjean_player").innerHTML += albumHTML;
 
 albumHTML = generateAlbumHTML(metadatas["short_movies"]["lefeuauxpoudres"],show_big_cover=false); 
 document.getElementById("lefeuauxpoudres_player").innerHTML += albumHTML;
+
+albumHTML = generateAlbumHTML(metadatas["short_movies"]["leserpent"],show_big_cover=false); 
+document.getElementById("leserpent_player").innerHTML += albumHTML;
 
 albumHTML = generateAlbumHTML(metadatas["short_movies"]["evanescence"],show_big_cover=false); 
 document.getElementById("evanescence_player").innerHTML += albumHTML;
