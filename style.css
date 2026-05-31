@@ -285,10 +285,14 @@ h1 {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/lesaintjean.png');
 }
 
+
+.bg-leserpent::before {
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/leserpent.png');
+}
+
 .bg-prejudices::before {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/prejudices.jpg');
 }
-
 
 .bg-lepassager::before {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/lepassager.jpg');
@@ -369,6 +373,10 @@ h1 {
 }
 
 .bg-lefeuauxpoudres::after {
+    background-color: rgba(31, 29, 27,0.40);
+}
+
+.bg-leserpent::after {
     background-color: rgba(31, 29, 27,0.40);
 }
 
@@ -668,12 +676,6 @@ span.line {
 }
 
 .demo {
-  /*
-  background-image: url('./img/enceinte.png');
-  background-position: 8px 8px;
-  background-color: rgb(10, 124, 0);
-  background-blend-mode: screen;
-  */
   display: flex;
   flex-flow: column nowrap;
   min-width: 170px;
