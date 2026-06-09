@@ -198,7 +198,7 @@ metadatas = {
                   "genre": "Orchestral / Electronic",
                   "tracks":["cérémonie.mp3","nuit de noce.mp3","trahison.mp3"],
                   "genres":["Orchestral","Orchestral / Electronic", "Orchestral / Electronic"],
-                  "track_durations":["00:46","02:09","02:17"],
+                  "track_durations":["01:02","02:09","02:17"],
                   "top_color":"#2c0e19",
                   "bottom_color":"#4d182a",
                   "bottom_text":"#c4c4c4ff",
