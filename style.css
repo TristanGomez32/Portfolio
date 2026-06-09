@@ -285,7 +285,6 @@ h1 {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/lesaintjean.png');
 }
 
-
 .bg-leserpent::before {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/leserpent.png');
 }
@@ -297,7 +296,6 @@ h1 {
 .bg-lepassager::before {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/lepassager.jpg');
 }
-
 
 .bg-evanescence::before {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/evanescence.jpg');
@@ -381,7 +379,7 @@ h1 {
 }
 
 .bg-prejudices::after {
-    background-color: rgb(37,150,190,0.1);
+    background-color: rgba(16, 67, 85, 0.1);
 }
 
 .bg-evanescence::after {

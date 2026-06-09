@@ -259,7 +259,7 @@ metadatas = {
                   "bottom_text":"#accab0",
                   "top_text":"rgb(255, 255, 255)",
             }, "prejudices":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/prejudices/",
-                  "albumName": "Préjudices",
+                  "albumName": "Préjudice",
                   "genre": "Ambient",
                   "tracks":["une forme de soutien.mp3","l'atelier.mp3","l'affaire.mp3","préjudices.mp3","guyane.mp3","quelqu'un de bien.mp3"],
                   "genres":["Ambient","Ambient","Ambient","Ambient","Ambient","Ambient"],
