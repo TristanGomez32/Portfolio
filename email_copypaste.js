@@ -45,5 +45,4 @@ for (emailContainer of emailContainers){
 
     });
 
-    console.log(emailContainer);
 }
