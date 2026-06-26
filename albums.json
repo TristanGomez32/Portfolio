@@ -16,7 +16,7 @@
                   "genre": "Dystopian / Synthwave",
                   "tracks":["intruder_on_board.mp3","weird_signal.mp3"],
                   "genres":["Dystopian","Synthwave"],
-                  "track_durations":["01:02","01:25",],
+                  "track_durations":["01:02","01:25"],
                   "top_color":"#152b55ff",
                   "bottom_color":"#2a3194ff",
                   "bottom_text":"#9bd2e6",
@@ -44,7 +44,7 @@
                   "top_color":"#375324",
                   "bottom_color":"#4c752c",
                   "bottom_text":"#c7dfafff",
-                  "top_text":"#d4ecbbff",
+                  "top_text":"#d4ecbbff"
             },"laberceuse":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/laberceuse/",
                   "albumName": "La berceuse",
                   "genre": "Folk",
@@ -55,7 +55,7 @@
                   "top_color":"rgb(67, 94, 124)",
                   "bottom_color":"rgb(98, 124, 153)",
                   "bottom_text":"#ccd0d4",
-                  "top_text":"#cad1d8ff",
+                  "top_text":"#cad1d8ff"
             },"runlikeagirl":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/runlikeagirl/",
                   "albumName": "Run like a girl",
                   "genre": "Orchestral / Electronic",
@@ -66,7 +66,7 @@
                   "top_color":"rgb(66, 92, 122)",
                   "bottom_color":"rgb(91, 115, 143)",
                   "bottom_text":"#93a2b3",
-                  "top_text":"#cad1d8ff",                 
+                  "top_text":"#cad1d8ff"               
             }, "summer_tape":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/summer_tape/",
                   "albumName": "Summer tape",
                   "genre": "Folk / Hardtech / Blues",
