@@ -198,7 +198,7 @@ metadatas = {
                   "genre": "Orchestral / Electronic",
                   "tracks":["cérémonie.mp3","nuit de noce.mp3","trahison.mp3"],
                   "genres":["Orchestral","Orchestral / Electronic", "Orchestral / Electronic"],
-                  "track_durations":["00:46","02:09","02:17"],
+                  "track_durations":["01:02","02:09","02:17"],
                   "top_color":"#2c0e19",
                   "bottom_color":"#4d182a",
                   "bottom_text":"#c4c4c4ff",
@@ -259,11 +259,11 @@ metadatas = {
                   "bottom_text":"#accab0",
                   "top_text":"rgb(255, 255, 255)",
             }, "prejudices":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/prejudices/",
-                  "albumName": "Préjudices",
+                  "albumName": "Préjudice",
                   "genre": "Ambient",
-                  "tracks":["l'atelier.mp3","l'affaire.mp3","préjudices.mp3","guyane.mp3","quelqu'un de bien.mp3"],
-                  "genres":["Ambient","Ambient","Ambient","Ambient","Ambient"],
-                  "track_durations":["02:02","02:57","03:02","03:01","03:44"],
+                  "tracks":["une forme de soutien.mp3","l'atelier.mp3","l'affaire.mp3","préjudices.mp3","guyane.mp3","quelqu'un de bien.mp3"],
+                  "genres":["Ambient","Ambient","Ambient","Ambient","Ambient","Ambient"],
+                  "track_durations":["01:30","02:02","02:57","03:02","03:01","03:44"],
                   "top_color":"#001227",
                   "bottom_color":"#002652",
                   "bottom_text":"rgb(149, 168, 196)",
@@ -476,13 +476,15 @@ function updateSeekBar(progressPercent,seekBar,seekBarHandle){
 
 function playNextTrack(album){
 
+  audio = album.parentElement.parentElement.querySelectorAll(".album-audio")[0];
+
   tracks = album.querySelectorAll(".track");
 
   let i=0;
   while(i<tracks.length){
     track = tracks[i];
           
-    if (is_same_track(track.getAttribute("data-src"),audio.src)){
+    if (is_same_track(track.getAttribute("data-src"),decodeURIComponent(audio.src))){
       break
     }
     
