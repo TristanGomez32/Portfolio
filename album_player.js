@@ -476,13 +476,15 @@ function updateSeekBar(progressPercent,seekBar,seekBarHandle){
 
 function playNextTrack(album){
 
+  audio = album.parentElement.parentElement.querySelectorAll(".album-audio")[0];
+
   tracks = album.querySelectorAll(".track");
 
   let i=0;
   while(i<tracks.length){
     track = tracks[i];
           
-    if (is_same_track(track.getAttribute("data-src"),audio.src)){
+    if (is_same_track(track.getAttribute("data-src"),decodeURIComponent(audio.src))){
       break
     }
     
