@@ -33,7 +33,7 @@ h2{
 
 
 video {
-    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/first_img_of_header_vid.png');
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/first_img_of_header_vid.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
@@ -341,6 +341,9 @@ h1 {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/dromfit.png');
 }
 
+.bg-moon::before {
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/forallmankind.png');
+}
 
 .bg-skid::before {
     background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/skid.png');
