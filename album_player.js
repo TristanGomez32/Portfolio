@@ -1,4 +1,6 @@
-/* GENERATE ALBUM */
+PLAYERS_JSON_PATH = "https://raw.githubusercontent.com/TristanGomez32/Portfolio/refs/heads/dev/albums.json"
+
+ALBUMS = "albums"
 
 function generateAlbumHTML(metadata,show_big_cover=true) {
   
@@ -80,281 +82,6 @@ function generateAlbumHTML(metadata,show_big_cover=true) {
     return html;
 }
 
-metadatas = {
-            "albums":[
-            {"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/rome_will_burn/",
-                  "albumName": "Rome",
-                  "genre": "Hard rock / Folk / Orchestral",
-                  "tracks":["rome_will_burn.mp3","again.mp3","what_you_did.mp3","trailer_for_my_brother.mp3"],
-                  "genres":["Hard rock","Orchestral","Folk / Orchestral","Orchestral / Electro"],
-                  "track_durations":["02:25","02:46","03:11","02:39"],
-                  "top_color":"rgba(88, 40, 21, 1)", 
-                  "bottom_color":"#7a371bff",
-                  "bottom_text":"#e2d0c1ff",
-                  "top_text":"#e4cdb8ff",
-            },
-            {"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/weird_signal/",
-                  "albumName": "Weird Signal",
-                  "genre": "Dystopian / Synthwave",
-                  "tracks":["intruder_on_board.mp3","weird_signal.mp3"],
-                  "genres":["Dystopian","Synthwave"],
-                  "track_durations":["01:02","01:25",],
-                  "top_color":"#152b55ff",
-                  "bottom_color":"#2a3194ff",
-                  "bottom_text":"#9bd2e6",
-                  "top_text":"#9ecedf",
-            },
-            {"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/classical_work/",
-                  "albumName": "Classical work",
-                  "genre": "Baroque / Classical / Post-romantic",
-                  "tracks":["fugue_for_organ.mp3","theme_and_variations.mp3","song_for_violin_and_piano.mp3"],
-                  "genres":["Baroque","Classical","Post-romantic"],
-                  "track_durations":["03:27","06:37","01:53"],
-                  "top_color":"#4b2c0c", 
-                  "bottom_color":"#5e442c",
-                  "bottom_text":"#e2d0c1ff",
-                  "top_text":"#e4cdb8ff",
-                  
-            },],
-            "short_movies":{
-              "lelit":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/lelit/",
-                  "albumName": "<span class='line'>\
-                                  <span class='line'>Le lit</span>\
-                                  <span class='line'>de la rivière</span>\
-                                </span>",
-                  "genre": "Ambient synths",
-                  "tracks":["tu_vas_guerir.mp3","crematorium.mp3","dispersion.mp3","souvenirs.mp3","le_lit.mp3"],
-                  "titles":["Tu vas guérir","Crématorium","Dispersion","Souvenirs","Le lit"],
-                  "genres":["Ambient synths","Ambient synths","Ambient synths","Ambient synths","Ambient synths"],
-                  "track_durations":["01:26","00:56","02:50","02:06","01:17"],
-                  "top_color":"#375324",
-                  "bottom_color":"#4c752c",
-                  "bottom_text":"#c7dfafff",
-                  "top_text":"#d4ecbbff",
-            },"laberceuse":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/laberceuse/",
-                  "albumName": "La berceuse",
-                  "genre": "Folk",
-                  "tracks":["de_belles_paroles.mp3","la_honte.mp3"],
-                  "titles":["De belles paroles","La honte"],
-                  "genres":["Orchestral / Ambient / Synths","Folk"],
-                  "track_durations":["01:10","01:13"],
-                  "top_color":"rgb(67, 94, 124)",
-                  "bottom_color":"rgb(98, 124, 153)",
-                  "bottom_text":"#ccd0d4",
-                  "top_text":"#cad1d8ff",
-            },"runlikeagirl":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/runlikeagirl/",
-                  "albumName": "Run like a girl",
-                  "genre": "Orchestral / Electronic",
-                  "tracks":["run_like_a_girl.mp3","credits.mp3"],
-                  "titles":["Run like a girl","Credits"],
-                  "genres":["Orchestral / Electronic","Orchestral / Electronic"],
-                  "track_durations":["01:59","01:02"],
-                  "top_color":"rgb(66, 92, 122)",
-                  "bottom_color":"rgb(91, 115, 143)",
-                  "bottom_text":"#93a2b3",
-                  "top_text":"#cad1d8ff",                 
-            }, "summer_tape":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/summer_tape/",
-                  "albumName": "Summer tape",
-                  "genre": "Folk / Hardtech / Blues",
-                  "tracks":["we're_the_only_ones_here_!.mp3","akward_flirt.mp3","why_did_you_bring_all_of_these.mp3","banjo_what.mp3","your_mom_is_gonna_worry.mp3"],
-                  "genres":["Hardtech","Folk / Blues","Folk","Folk","Folk"],
-                  "track_durations":["00:45","00:41","00:24","00:46","00:54"],
-                  "top_color":"#644f31ff",
-                  "bottom_color":"#81663fff",
-                  "bottom_text":"#fddfc6ff",
-                  "top_text":"#ffffffff",
-            }, "evanescence":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/evanescence/",
-                  "albumName": "Evanescence",
-                  "genre": "Orchestral",
-                  "tracks":["evanescence.mp3"],
-                  "genres":["Orchestral"],
-                  "track_durations":["02:03"],
-                  "top_color":"#232c35",
-                  "bottom_color":"#394857",
-                  "bottom_text":"#c4c4c4ff",
-                  "top_text":"#ffffffff",
-            }, "ensemble":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/ensemble/",
-                  "albumName": "Ensemble",
-                  "genre": "Angst / Ambient",
-                  "tracks":["ensemble.mp3"],
-                  "genres":["Angst / Ambient"],
-                  "track_durations":["02:18"],
-                  "top_color":"#161616ff",
-                  "bottom_color":"#2b2b2bff",
-                  "bottom_text":"#c4c4c4ff",
-                  "top_text":"#ffffffff",
-            }, "lepassager":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/lepassager/",
-                  "albumName": "Le passager",
-                  "genre": "Lofi / Orchestral",
-                  "tracks":["deux_whiskies.mp3","sur_le_chemin.mp3"],
-                  "genres":["Lofi","Orchestral"],
-                  "track_durations":["00:46","01:35"],
-                  "top_color":"#00232b",
-                  "bottom_color":"#002e38",
-                  "bottom_text":"#c4c4c4ff",
-                  "top_text":"#ffffffff",
-            }, "promesses":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/promesses/",
-                  "albumName": "Promesses",
-                  "genre": "Orchestral / Electronic",
-                  "tracks":["cérémonie.mp3","nuit de noce.mp3","trahison.mp3"],
-                  "genres":["Orchestral","Orchestral / Electronic", "Orchestral / Electronic"],
-                  "track_durations":["01:02","02:09","02:17"],
-                  "top_color":"#2c0e19",
-                  "bottom_color":"#4d182a",
-                  "bottom_text":"#c4c4c4ff",
-                  "top_text":"#ffffffff",
-            }, "tophit":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/tophit/",
-                  "albumName": "Top hit",
-                  "genre": "Funk",
-                  "tracks":["break-in.mp3","disco party.mp3","main event.mp3","end_credits.mp3"],
-                  "genres":["Funk","Funk", "Funk","Funk"],
-                  "track_durations":["02:24","00:51","01:13","00:37"],
-                  "top_color":"#7b404a",
-                  "bottom_color":"#91685d",
-                  "bottom_text":"#fed8a5",
-                  "top_text":"#ecc8ce",
-            }, "leserpent":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/leserpent/",
-                  "albumName": "Le Serpent",
-                  "genre": "Ambient",
-                  "tracks":["le_serpent.mp3","tous_les_regards.mp3","ça_va_aller.mp3","un_verre_d'eau.mp3","votre_nom.mp3"],
-                  "genres":["Ambient","Ambient","Ambient","Ambient","Ambient"],
-                  "track_durations":["00:43","01:15","00:20","01:05","00:28"],
-                  "top_color":"#4b0d0f",
-                  "bottom_color":"#6d1316",
-                  "bottom_text":"#d4d3d3",
-                  "top_text":"#eeeeee", 
-            }, "lefeuauxpoudres":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/lefeuauxpoudres/",
-                  "albumName": "Le feu aux poudres",
-                  "genre": "Metal",
-                  "tracks":["le_feu_aux_poudres.mp3"],
-                  "genres":["Metal"],
-                  "track_durations":["00:32"],
-                  "top_color":"#252324",
-                  "bottom_color":"#413d3f",
-                  "bottom_text":"#999999",
-                  "top_text":"#eeeeee",
-            }, "lesaintjean":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/lesaintjean/",
-                  "albumName": "Le Saint-Jean",
-                  "genre": "Neo-romantic",
-                  "tracks":["small_talk.mp3","farewell.mp3"],
-                  "genres":["Neo-romantic","Neo-romantic"],
-                  "track_durations":["02:32","1:30"],
-                  "top_color":"#252324",
-                  "bottom_color":"#413d3f",
-                  "bottom_text":"#999999",
-                  "top_text":"#eeeeee",
-            }
-            },"docs":{"liledyeu":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/liledyeu/",
-                  "albumName": "<span class='line'>\
-                                  <span class='line'>L'Île</span>\
-                                  <span class='line'>d'yeu</span>\
-                                </span>",
-                  "genre": "Orchestral",
-                  "tracks":["debut.mp3","interlude1.mp3","interlude2.mp3","interlude3.mp3","fin.mp3"],
-                  "titles":["L'Île d'Yeu","Interlude 1","Interlude 2","Interlude 3","L'Île d'Yeu (variation)"],
-                  "genres":["Orchestral","Orchestral","Orchestral","Orchestral","Orchestral"],
-                  "track_durations":["01:49","00:25","00:24","00:33","01:21"],
-                  "top_color":"#384139",
-                  "bottom_color":"#4a574c",
-                  "bottom_text":"#accab0",
-                  "top_text":"rgb(255, 255, 255)",
-            }, "prejudices":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/prejudices/",
-                  "albumName": "Préjudice",
-                  "genre": "Ambient",
-                  "tracks":["une forme de soutien.mp3","l'atelier.mp3","l'affaire.mp3","préjudices.mp3","guyane.mp3","quelqu'un de bien.mp3"],
-                  "genres":["Ambient","Ambient","Ambient","Ambient","Ambient","Ambient"],
-                  "track_durations":["01:30","02:02","02:57","03:02","03:01","03:44"],
-                  "top_color":"#001227",
-                  "bottom_color":"#002652",
-                  "bottom_text":"rgb(149, 168, 196)",
-                  "top_text":"#ffffffff",
-            }
-            },"ads":{"publu":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/publu/",
-                  "albumName": "<span class='line'>\
-                                  <span class='line'>LU - </span>\
-                                  <span class='line'>La gourmandise</span>\
-                                </span>",
-                  "genre": "Orchestral / Jazz",
-                  "tracks":["intro.mp3","intro_alt.mp3","end.mp3"],
-                  "titles":["Petit beurre ?","Petit beurre ? (alt.)","Simple chef d'oeuvre"],
-                  "genres":["Orchestral","Baroque","Jazz"],
-                  "track_durations":["00:25","00:13","00:13"],
-                  "top_color":"#724c2a",
-                  "bottom_color":"#a17038",
-                  "bottom_text":"#fcd3be",
-                  "top_text":"rgb(255, 255, 255)",
-            },"dromfit":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/dromfit/",
-                  "albumName": "Dromfit",
-                  "genre": "Trailer",
-                  "tracks":["dromfit.mp3"],
-                  "titles":["Dromfit"],
-                  "genres":["Trailer"],
-                  "track_durations":["00:35"],
-                  "top_color":"#2b2b2b",
-                  "bottom_color":"#4d4d4d",
-                  "bottom_text":"#ffffff",
-                  "top_text":"rgb(255, 255, 255)",
-            }
-            },
-          };
-
-var albumHTML;
-
-for (metadata of metadatas["albums"]){
-  albumHTML = generateAlbumHTML(metadata);
-  document.querySelectorAll(".albums")[0].innerHTML += albumHTML;
-}
-
-albumHTML = generateAlbumHTML(metadatas["short_movies"]["promesses"],show_big_cover=false); 
-document.getElementById("promesses_player").innerHTML += albumHTML;
-
-albumHTML = generateAlbumHTML(metadatas["short_movies"]["tophit"],show_big_cover=false); 
-document.getElementById("tophit_player").innerHTML += albumHTML;
-
-albumHTML = generateAlbumHTML(metadatas["short_movies"]["lesaintjean"],show_big_cover=false); 
-document.getElementById("lesaintjean_player").innerHTML += albumHTML;
-
-albumHTML = generateAlbumHTML(metadatas["short_movies"]["lefeuauxpoudres"],show_big_cover=false); 
-document.getElementById("lefeuauxpoudres_player").innerHTML += albumHTML;
-
-albumHTML = generateAlbumHTML(metadatas["short_movies"]["leserpent"],show_big_cover=false); 
-document.getElementById("leserpent_player").innerHTML += albumHTML;
-
-albumHTML = generateAlbumHTML(metadatas["short_movies"]["evanescence"],show_big_cover=false); 
-document.getElementById("evanescence_player").innerHTML += albumHTML;
-
-albumHTML = generateAlbumHTML(metadatas["short_movies"]["lepassager"],show_big_cover=false); 
-document.getElementById("lepassager_player").innerHTML += albumHTML;
-
-albumHTML = generateAlbumHTML(metadatas["short_movies"]["ensemble"],show_big_cover=false); 
-document.getElementById("ensemble_player").innerHTML += albumHTML;
-
-albumHTML = generateAlbumHTML(metadatas["short_movies"]["laberceuse"],show_big_cover=false); 
-document.getElementById("laberceuse_player").innerHTML += albumHTML;
-
-albumHTML = generateAlbumHTML(metadatas["short_movies"]["lelit"],show_big_cover=false); 
-document.getElementById("lelit_player").innerHTML += albumHTML;
-
-albumHTML = generateAlbumHTML(metadatas["short_movies"]["summer_tape"],show_big_cover=false); 
-document.getElementById("summer_tape_player").innerHTML += albumHTML;
-
-albumHTML = generateAlbumHTML(metadatas["short_movies"]["runlikeagirl"],show_big_cover=false); 
-document.getElementById("runlikeagirl_player").innerHTML += albumHTML;
-
-albumHTML = generateAlbumHTML(metadatas["docs"]["liledyeu"],show_big_cover=false); 
-document.getElementById("liledyeu_player").innerHTML += albumHTML;
-
-albumHTML = generateAlbumHTML(metadatas["docs"]["prejudices"],show_big_cover=false); 
-document.getElementById("prejudices_player").innerHTML += albumHTML;
-
-albumHTML = generateAlbumHTML(metadatas["ads"]["publu"],show_big_cover=false); 
-document.getElementById("publu_player").innerHTML += albumHTML;
-
-albumHTML = generateAlbumHTML(metadatas["ads"]["dromfit"],show_big_cover=false); 
-document.getElementById("dromfit_player").innerHTML += albumHTML;
-
-/* GENERATE ALBUM END */
-
 function convert_to_str_with_zero_padding(value){
   if (value<10){
     value_str = "0"+value.toString();
@@ -390,7 +117,7 @@ function make_play_symbol(color,draw_circle=true,set_size=true){
 }
 
 function make_pause_symbol(color,draw_circle=true,set_size=true){
-   
+  
   if(set_size){
     html = `<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">`;
   }else{
@@ -446,8 +173,6 @@ function playTrack(track) {
     track.classList.add("active-track");
     track.querySelectorAll(".track-number")[0].dataset.playing = true;
 }
-
-const albums = document.querySelectorAll(".album-player");
 
 function updateTimecode(audio,timecode){
   durationStr = convert_timecode_to_string(audio.dataset.duration);
@@ -541,165 +266,6 @@ function updateAudio(e,seekBarContainer){
   }
 
 
-};
-
-for (album of albums){
-
-  audio = album.querySelectorAll(".album-audio")[0];
-  albumHeader = album.querySelectorAll(".album-header")[0];
-  playBtn = albumHeader.querySelectorAll(".play-btn")[0];
-  seekBarHandle = album.querySelectorAll(".seekbar-handle")[0]; 
-  seekBarContainer = album.querySelectorAll(".seekbar-container")[0]; 
-  tracks = album.querySelectorAll(".track-list li");
-
-  playBtn.innerHTML = make_play_symbol(playBtn.dataset.color);
-  playBtn.addEventListener('click', (e) => {
-
-    playBtn = e["target"];
-    tracks = playBtn.parentElement.parentElement.parentElement.parentElement.parentElement.querySelectorAll(".track-list li");
-
-    found_source = false;
-    for (track of tracks){
-
-      if (is_same_track(track.getAttribute("data-src"),audio.src)){
-
-        found_source = true;
-        break
-      }
-    }
-
-    if (!found_source){
-      track = tracks[0];
-    }
-
-    track.click();
-
-  });
-
-  tracks.forEach(track => {
-    track.addEventListener('click', () => {
-      const isPlaying = track.dataset.playing === "true";
-
-      tracks.forEach(t => t.dataset.playing = "false");
-      tracks.forEach(t => t.querySelectorAll(".track-number")[0].innerHTML = t.dataset.tracknb);
-
-      track.dataset.playing = isPlaying ? "false" : "true";
-      track.querySelectorAll(".track-number")[0].playing = track.dataset.playing;
-
-      album = track.parentElement.parentElement.parentElement;
-      playBtn = album.querySelectorAll(".play-btn")[0];
-      audio = album.querySelectorAll(".album-audio")[0];
-
-      trackNb = track.querySelectorAll(".track-number")[0];
-
-      if (isPlaying){
-          audio.pause();
-          playBtn.innerHTML = make_play_symbol(playBtn.dataset.color);
-          trackNb.innerHTML = make_play_symbol("white",draw_circle=false,set_size=false);
-      } else {
-          playTrack(track);
-          playBtn_list = document.querySelectorAll(".play-btn");
-          for (other_playBtn of playBtn_list){
-            other_playBtn.innerHTML = make_play_symbol(other_playBtn.dataset.color);
-          }
-          demo_btn_list = document.querySelectorAll(".demo_audio_btn");
-          for (demo_audio_btn of demo_btn_list){
-
-            rect = demo_audio_btn.querySelectorAll("rect")[0];
-            if (rect){
-              color = rect.getAttribute("fill");
-              demo_audio_btn.innerHTML = make_play_symbol(color);
-            }
-            
-            demo_audio_btn.dataset.playing = false;
-
-          }
-
-          playBtn.innerHTML = make_pause_symbol(playBtn.dataset.color);
-          trackNb.innerHTML = make_pause_symbol("white",draw_circle=false,set_size=false);
-      }
-
-    });
-  });
-
-  audio.addEventListener('timeupdate', (e) => {
-
-    audio = e["target"];
-
-    seekbarContainer = audio.parentElement.querySelectorAll(".seekbar-container")[0];
-
-    if (Array.from(seekBarContainer.classList).includes("updating")){
-      return;
-    }
-
-    seekBar = seekbarContainer.querySelectorAll(".seekbar")[0];
-    seekBarHandle = seekbarContainer.querySelectorAll(".seekbar-handle")[0];
-
-    const progressPercent = (audio.currentTime / audio.dataset.duration) * 100;
- 
-    updateSeekBar(progressPercent,seekBar,seekBarHandle,audio);
-
-    album = audio.parentElement;
-
-    if (progressPercent>=99.9){
-      playNextTrack(album);
-    }
-    
-  });
-
-  function setSeekBarToUpdateMode(e){
-    seekBarContainer = e["target"];
-
-    if (seekBarContainer.getAttribute("class")=="seekbar"){
-      seekBarContainer = seekBarContainer.parentElement;
-    }
-
-    for (otherSeekBarContainer of document.querySelectorAll(".seekbar-container")){
-      otherSeekBarContainer.classList.remove("updating");
-    }
-
-    seekBarContainer.classList.add("updating");
-
-  }
-
-  seekBarContainer.addEventListener('mousedown', (e) => {
-    setSeekBarToUpdateMode(e);
-    findSeekBarInUpdateModeAndUpdateIt(e);
-  });
-  seekBarContainer.addEventListener('touchstart', (e) => {
-    setSeekBarToUpdateMode(e);  
-    findSeekBarInUpdateModeAndUpdateIt(e);
-  });
-
-  seekBarContainer.addEventListener("click", (e)=>{
-    setSeekBarToUpdateMode(e);  
-    findSeekBarInUpdateModeAndUpdateIt(e);
-    setSeekBarToNotUpdatingMode(e);
-  });
-
-  
-}
-
-function setSeekBarToNotUpdatingMode(e) {
-  for (otherSeekBarContainer of document.querySelectorAll(".seekbar-container")){
-  
-    if (Array.from(otherSeekBarContainer.classList).includes("updating")){
-      updateAudio(e,otherSeekBarContainer);
-    }
-    
-    otherSeekBarContainer.classList.remove("updating");
-
-  }
-};
-
-var mouseDown = false;
-window.onmousedown = function() {mouseDown=true;};
-window.onmouseup = function(e){
-  mouseDown=false;
-  setSeekBarToNotUpdatingMode(e);
-}
-window.ontouchend = function(e) {
-  setSeekBarToNotUpdatingMode(e);
 }
 
 function findSeekBarInUpdateModeAndUpdateIt(e){
@@ -737,30 +303,226 @@ function findSeekBarInUpdateModeAndUpdateIt(e){
 
 }
 
-document.addEventListener("mousemove", (e) => {
-  
-  if (!mouseDown){ 
-    return null;
-  };
+function setSeekBarToNotUpdatingMode(e) {
+    for (otherSeekBarContainer of document.querySelectorAll(".seekbar-container")){
+    
+      if (Array.from(otherSeekBarContainer.classList).includes("updating")){
+        updateAudio(e,otherSeekBarContainer);
+      }
+      
+      otherSeekBarContainer.classList.remove("updating");
 
-  findSeekBarInUpdateModeAndUpdateIt(e);
+    }
+};
 
-});
-
-document.addEventListener("touchmove", (e) => {
-  findSeekBarInUpdateModeAndUpdateIt(e);
-});
-
-
-for (album of albums){
-
-  tracks = album.querySelectorAll(".track-list li");
-  tracks[0].click();
-  tracks[0].click();
-
-  timecode = album.querySelectorAll(".timecode")[0];
-  audio = album.querySelectorAll("audio")[0];
-
-  updateTimecode(audio,timecode);
-
+async function buildPlayers(json_path) {
+  const metadatas_str = await fetch(json_path);
+  const metadatas = await metadatas_str.json();
+  return metadatas;
 }
+
+buildPlayers(PLAYERS_JSON_PATH).then(metadatas => {
+
+  var albumHTML;
+
+  for (album of metadatas["albums"]){
+    albumHTML = generateAlbumHTML(album);
+    document.querySelectorAll(".albums")[0].innerHTML += albumHTML;
+  }
+
+  const content_types = Object.keys(metadatas)
+
+  for (content_type of content_types){
+
+      if(content_type == ALBUMS){
+        continue;
+      }
+
+      contents = Object.keys(metadatas[content_type]);
+
+      for (content of contents){
+        albumHTML = generateAlbumHTML(metadatas[content_type][content],show_big_cover=false); 
+        document.getElementById(content+"_player").innerHTML += albumHTML;
+
+      }
+
+  }
+
+  const albums = document.querySelectorAll(".album-player");
+
+  for (album of albums){
+
+    audio = album.querySelectorAll(".album-audio")[0];
+    albumHeader = album.querySelectorAll(".album-header")[0];
+    playBtn = albumHeader.querySelectorAll(".play-btn")[0];
+    seekBarHandle = album.querySelectorAll(".seekbar-handle")[0]; 
+    seekBarContainer = album.querySelectorAll(".seekbar-container")[0]; 
+    tracks = album.querySelectorAll(".track-list li");
+
+    playBtn.innerHTML = make_play_symbol(playBtn.dataset.color);
+    playBtn.addEventListener('click', (e) => {
+
+      playBtn = e["target"];
+      tracks = playBtn.parentElement.parentElement.parentElement.parentElement.parentElement.querySelectorAll(".track-list li");
+
+      found_source = false;
+      for (track of tracks){
+
+        if (is_same_track(track.getAttribute("data-src"),audio.src)){
+
+          found_source = true;
+          break
+        }
+      }
+
+      if (!found_source){
+        track = tracks[0];
+      }
+
+      track.click();
+
+    });
+
+    tracks.forEach(track => {
+      track.addEventListener('click', () => {
+        const isPlaying = track.dataset.playing === "true";
+
+        tracks.forEach(t => t.dataset.playing = "false");
+        tracks.forEach(t => t.querySelectorAll(".track-number")[0].innerHTML = t.dataset.tracknb);
+
+        track.dataset.playing = isPlaying ? "false" : "true";
+        track.querySelectorAll(".track-number")[0].playing = track.dataset.playing;
+
+        album = track.parentElement.parentElement.parentElement;
+        playBtn = album.querySelectorAll(".play-btn")[0];
+        audio = album.querySelectorAll(".album-audio")[0];
+
+        trackNb = track.querySelectorAll(".track-number")[0];
+
+        if (isPlaying){
+            audio.pause();
+            playBtn.innerHTML = make_play_symbol(playBtn.dataset.color);
+            trackNb.innerHTML = make_play_symbol("white",draw_circle=false,set_size=false);
+        } else {
+            playTrack(track);
+            playBtn_list = document.querySelectorAll(".play-btn");
+            for (other_playBtn of playBtn_list){
+              other_playBtn.innerHTML = make_play_symbol(other_playBtn.dataset.color);
+            }
+            demo_btn_list = document.querySelectorAll(".demo_audio_btn");
+            for (demo_audio_btn of demo_btn_list){
+
+              rect = demo_audio_btn.querySelectorAll("rect")[0];
+              if (rect){
+                color = rect.getAttribute("fill");
+                demo_audio_btn.innerHTML = make_play_symbol(color);
+              }
+              
+              demo_audio_btn.dataset.playing = false;
+
+            }
+
+            playBtn.innerHTML = make_pause_symbol(playBtn.dataset.color);
+            trackNb.innerHTML = make_pause_symbol("white",draw_circle=false,set_size=false);
+        }
+
+      });
+    });
+
+    audio.addEventListener('timeupdate', (e) => {
+
+      audio = e["target"];
+
+      seekbarContainer = audio.parentElement.querySelectorAll(".seekbar-container")[0];
+
+      if (Array.from(seekBarContainer.classList).includes("updating")){
+        return;
+      }
+
+      seekBar = seekbarContainer.querySelectorAll(".seekbar")[0];
+      seekBarHandle = seekbarContainer.querySelectorAll(".seekbar-handle")[0];
+
+      const progressPercent = (audio.currentTime / audio.dataset.duration) * 100;
+  
+      updateSeekBar(progressPercent,seekBar,seekBarHandle,audio);
+
+      album = audio.parentElement;
+
+      if (progressPercent>=99.9){
+        playNextTrack(album);
+      }
+      
+    });
+
+    function setSeekBarToUpdateMode(e){
+      seekBarContainer = e["target"];
+
+      if (seekBarContainer.getAttribute("class")=="seekbar"){
+        seekBarContainer = seekBarContainer.parentElement;
+      }
+
+      for (otherSeekBarContainer of document.querySelectorAll(".seekbar-container")){
+        otherSeekBarContainer.classList.remove("updating");
+      }
+
+      seekBarContainer.classList.add("updating");
+
+    }
+
+    seekBarContainer.addEventListener('mousedown', (e) => {
+      setSeekBarToUpdateMode(e);
+      findSeekBarInUpdateModeAndUpdateIt(e);
+    });
+    seekBarContainer.addEventListener('touchstart', (e) => {
+      setSeekBarToUpdateMode(e);  
+      findSeekBarInUpdateModeAndUpdateIt(e);
+    });
+
+    seekBarContainer.addEventListener("click", (e)=>{
+      setSeekBarToUpdateMode(e);  
+      findSeekBarInUpdateModeAndUpdateIt(e);
+      setSeekBarToNotUpdatingMode(e);
+    });
+
+    
+  }
+
+  var mouseDown = false;
+  window.onmousedown = function() {mouseDown=true;};
+  window.onmouseup = function(e){
+    mouseDown=false;
+    setSeekBarToNotUpdatingMode(e);
+  }
+  window.ontouchend = function(e) {
+    setSeekBarToNotUpdatingMode(e);
+  }
+
+  document.addEventListener("mousemove", (e) => {
+    
+    if (!mouseDown){ 
+      return null;
+    };
+
+    findSeekBarInUpdateModeAndUpdateIt(e);
+
+  });
+
+  document.addEventListener("touchmove", (e) => {
+    findSeekBarInUpdateModeAndUpdateIt(e);
+  });
+
+
+  for (album of albums){
+
+    tracks = album.querySelectorAll(".track-list li");
+    tracks[0].click();
+    tracks[0].click();
+
+    timecode = album.querySelectorAll(".timecode")[0];
+    audio = album.querySelectorAll("audio")[0];
+
+    updateTimecode(audio,timecode);
+
+  }
+
+});
