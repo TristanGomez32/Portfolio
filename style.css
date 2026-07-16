@@ -363,7 +363,7 @@ h1 {
 }
 
 .bg-promesses::after {
-    background-color: rgba(95, 110, 143,0.1);
+    background-color: rgba(63, 88, 145, 0.329);
 }
 
 .bg-tophit::after {
