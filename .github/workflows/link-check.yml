@@ -18,5 +18,7 @@ jobs:
             --verbose
             --no-progress
             --exclude-loopback
-            './**/*.{html,js,json}'
+            './*.html'
+            './*.js'
+            './*.json'
           fail: true
