@@ -20,5 +20,4 @@ jobs:
             --exclude-loopback
             './*.html'
             './*.js'
-            './*.json'
           fail: true
