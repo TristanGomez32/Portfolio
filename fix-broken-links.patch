@@ -1,0 +1,228 @@
+diff --git a/albums.json b/albums.json
+index 26f7f8c..4221cf2 100644
+--- a/albums.json
++++ b/albums.json
+@@ -70,7 +70,7 @@
+             }, "summer_tape":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/summer_tape/",
+                   "albumName": "Summer tape",
+                   "genre": "Folk / Hardtech / Blues",
+-                  "tracks":["we're_the_only_ones_here_!.mp3","akward_flirt.mp3","why_did_you_bring_all_of_these.mp3","banjo_what.mp3","your_mom_is_gonna_worry.mp3"],
++                  "tracks":["were_the_only_ones_here_!.mp3","akward_flirt.mp3","why_did_you_bring_all_of_these.mp3","banjo_what.mp3","your_mom_is_gonna_worry.mp3"],
+                   "genres":["Hardtech","Folk / Blues","Folk","Folk","Folk"],
+                   "track_durations":["00:45","00:41","00:24","00:46","00:54"],
+                   "top_color":"#644f31ff",
+@@ -110,7 +110,7 @@
+             }, "promesses":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/promesses/",
+                   "albumName": "Promesses",
+                   "genre": "Orchestral / Electronic",
+-                  "tracks":["cérémonie.mp3","nuit de noce.mp3","trahison.mp3"],
++                  "tracks":["cérémonie.mp3","nuit_de_noce.mp3","trahison.mp3"],
+                   "genres":["Orchestral","Orchestral / Electronic", "Orchestral / Electronic"],
+                   "track_durations":["01:02","02:09","02:17"],
+                   "top_color":"#2c0e19",
+@@ -120,7 +120,7 @@
+             }, "tophit":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/tophit/",
+                   "albumName": "Top hit",
+                   "genre": "Funk",
+-                  "tracks":["break-in.mp3","disco party.mp3","main event.mp3","end_credits.mp3"],
++                  "tracks":["break-in.mp3","disco_party.mp3","main_event.mp3","end_credits.mp3"],
+                   "genres":["Funk","Funk", "Funk","Funk"],
+                   "track_durations":["02:24","00:51","01:13","00:37"],
+                   "top_color":"#7b404a",
+@@ -130,7 +130,7 @@
+             }, "leserpent":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/leserpent/",
+                   "albumName": "Le Serpent",
+                   "genre": "Ambient",
+-                  "tracks":["le_serpent.mp3","tous_les_regards.mp3","ça_va_aller.mp3","un_verre_d'eau.mp3","votre_nom.mp3"],
++                  "tracks":["le_serpent.mp3","tous_les_regards.mp3","ça_va_aller.mp3","un_verre_deau.mp3","votre_nom.mp3"],
+                   "genres":["Ambient","Ambient","Ambient","Ambient","Ambient"],
+                   "track_durations":["00:43","01:15","00:20","01:05","00:28"],
+                   "top_color":"#4b0d0f",
+@@ -140,7 +140,7 @@
+             }, "lefeuauxpoudres":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/lefeuauxpoudres/",
+                   "albumName": "Le feu aux poudres",
+                   "genre": "Metal",
+-                  "tracks":["emballement.mp3","la voix du peuple.mp3","le feu aux poudres.mp3","le feu aux poudres II.mp3"],
++                  "tracks":["emballement.mp3","la_voix_du_peuple.mp3","le_feu_aux_poudres.mp3","le_feu_aux_poudres_II.mp3"],
+                   "genres":["Electro","Electro","Metal","Metal"],
+                   "track_durations":["00:49","00:37","00:29","02:58"],
+                   "top_color":"#252324",
+@@ -172,7 +172,7 @@
+             }, "prejudices":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/prejudices/",
+                   "albumName": "Préjudice",
+                   "genre": "Ambient",
+-                  "tracks":["une forme de soutien.mp3","l'atelier.mp3","l'affaire.mp3","préjudices.mp3","guyane.mp3","quelqu'un de bien.mp3"],
++                  "tracks":["une_forme_de_soutien.mp3","latelier.mp3","laffaire.mp3","préjudices.mp3","guyane.mp3","quelquun_de_bien.mp3"],
+                   "genres":["Ambient","Ambient","Ambient","Ambient","Ambient","Ambient"],
+                   "track_durations":["01:30","02:02","02:57","03:02","03:01","03:44"],
+                   "top_color":"#001227",
+diff --git a/albums/lefeuauxpoudres/la voix du peuple.mp3 b/albums/lefeuauxpoudres/la_voix_du_peuple.mp3
+similarity index 100%
+rename from albums/lefeuauxpoudres/la voix du peuple.mp3
+rename to albums/lefeuauxpoudres/la_voix_du_peuple.mp3
+diff --git a/albums/lefeuauxpoudres/le feu aux poudres.mp3 b/albums/lefeuauxpoudres/le_feu_aux_poudres.mp3
+similarity index 100%
+rename from albums/lefeuauxpoudres/le feu aux poudres.mp3
+rename to albums/lefeuauxpoudres/le_feu_aux_poudres.mp3
+diff --git a/albums/lefeuauxpoudres/le feu aux poudres II.mp3 b/albums/lefeuauxpoudres/le_feu_aux_poudres_II.mp3
+similarity index 100%
+rename from albums/lefeuauxpoudres/le feu aux poudres II.mp3
+rename to albums/lefeuauxpoudres/le_feu_aux_poudres_II.mp3
+diff --git a/albums/leserpent/un_verre_d'eau.mp3 b/albums/leserpent/un_verre_deau.mp3
+similarity index 100%
+rename from albums/leserpent/un_verre_d'eau.mp3
+rename to albums/leserpent/un_verre_deau.mp3
+diff --git a/albums/prejudices/l'affaire.mp3 b/albums/prejudices/laffaire.mp3
+similarity index 100%
+rename from albums/prejudices/l'affaire.mp3
+rename to albums/prejudices/laffaire.mp3
+diff --git a/albums/prejudices/l'atelier.mp3 b/albums/prejudices/latelier.mp3
+similarity index 100%
+rename from albums/prejudices/l'atelier.mp3
+rename to albums/prejudices/latelier.mp3
+diff --git a/albums/prejudices/quelqu'un de bien.mp3 b/albums/prejudices/quelquun_de_bien.mp3
+similarity index 100%
+rename from albums/prejudices/quelqu'un de bien.mp3
+rename to albums/prejudices/quelquun_de_bien.mp3
+diff --git a/albums/prejudices/une forme de soutien.mp3 b/albums/prejudices/une_forme_de_soutien.mp3
+similarity index 100%
+rename from albums/prejudices/une forme de soutien.mp3
+rename to albums/prejudices/une_forme_de_soutien.mp3
+diff --git a/albums/promesses/nuit de noce.mp3 b/albums/promesses/nuit_de_noce.mp3
+similarity index 100%
+rename from albums/promesses/nuit de noce.mp3
+rename to albums/promesses/nuit_de_noce.mp3
+diff --git a/albums/summer_tape/we're_the_only_ones_here_!.mp3 b/albums/summer_tape/were_the_only_ones_here_!.mp3
+similarity index 100%
+rename from albums/summer_tape/we're_the_only_ones_here_!.mp3
+rename to albums/summer_tape/were_the_only_ones_here_!.mp3
+diff --git a/albums/tophit/disco party.mp3 b/albums/tophit/disco_party.mp3
+similarity index 100%
+rename from albums/tophit/disco party.mp3
+rename to albums/tophit/disco_party.mp3
+diff --git a/albums/tophit/main event.mp3 b/albums/tophit/main_event.mp3
+similarity index 100%
+rename from albums/tophit/main event.mp3
+rename to albums/tophit/main_event.mp3
+diff --git a/demos/again call to adventure.mp3 b/demos/again_call_to_adventure.mp3
+similarity index 100%
+rename from demos/again call to adventure.mp3
+rename to demos/again_call_to_adventure.mp3
+diff --git a/demos/again victory.mp3 b/demos/again_victory.mp3
+similarity index 100%
+rename from demos/again victory.mp3
+rename to demos/again_victory.mp3
+diff --git a/demos/im not sure we're safe.mp3 b/demos/im_not_sure_were_safe.mp3
+similarity index 100%
+rename from demos/im not sure we're safe.mp3
+rename to demos/im_not_sure_were_safe.mp3
+diff --git a/demos/lelit cue 2.mp3 b/demos/lelit_cue_2.mp3
+similarity index 100%
+rename from demos/lelit cue 2.mp3
+rename to demos/lelit_cue_2.mp3
+diff --git a/demos/rome will burn.mp3 b/demos/rome_will_burn.mp3
+similarity index 100%
+rename from demos/rome will burn.mp3
+rename to demos/rome_will_burn.mp3
+diff --git a/demos/summer tape sax.mp3 b/demos/summer_tape_sax.mp3
+similarity index 100%
+rename from demos/summer tape sax.mp3
+rename to demos/summer_tape_sax.mp3
+diff --git a/demos/trailer dr home.mp3 b/demos/trailer_dr_home.mp3
+similarity index 100%
+rename from demos/trailer dr home.mp3
+rename to demos/trailer_dr_home.mp3
+diff --git a/demos/trailer lush.mp3 b/demos/trailer_lush.mp3
+similarity index 100%
+rename from demos/trailer lush.mp3
+rename to demos/trailer_lush.mp3
+diff --git a/demos/trailer victory.mp3 b/demos/trailer_victory.mp3
+similarity index 100%
+rename from demos/trailer victory.mp3
+rename to demos/trailer_victory.mp3
+diff --git a/demos/what you did folk.mp3 b/demos/what_you_did_folk.mp3
+similarity index 100%
+rename from demos/what you did folk.mp3
+rename to demos/what_you_did_folk.mp3
+diff --git a/script.js b/script.js
+index 9d5e49a..ee8c423 100644
+--- a/script.js
++++ b/script.js
+@@ -5,7 +5,7 @@ const audioTracks = [
+   {
+     id: "again_call_to_adv",
+     label: "Call to adventure",
+-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/again call to adventure.mp3"
++    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/again_call_to_adventure.mp3"
+   },
+   {
+     id: "colossus",
+@@ -16,28 +16,28 @@ const audioTracks = [
+   {
+     id: "again_victory",
+     label: "Epic orchestra",
+-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/trailer victory.mp3",
++    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/trailer_victory.mp3",
+     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/enceinte_crop1.png",
+     color: "rgb(116,91,52)",
+   },
+   {
+     id: "lelitcue2",
+     label: "Ambient synths",
+-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/lelit cue 2.mp3",
++    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/lelit_cue_2.mp3",
+     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/hjalmar-wahlin-08_blurred_crop1.png",
+     color: "rgb(13,32,85)",
+   },
+   {
+     id: "trailerlush",
+     label: "Lush strings",
+-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/trailer lush.mp3",
++    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/trailer_lush.mp3",
+     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/enceinte_crop2.png",
+     color: "rgb(2,57,34)",
+   } ,
+   {
+     id: "romewillburn",
+     label: "Hard rock",
+-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/rome will burn.mp3",
++    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/rome_will_burn.mp3",
+     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/affiche-skid-768x0-c-default_blurred_crop1.png",
+     background_size: "250px",
+     color: "rgb(25,39,48)",
+@@ -45,7 +45,7 @@ const audioTracks = [
+   {
+     id: "whatyoudidfolk",
+     label: "Folk guitar",
+-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/what you did folk.mp3",
++    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/what_you_did_folk.mp3",
+     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/John_Singer_Sargent_-_Gabriel_Fauré_crop1_blur.png",
+     background_size: "220px",
+     color: "rgb(131,55,22)",
+@@ -53,7 +53,7 @@ const audioTracks = [
+   {
+     id: "dystopiantrailer",
+     label: "Dystopian electro",
+-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/im not sure we're safe.mp3",
++    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/im_not_sure_were_safe.mp3",
+     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/hjalmar-wahlin-08_blurred_crop2.png",
+     backgroundSize: "220px",
+     color: "rgba(149, 59, 182, 1)",
+@@ -117,7 +117,7 @@ const audioTracks = [
+   {
+     id: "2000s_medical_drama",
+     label: "2000s medical drama",
+-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/trailer dr home.mp3",
++    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/trailer_dr_home.mp3",
+     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/hospital.png",
+     color: "rgba(117, 148, 153)",
+   },
+@@ -134,7 +134,7 @@ const audioTracks = [
+   {
+     id: "sax",
+     label: "Awkward saxophone",
+-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/summer tape sax.mp3",
++    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/summer_tape_sax.mp3",
+     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/lelit_mo_crop1.png",
+     color: "rgb(27,83,0)",
+   },
