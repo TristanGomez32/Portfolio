@@ -5,7 +5,7 @@ const audioTracks = [
   {
     id: "again_call_to_adv",
     label: "Call to adventure",
-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/again_call_to_adventure.mp3"
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/again call to adventure.mp3"
   },
   {
     id: "colossus",
@@ -16,28 +16,28 @@ const audioTracks = [
   {
     id: "again_victory",
     label: "Epic orchestra",
-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/trailer_victory.mp3",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/trailer victory.mp3",
     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/enceinte_crop1.png",
     color: "rgb(116,91,52)",
   },
   {
     id: "lelitcue2",
     label: "Ambient synths",
-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/lelit_cue_2.mp3",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/lelit cue 2.mp3",
     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/hjalmar-wahlin-08_blurred_crop1.png",
     color: "rgb(13,32,85)",
   },
   {
     id: "trailerlush",
     label: "Lush strings",
-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/trailer_lush.mp3",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/trailer lush.mp3",
     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/enceinte_crop2.png",
     color: "rgb(2,57,34)",
   } ,
   {
     id: "romewillburn",
     label: "Hard rock",
-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/rome_will_burn.mp3",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/rome will burn.mp3",
     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/affiche-skid-768x0-c-default_blurred_crop1.png",
     background_size: "250px",
     color: "rgb(25,39,48)",
@@ -45,7 +45,7 @@ const audioTracks = [
   {
     id: "whatyoudidfolk",
     label: "Folk guitar",
-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/what_you_did_folk.mp3",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/what you did folk.mp3",
     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/John_Singer_Sargent_-_Gabriel_Fauré_crop1_blur.png",
     background_size: "220px",
     color: "rgb(131,55,22)",
@@ -53,7 +53,7 @@ const audioTracks = [
   {
     id: "dystopiantrailer",
     label: "Dystopian electro",
-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/im_not_sure_were_safe.mp3",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/im not sure we're safe.mp3",
     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/hjalmar-wahlin-08_blurred_crop2.png",
     backgroundSize: "220px",
     color: "rgba(149, 59, 182, 1)",
@@ -117,7 +117,7 @@ const audioTracks = [
   {
     id: "2000s_medical_drama",
     label: "2000s medical drama",
-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/trailer_dr_home.mp3",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/trailer dr home.mp3",
     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/hospital.png",
     color: "rgba(117, 148, 153)",
   },
@@ -134,7 +134,7 @@ const audioTracks = [
   {
     id: "sax",
     label: "Awkward saxophone",
-    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/summer_tape_sax.mp3",
+    src: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/summer tape sax.mp3",
     bckgr_image: "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/lelit_mo_crop1.png",
     color: "rgb(27,83,0)",
   },
