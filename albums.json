@@ -127,6 +127,16 @@
                   "bottom_color":"#91685d",
                   "bottom_text":"#fed8a5",
                   "top_text":"#ecc8ce"
+            }, "mysteryrock":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/mysteryrock/",
+                  "albumName": "Mystery Rock",
+                  "genre": "Orchestral",
+                  "tracks":["the_brawl.mp3"],
+                  "genres":["Orchestral"],
+                  "track_durations":["00:51"],
+                  "top_color":"#7b404a",
+                  "bottom_color":"#91685d",
+                  "bottom_text":"#fed8a5",
+                  "top_text":"#ecc8ce"
             }, "leserpent":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/leserpent/",
                   "albumName": "Le Serpent",
                   "genre": "Ambient",
