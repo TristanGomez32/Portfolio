@@ -1,0 +1,23 @@
+name: Link Checker
+
+on:
+  push:
+    branches: [dev]
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Check for broken links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >
+            --verbose
+            --no-progress
+            --exclude-loopback
+            './*.html'
+            './*.js'
+          fail: true

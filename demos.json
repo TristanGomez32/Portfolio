@@ -1,0 +1,117 @@
+[
+  {
+    "id": "again_victory",
+    "label": "Epic orchestra",
+    "src": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/trailer victory.mp3",
+    "bckgr_image": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/enceinte_crop1.png",
+    "color": "rgb(116,91,52)"
+  },
+  {
+    "id": "lelitcue2",
+    "label": "Ambient synths",
+    "src": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/lelit cue 2.mp3",
+    "bckgr_image": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/hjalmar-wahlin-08_blurred_crop1.png",
+    "color": "rgb(13,32,85)"
+  },
+  {
+    "id": "trailerlush",
+    "label": "Lush strings",
+    "src": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/trailer lush.mp3",
+    "bckgr_image": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/enceinte_crop2.png",
+    "color": "rgb(2,57,34)"
+  } ,
+  {
+    "id": "romewillburn",
+    "label": "Hard rock",
+    "src": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/rome will burn.mp3",
+    "bckgr_image": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/affiche-skid-768x0-c-default_blurred_crop1.png",
+    "background_size": "250px",
+    "color": "rgb(25,39,48)"
+  },
+  {
+    "id": "whatyoudidfolk",
+    "label": "Folk guitar",
+    "src": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/what you did folk.mp3",
+    "bckgr_image": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/John_Singer_Sargent_-_Gabriel_Fauré_crop1_blur.png",
+    "background_size": "220px",
+    "color": "rgb(131,55,22)"
+  },
+  {
+    "id": "dystopiantrailer",
+    "label": "Dystopian electro",
+    "src": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/im not sure we're safe.mp3",
+    "bckgr_image": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/hjalmar-wahlin-08_blurred_crop2.png",
+    "backgroundSize": "220px",
+    "color": "rgba(149, 59, 182, 1)"
+  },
+  {
+    "id": "hardtech",
+    "label": "Hardtech",
+    "src": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/demos/hardtech.mp3",
+    "bckgr_image": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/skid_crop1_darker.png",
+    "color": "#757c81"
+  },
+  {
+    "id": "dnb",
+    "label": "DnB",
+    "src": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/dnb.mp3",
+    "bckgr_image": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/romantic_flight_crop.png",
+    "color": "#5f3d30"
+  },
+  {
+    "id": "spy_thriller",
+    "label": "Spy thriller",
+    "src": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/severance.mp3",
+    "bckgr_image": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/img/crops/lelit_mo_crop1.png",
+    "color": "rgb(27,83,0)"
+  },
+  {
+    "id": "action_strings",
+    "label": "Action blockbuster",
+    "src": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/mission_lu.mp3",
+    "bckgr_image": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/tshirt_red.png",
+    "color": "rgba(113, 15, 10)"
+  },
+  {
+    "id": "peaceful_piano",
+    "label": "Peaceful piano",
+    "src": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/ambient.mp3",
+    "bckgr_image": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/ice.png",
+    "color": "rgba(47, 142, 197)"
+  },
+  {
+    "id": "kpop_x_trailer",
+    "label": "Epic K-Pop",
+    "src": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/golden.mp3",
+    "bckgr_image": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/golden.png",
+    "color": "rgba(204, 132, 56)"
+  },
+  {
+    "id": "f1_car_chase",
+    "label": "F1 car chase",
+    "src": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/skid_part2.mp3",
+    "bckgr_image": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/f1.png",
+    "color": "rgba(121, 72, 60)"
+  },
+  {
+    "id": "tension_builder",
+    "label": "Tension builder",
+    "src": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/skid_part1.mp3",
+    "bckgr_image": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/f1_2.png",
+    "color": "rgba(19, 39, 45)"
+  },
+  {
+    "id": "2000s_medical_drama",
+    "label": "2000s medical drama",
+    "src": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/trailer dr home.mp3",
+    "bckgr_image": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/hospital.png",
+    "color": "rgba(117, 148, 153)"
+  },
+  {
+    "id": "neoromantic",
+    "label": "Neo-Romantic",
+    "src": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/demos/neoromantic.mp3",
+    "bckgr_image": "https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/crops/orpheus.png",
+    "color": "rgba(165, 123, 58)"
+  }
+]

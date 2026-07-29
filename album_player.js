@@ -1,4 +1,4 @@
-PLAYERS_JSON_PATH = "https://raw.githubusercontent.com/TristanGomez32/Portfolio/refs/heads/dev/albums.json"
+const PLAYERS_JSON_PATH = "./albums.json"
 
 ALBUMS = "albums"
 
