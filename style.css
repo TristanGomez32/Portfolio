@@ -278,7 +278,7 @@ h1 {
 }
 
 .bg-mysteryrock::before {
-    background-image: url('./img/mysteryrock.png');
+    background-image: url('https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/img/mysteryrock.png');
 }
 
 .bg-lefeuauxpoudres::before {
