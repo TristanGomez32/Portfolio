@@ -35,7 +35,7 @@
             }],
             "short_movies":{
               "lelit":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/main/albums/lelit/",
-                  "albumName": "<span class='line'>\\<span class='line'>Le lit</span>\\<span class='line'>de la rivière</span>\\</span>",
+                  "albumName": "<span class='line'><span class='line'>Le lit</span><span class='line'>de la rivière</span></span>",
                   "genre": "Ambient synths",
                   "tracks":["tu_vas_guerir.mp3","crematorium.mp3","dispersion.mp3","souvenirs.mp3","le_lit.mp3"],
                   "titles":["Tu vas guérir","Crématorium","Dispersion","Souvenirs","Le lit"],
@@ -169,7 +169,7 @@
                   "top_text":"#eeeeee"
             }
             },"docs":{"liledyeu":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/liledyeu/",
-                  "albumName": "<span class='line'>\\<span class='line'>L'Île</span>\\<span class='line'>d'yeu</span>\\</span>",
+                  "albumName": "<span class='line'><span class='line'>L'Île</span><span class='line'>d'yeu</span></span>",
                   "genre": "Orchestral",
                   "tracks":["debut.mp3","interlude1.mp3","interlude2.mp3","interlude3.mp3","fin.mp3"],
                   "titles":["L'Île d'Yeu","Interlude 1","Interlude 2","Interlude 3","L'Île d'Yeu (variation)"],
@@ -191,7 +191,7 @@
                   "top_text":"#ffffffff"
             }
             },"ads":{"publu":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/publu/",
-                  "albumName": "<span class='line'>\\<span class='line'>LU - </span>\\<span class='line'>La gourmandise</span>\\</span>",
+                  "albumName": "<span class='line'><span class='line'>LU</span><span class='line'>, la gourmandise</span></span>",
                   "genre": "Orchestral / Jazz",
                   "tracks":["intro.mp3","intro_alt.mp3","end.mp3"],
                   "titles":["Petit beurre ?","Petit beurre ? (alt.)","Simple chef d'oeuvre"],
