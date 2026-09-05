@@ -100,7 +100,7 @@
             }, "lepassager":{"folder":"https://media.githubusercontent.com/media/TristanGomez32/Portfolio/refs/heads/dev/albums/lepassager/",
                   "albumName": "Le passager",
                   "genre": "Rock / Lofi / Orchestral",
-                  "tracks":["bar_song","deux_whiskies.mp3","sur_le_chemin.mp3"],
+                  "tracks":["bar_song.mp3","deux_whiskies.mp3","sur_le_chemin.mp3"],
                   "genres":["Rock","Lofi","Orchestral"],
                   "track_durations":["00:32","00:46","01:35"],
                   "top_color":"#00232b",
